@@ -1,0 +1,60 @@
+html,body{
+	background-color: rgba(0,0,0,0);
+}
+.Todo{
+	display: flex;
+	flex-direction: row-reverse;
+	/* float: right; */
+}
+
+/**********************************/
+.LeftBar{
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+	background-color: dimgrey;
+	display: flex;
+	align-items: center;
+	width: 1.3em;
+	max-width: 1.3em;
+	min-width: 1em;
+	height: 100%;
+}
+.LeftBar img{
+	display:block;
+}
+.LeftBar:hover{
+	background-color: darkgrey;
+}
+.LeftBar:active{
+	background-color: #8a8989;
+}
+
+
+/************************************************/
+.Header{font-size: 0.7em;}
+.Config{
+
+}
+.Switch{
+
+}
+
+/**********************************************/
+.PrincipalMini{
+	width:100%;
+	background-color: grey;
+	transition: all 0.9s ease;
+	border-right: solid 5px black;
+	box-sizing: border-box;
+}
+
+/**************************************/
+
+
+
+.hidden-h{
+	width: 1%;
+}
+.hidden-v{
+	height: 1%;
+}
