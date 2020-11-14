@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './assets/css/gral.css';
-import './assets/css/royal-mini.css';
+import './assets/css/royal-mini.css'; // no llamar para app comun
 
 // Components
 import PrincipalMini from "./components/PrincipalMini";

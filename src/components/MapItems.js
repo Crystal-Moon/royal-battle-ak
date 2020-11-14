@@ -5,7 +5,7 @@ import Item from './Item';
 import ItemIcon from './ItemIcon';
 
 class MapItems extends Component {
-  render() {   /* lo mismo, los Item de los icon-3 tambienm los ultimos tendran hover-r y los primeros hover-l */
+  render() {
     return (
       <div className="MapItems">
        

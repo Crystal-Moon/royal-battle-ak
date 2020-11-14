@@ -3,6 +3,7 @@ import Item from "./Item";
 
 class AcordeonItem extends Component {
   render() {  /* <!-- la mitad de los item eztablecer clase hover-l y la segunda mitad con hover-r --> */
+                /* ya esta arreglado con los position */
     return (
       <li className="AcordeonItem">
         <h4>Titulo de Seccion</h4>
