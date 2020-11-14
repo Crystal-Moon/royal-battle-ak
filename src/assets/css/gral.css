@@ -63,7 +63,7 @@ h2, h3, h4, .ttl{
 	background-color: #443838;
 }
 /***********************************/
-.Switch{display: flex;flex-direction: row;margin-right: 1em;margin-left: auto;width: max-content;font-family: 'Hind Siliguri', sans-serif;/* cursor: pointer; */}
+.Switch{display: flex;flex-direction: row;margin-right: 0.5em;margin-left: auto;width: max-content;font-family: 'Hind Siliguri', sans-serif;/* cursor: pointer; */}
 .Switch *{
 	display:flex;
 	align-items:center;
@@ -116,4 +116,79 @@ h2, h3, h4, .ttl{
 	margin-left: 50%;
 	/* left: auto; */
 	margin-right: 0;
+}
+
+/**************************************/
+.Item{
+    width: max-content;
+    height: max-content;
+    margin: 0.3em;
+    position: relative;
+    width: 1.2em;
+    height: 1.2em;
+}
+.Item:hover .Hover{
+	display:block;
+}
+.ItemIcon{
+	display:block;
+	border: 0.18rem solid white;
+	border-radius: 10%;
+	width: 1.2em;
+	height: 1.2em;
+	/*margin: 0.1em;*/
+}
+.ItemIcon img{
+	width:100%;
+	height:100%;
+}
+.Hover{
+	z-index: 100;
+	display:none;
+	position: absolute;
+	background-color: #161616;
+	width: max-content;
+	max-width: 13.5em;
+	font-size: 0.9em;
+	padding: 0.6em;
+	border-radius:0.5em;
+}
+.Hover .ItemIcon{
+	width: inherit;
+    height: inherit;
+
+}
+
+.item-head{
+	display: flex;
+	flex-direction:row;
+}
+.item-head span{
+	flex:3;
+}
+
+.item-head span:first-child{
+	flex:1;
+}
+.item-head span:last-child{
+	flex:3;
+}
+
+.item-name{
+	font-family: 'Bree Serif', serif;
+	padding: 0.2em;
+}
+.stat{
+	background-color: #0d0d0d;
+	border-radius: 0.5em;
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+}
+.item-body hr{
+	display:block;
+	background: linear-gradient(90deg, rgba(2,0,36,1) -15%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 115%);
+	height: 1px;
+	border:none;
+	margin-top:0.3em;
+	margin-bottom:0.3em;
 }
