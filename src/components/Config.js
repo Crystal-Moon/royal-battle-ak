@@ -7,7 +7,7 @@ class Config extends Component {
   render() { /*<ConfigOption />*/
     return (
       <div className="Config">
-        <img src alt="cfg" />
+        <img src='' alt="cfg" />
         <div className="config">
           <Switch />
           <Switch />

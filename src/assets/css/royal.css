@@ -1,4 +1,9 @@
-
+html, body{
+	overflow: hidden;
+}
+/*
+.Todo{ height: max-content; } 
+*/
 /************************************/
 
 .Logo{
@@ -22,9 +27,9 @@
 	height: calc(100% - 3em - 1.5em);
 	overflow: hidden;
 }
-.Nav{width: 20%;height: 100%;background-color: dimgrey;min-width: max-content;/* max-width: 16em; */}
+.Nav{width: 20%;height: 100%;background-color: dimgrey;min-width: max-content;/* max-width: 16em; */height: auto;}
 .ul{margin: 0;padding: 0;list-style: none;height: 100%;display: flex;flex-direction: column;}
-.Li{flex: 1;display: flex;align-items: center;padding: 0.2em;padding-left: 0.8em;padding-right: 0.6em;position: relative;margin: 0.2em;margin-left: 0.4em;margin-right: 0.4em;border-radius: 0.5em;}
+.Li{flex: 1;display: flex;align-items: center;padding: 0.2em;padding-left: 0.8em;padding-right: 0.6em;position: relative;margin: 0.2em;margin-left: 0.4em;margin-right: 0.4em;border-radius: 0.5em;max-height:4em;}
 .Li:hover, .Li.selected:hover{
 	background-color: darkgrey;
 }
@@ -63,7 +68,11 @@
 }
 */
 /****/
-.Principal{width: 80%;overflow: auto;/* height: calc(50% - 1.5em - 3em); */height: 100%;/* padding: 0.3em; */background-color: grey;}
+.Principal{
+	width: 80%;
+	overflow: auto;
+	overflow-x: hidden;
+	/* height: calc(50% - 1.5em - 3em); */height: 100%;/* padding: 0.3em; */background-color: grey;}
 .scrolleable{
 	/* overflow: auto; */
 	/* height: calc(100% - 3em - 1.5em); */
@@ -81,9 +90,54 @@
 	bottom: 0;
 	width: 100%;
 	background-color: violet;
+
+	font-size: 0.8em;
+    font-family: monospace;
+    /* height: max-content; */
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+.Footer>div{
+	margin: 0;
+	margin-left:0.5em;
+	margin-right: 0.5em;
+	height: min-content;
+    display: flex;
+    height: 100%;
+}
+.Footer span{
+	margin:0;
+	font-size:1em;
+	height: 1em;
+	display: inline-block;
+}
+.Footer .tech{
+	
+	    margin: auto;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    background-color: red;
+    /* height: 1.1em; */
+    top: 0;
+    bottom: 0;
+
+	width: 1em;
+	
+	margin-left: 0.3em;
+	margin-right: 0.3em;
+
+	background-position: center center;
+    background-size: 100% 100%;
 
 
+
+}
+#react{
+	background-image: url('https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/react-512.png');
+}
 
 /*****************************************/
 ::-webkit-scrollbar              { /* 1 */ }
