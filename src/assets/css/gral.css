@@ -220,6 +220,7 @@ button span{display: block;margin:0;padding: 0;}
 	border-radius: 0.5em;
 	margin-top:0.3em;
 	margin-bottom:0.3em;
+	padding: 0.4em;
 }
 .item-body hr{
 	display:block;

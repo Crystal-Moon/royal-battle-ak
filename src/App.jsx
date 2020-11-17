@@ -9,6 +9,12 @@ import Main from './components/Main';
 import Footer from './components/Footer'
 
 class App extends Component {
+
+  componentDidMount(){
+  	
+  	//require('./assets/css/themes/nowa.css'); //funciona genial :D
+  }
+  
   render() {
     return (
       <div className="Todo">

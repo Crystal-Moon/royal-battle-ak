@@ -4,12 +4,12 @@ import ItemIcon from './ItemIcon';
 
 class Item extends Component {
   render() {
+   // console.log(this.props)
+    const { item={} } = this.props;
     return (
       <div className="Item">
-        
-        	<ItemIcon></ItemIcon>
-        	<Hover></Hover>
-       
+        	<ItemIcon item={ item } />
+        	<Hover item={ item }></Hover>
       </div>
     );
   }

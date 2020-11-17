@@ -8,6 +8,12 @@ import PrincipalMini from "./components/PrincipalMini";
 import LeftBar from "./components/LeftBar";
 
 class AppMini extends Component {
+	
+  componentDidMount(){
+  	
+  	//require('./assets/css/themes/nowa.css'); //funciona genial :D
+  }
+
   render() {
     return (
       <div className="Todo">

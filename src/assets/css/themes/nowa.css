@@ -1,0 +1,17 @@
+.PrincipalMini{
+	background-color:#2a1c5f;
+}
+.Header{
+	background-color:#F2856D;
+	color: black;
+}
+.Switch .s-back, .AcordeonItem h4{
+	background-color:#79E6F2;
+}
+.Switch .s, .LeftBar{
+	background-color:#61378C;
+}
+
+.Config:hover, .Config:active, .Config.active, .config{
+	background-color: #e3765e;
+}

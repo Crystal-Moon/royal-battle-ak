@@ -2,12 +2,16 @@ import { Component } from 'react';
 
 class ItemIcon extends Component {
   render() {
-    return (
-      <div className="ItemIcon">
-        <img src="https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A40012.png" title="nombre item" alt="" className="icon blue" />
-      </div>
-    );
+  	const item = this.props.item || {};
+  	const { name='', icon='', qlty='white' } = item;
+    return <img src={ icon } title={ name } className={`ItemIcon ${qlty}`} /> ;
   }
 }
 
 export default ItemIcon;
+
+/*
+<div className={`ItemIcon ${borderItem}`}>
+        <img src={ imgItem } title={ nameItem } className='icon' />
+      </div>
+      */

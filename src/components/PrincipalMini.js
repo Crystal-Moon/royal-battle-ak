@@ -1,9 +1,8 @@
 import { Component } from 'react';
 import Config from "./Config";
 import Switch from "./Switch";
+import Acordeon from './Acordeon';
 import MapItems from './MapItems';
-import Menu from "./Menu";
-import Map from "./Map";
 
 class PrincipalMini extends Component {
   render() {
@@ -13,9 +12,12 @@ class PrincipalMini extends Component {
           <Switch></Switch>
           <Config></Config>
         </div>
-        <Menu />
+
+        <div className="Menu">
+          <Acordeon></Acordeon>
+        </div>
+        
         <MapItems/>
-        <Map />
       </div>
     );
   }
