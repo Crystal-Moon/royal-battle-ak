@@ -58,8 +58,9 @@ html,body{
     /* height: 1.6em; */
     overflow: hidden;
     max-height: 1.7em;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.25s ease-out;
     overflow: hidden;
+    cursor: pointer;
 }
 .AcordeonItem h4{
     font-size: 1em;
@@ -87,11 +88,11 @@ html,body{
 }
 */
 .AcordeonItem.show{
-	overflow: visible;
+	overflow: visible; /* necesario para los hover */
     /* height: 1.6em; */
     
     max-height: 20em;
-    transition: max-height 0.5s ease-in;
+    transition: max-height 0.25s ease-in;
 }
 .item-section{
 	/*font-size:1.3em;*/

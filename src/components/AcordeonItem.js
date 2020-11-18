@@ -8,6 +8,7 @@ class AcordeonItem extends Component {
    // this.state = {
    //   items: []
    // }
+    this.showSection = this.showSection.bind(this)
   }
 
   componentDidMount(){
@@ -18,14 +19,18 @@ class AcordeonItem extends Component {
     })*/
   }
 
-  render() {  /* <!-- la mitad de los item eztablecer clase hover-l y la segunda mitad con hover-r --> */
-                /* ya esta arreglado con los position */
+  showSection(e){
+    //console.log(e.target)
+    e.target.parentNode.classList.toggle('show')
+  }
+
+  render() {
   console.log('las props en  acorItem',this.props)
     let { blue=[], green=[], orange=[] } = this.props.items;
-   // const qlities= this.props.items? Object.keys(this.props.items) : []
+    let { titleSection='Menu-Section' } = this.props;
     return (
-      <li className="AcordeonItem">
-        <h4>Titulo de Seccion</h4>
+      <li className="AcordeonItem" onClick={ this.showSection }>
+        <h4>{ titleSection }</h4>
         <ul className="ul">
           
           <div className="item-section">
@@ -51,43 +56,6 @@ class AcordeonItem extends Component {
               <Item item={i} itemId={i.id} />
             </li>
             )}
-          </div> 
-
-
-          <div className="item-section">
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-          </div> 
-
-          <div className="item-section">
-           <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
-            <li>
-              <Item></Item>
-            </li>
           </div>
 
         </ul>

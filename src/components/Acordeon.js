@@ -12,12 +12,7 @@ class Acordeon extends Component {
 
   componentDidMount(){
   	db.getAll().then(items=>{
-      console.log('el items',items)
-	  let types=Object.keys(items)   	  
-
-
-
-
+      //console.log('el items',items)
       this.setState({ items })
     })
   	
@@ -27,9 +22,9 @@ class Acordeon extends Component {
   	if(this.state.items.eido){
     return (
       <ul className="Acordeon ul">
-        <AcordeonItem items={this.state.items.eido} tipo="eido" />
-        <AcordeonItem items={this.state.items.equipo} tipo="equipo" />
-        <AcordeonItem items={this.state.items.o} tipo="o" />
+        <AcordeonItem items={this.state.items.eido} titleSection="Eidolons" />
+        <AcordeonItem items={this.state.items.equipo} titleSection="Equipamiento" />
+        <AcordeonItem items={this.state.items.potas} titleSection="Consumibles" />
       </ul>
     )
 	}else{
