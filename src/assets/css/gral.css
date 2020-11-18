@@ -62,6 +62,45 @@ h2, h3, h4, .ttl{
 	flex-direction: row;
 	background-color: #443838;
 }
+/**********************************/
+.Config{
+	margin-left: 0.3em;
+    margin-right: 0.3em;
+    margin-top: 0.3em;
+       border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    position: relative;
+    width: 2.8em;
+}
+.Config:hover, .Config:active, .Config.active{
+	background-color: dimgrey;
+}
+.Config img{
+	position: relative;
+	height: 100%;
+    width: 100%;
+    display: block;
+}
+.ConfigIcon{
+    height: 70%;
+    width: auto;
+    margin: 0.5em;
+    margin-bottom: 0;
+}
+.config{
+	display: none;
+	position: absolute;
+    right: 0;
+    background-color: dimgrey;
+    padding: 0.4em;
+    padding-left: 0.9em;
+    width: max-content;
+    height: max-content;
+    z-index: 500;
+}
+.Config.active .config{
+	display:block;
+}
 /***********************************/
 .Switch, .Zoom{
 	display: flex;
@@ -100,7 +139,7 @@ h2, h3, h4, .ttl{
 	max-height: 2rem;
 	max-width: 4rem;
 	cursor: pointer;
-	background-color: grey;
+	background-color: #a0a0a0;
 	text-align: center;
 }
 .s{
@@ -144,6 +183,8 @@ h2, h3, h4, .ttl{
     line-height: 1em;
     height: 1em;
     font-size: 1em;
+    border: none;
+    border-radius: 1em;
 }
 .Zoom .s{margin: 0;cursor: pointer;}
 .Zoom button{

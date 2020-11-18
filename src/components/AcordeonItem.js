@@ -4,7 +4,7 @@ import db from '../util/db';
 
 class AcordeonItem extends Component {
   constructor(){
-   // super();
+    super();
    // this.state = {
    //   items: []
    // }

@@ -1,3 +1,27 @@
+.Principal{
+	background-color: #2a1c5f;
+}
+.Nav{
+	background-color: #3e3073
+}
+.Footer{
+	background-color: #79e6f2;
+	color:black;
+}
+/*.Li{
+	color: #f35e3e;
+}*/
+/*.Li:hover{
+	background-color:#754ba0;
+}*/
+.Li.selected{
+	background-color:#613796;
+}
+.ConfigIcon{
+	fill: #61378c;
+}
+/**********************************************************/
+
 .PrincipalMini{
 	background-color:#2a1c5f;
 }
@@ -5,13 +29,31 @@
 	background-color:#F2856D;
 	color: black;
 }
-.Switch .s-back, .AcordeonItem h4{
-	background-color:#79E6F2;
+.Switch.active .s-back, .Zoom .s-txt{
+	background-color: antiquewhite;
+	color: black;
+    
+    /*color: #f35e3e;*/
 }
-.Switch .s, .LeftBar{
+.s, .LeftBar{
 	background-color:#61378C;
+	color: #f35e3e;
+}
+.LeftBar:hover, .Li:hover, .Li.selected:hover{
+	background-color:#754ba0;
+}
+.AcordeonItem h4{
+	background-color: #3e3073;
+    border-bottom: 1px double #61378c;
+    color: #f35e3e;
+}
+.Config:hover, .Config:active, .Config.active, .config{
+	background-color: #79e6f2;
+}
+.AcordeonItem ul{
+	background-color: #2a1c5f;
 }
 
-.Config:hover, .Config:active, .Config.active, .config{
-	background-color: #e3765e;
+.LeftBar svg g{
+	fill: #ff6347;
 }

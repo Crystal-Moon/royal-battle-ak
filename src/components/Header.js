@@ -1,13 +1,15 @@
 import { Component } from 'react';
 import Logo from "./Logo";
 import Switch from "./Switch";
+import Config from './Config';
 
 class Header extends Component {
   render() {
     return (
-      <div id="header" className="Header">
+      <div className="Header">
         <Logo></Logo>
         <Switch></Switch>
+        <Config />
       </div>
     );
   }
