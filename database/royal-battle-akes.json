@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Gaia Teleportation Stone",
-		"type": "o",
+		"type": "potas",
 		"desc": "Right-click to teleport to any location on the map.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00064.png",
 		"qlty": "blue",
@@ -22,7 +22,7 @@
 	{
 		"id": 3,
 		"name": "Intermediate Healing Holy Water",
-		"type": "o",
+		"type": "potas",
 		"desc": "Use to recover 25,000 HP instantly.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I01988.png",
 		"qlty": "green",
@@ -32,7 +32,7 @@
 	{
 		"id": 4,
 		"name": "Basic Healing Holy Water",
-		"type": "o",
+		"type": "potas",
 		"desc": "Use to restore 6,000 HP instantly.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I01988.png",
 		"qlty": "blue",
@@ -52,7 +52,7 @@
 	{
 		"id": 6,
 		"name": "Intermediate Healing Salve",
-		"type": "o",
+		"type": "potas",
 		"desc": "Recovers 5,000 HP every second.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
 		"qlty": "green",
@@ -62,7 +62,7 @@
 	{
 		"id": 7,
 		"name": "Basic Healing Salve",
-		"type": "o",
+		"type": "potas",
 		"desc": "Recovers 2,000 HP every second.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
 		"qlty": "blue",
@@ -332,7 +332,7 @@
 	{
 		"id": 33,
 		"name": "Fairy Wing Pill",
-		"type": "o",
+		"type": "potas",
 		"desc": "Use to temporarily obtain Fairy Wings to descend into the air and enter Gliding mode. Gliding will be removed upon landing.Right-click to enter Gliding mode.",
 		"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00500.png",
 		"qlty": "blue",

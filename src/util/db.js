@@ -16,8 +16,16 @@ const DATA = Promise.resolve(d)
 export default {
 	getById: id => DATA.then(z=>{
 		let item = z.find(x=>x.id==id) || {}
-		item.made_by = z.filter(x=>item.by.includes(x.id)) // review
-		item.mat_for = z.filter(x=>item.for.includes(x.id))
+		let by = item.by.map(x=>x.id)
+		item.made_by = item.made_by.map(x=>{
+			let z= DATA.find(y=> y.id == x.id)
+			return ({ ...z, ...x })
+		})
+		//item.made_by = z.filter(x=>item.by.includes(x.id)) // review
+		//item.made_by.forEach(i=>i.cant=(item.by.find(y=>y.id)).x)
+		item.mat_for = item.mat_for.map(x=> DATA.find(z=> z.id == x))
+		console.log('item Por id',item)
+		return item;
 	}),
 
 	getAll: () => DATA.then(all=>{
