@@ -1,35 +1,49 @@
-import { Component } from 'react';
+import { Component, createRef } from 'react';
 import Item from "./Item";
 import db from '../util/db';
+import { Event } from '../util/Event';
 
 class AcordeonItem extends Component {
   constructor(){
     super();
-   // this.state = {
-   //   items: []
-   // }
-    this.showSection = this.showSection.bind(this)
+    this.showSection = this.showSection.bind(this);
+    this.hiddenSection = this.hiddenSection.bind(this);
+
+    this.state = { is_show: false }
+    this.acordeonItemRef = createRef();
+    
+    Event.on('showSection', this.hiddenSection);
   }
 
   componentDidMount(){
-    /* db.getByType().then(all=>{
-      console.log('el all',all)
-   
-      //this.setState({ items: all })
-    })*/
+
+  }
+
+  hiddenSection({ref}){
+    this.acordeonItemRef.current.classList.remove('show');
+    this.setState({ is_show: false })
+
+    if(ref==this.acordeonItemRef){
+      if(!this.state.is_show) this.acordeonItemRef.current.classList.add('show');
+      this.setState({ is_show: true })
+    }
+    
   }
 
   showSection(e){
-    //console.log(e.target)
-    e.target.parentNode.classList.toggle('show')
+    if(this.state.is_show){
+      this.acordeonItemRef.current.classList.remove('show');
+      this.setState({ is_show: false })
+    }else
+      Event.emit('showSection', { ref: this.acordeonItemRef })
   }
 
+
   render() {
-  console.log('las props en  acorItem',this.props)
     let { blue=[], green=[], orange=[] } = this.props.items;
     let { titleSection='Menu-Section' } = this.props;
     return (
-      <li className="AcordeonItem" onClick={ this.showSection }>
+      <li className="AcordeonItem" ref={ this.acordeonItemRef } onClick={ this.showSection } >
         <h4>{ titleSection }</h4>
         <ul className="ul">
           
@@ -39,8 +53,7 @@ class AcordeonItem extends Component {
               <Item item={i} itemId={i.id} />
             </li>
             )}
-          </div> 
-
+          </div>
 
           <div className="item-section">
             {green.map((i,k)=>
