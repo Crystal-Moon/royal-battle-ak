@@ -1,0 +1,62 @@
+.Principal{
+	background-color: #2E578C;
+}
+.Nav{
+	background-color: #4895D9;
+}
+.Footer{
+	background-color: #F2D1C9;
+	color:black;
+}
+/*.Li{
+	color: #f35e3e;
+}*/
+/*.Li:hover{
+	background-color:#754ba0;
+}*/
+.Li.selected{
+	background-color: #6da9de;
+}
+.ConfigIcon{
+	fill: #61378c;
+}
+/**********************************************************/
+
+.PrincipalMini{
+	background-color: #4895D9;
+}
+.Header{
+	background-color: #F2B988;
+	color: black;
+}
+.Switch.active .s-back, .Zoom .s-txt{
+	background-color: #4bdeff;
+	color: black;
+	/*color: #f35e3e;*/
+}
+.s{
+	background-color: #2E578C;
+	color: #F2B988;
+}
+.LeftBar{
+	background-color: #F2D1C9;
+	color: black;
+}
+.LeftBar:hover, .Li:hover, .Li.selected:hover{
+	background-color: #69b5f9;
+}
+.AcordeonItem h4{
+	background-color: #2E578C;
+	border-bottom: 1px double black;
+	color: white;
+}
+.Config:hover, .Config:active, .Config.active, .config{
+	background-color: #F2D1C9;
+}
+.AcordeonItem ul{
+	background-color: #4895D9;
+}
+
+.LeftBar svg g{
+	fill: #ff6347;
+}
