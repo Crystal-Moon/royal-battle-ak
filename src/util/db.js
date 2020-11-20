@@ -14,16 +14,17 @@ import d from './royal-battle-akes.json';
 const DATA = Promise.resolve(d)
 
 export default {
-	getById: id => DATA.then(z=>{
-		let item = z.find(x=>x.id==id) || {}
-		let by = item.by.map(x=>x.id)
+	getById: id => DATA.then(d=>{
+		let {...item} = d.find(x=>x.id==id); // necesario destructure porq find me lo cambia todo u.u
+		//let by = item.by.map(x=>x.id)
+		console.log('el item llegado de db', d.find(x=>x.id==id))
 		item.made_by = item.made_by.map(x=>{
-			let z= DATA.find(y=> y.id == x.id)
+			let z= d.find(y=> y.id == x.id)
 			return ({ ...z, ...x })
 		})
 		//item.made_by = z.filter(x=>item.by.includes(x.id)) // review
 		//item.made_by.forEach(i=>i.cant=(item.by.find(y=>y.id)).x)
-		item.mat_for = item.mat_for.map(x=> DATA.find(z=> z.id == x))
+		item.mat_for = item.mat_for.map(x=> d.find(z=> z.id == x) )
 		console.log('item Por id',item)
 		return item;
 	}),

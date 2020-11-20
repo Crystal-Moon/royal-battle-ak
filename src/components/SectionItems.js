@@ -1,7 +1,10 @@
 import { Component } from 'react';
 
 class SectionItems extends Component {
-  render() {
+
+/* aqi tendre un event.on para mostrar en el costado */
+  
+  render() { /* a los Item de aqui establecer el eventName en 'detail' para manejarlos diferentes eq en acordeonItems */
     return (
       <section className="Section">
         <h2 className="h2">seccion itens</h2>

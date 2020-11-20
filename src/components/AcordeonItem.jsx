@@ -7,19 +7,19 @@ class AcordeonItem extends Component {
   constructor(){
     super();
     this.showSection = this.showSection.bind(this);
-    this.hiddenSection = this.hiddenSection.bind(this);
+    this.hideSection = this.hideSection.bind(this);
 
     this.state = { is_show: false }
     this.acordeonItemRef = createRef();
     
-    Event.on('showSection', this.hiddenSection);
+    Event.on('showSection', this.hideSection);
   }
 
   componentDidMount(){
 
   }
 
-  hiddenSection({ref}){
+  hideSection({ref}){
     this.acordeonItemRef.current.classList.remove('show');
     this.setState({ is_show: false })
 
@@ -31,6 +31,7 @@ class AcordeonItem extends Component {
   }
 
   showSection(e){
+    e.stopPropagation();
     if(this.state.is_show){
       this.acordeonItemRef.current.classList.remove('show');
       this.setState({ is_show: false })
@@ -50,7 +51,7 @@ class AcordeonItem extends Component {
           <div className="item-section">
             {blue.map((i,k)=>
             <li key={k}>
-              <Item item={i} itemId={i.id} />
+              <Item item={i} eventName='desglose' />
             </li>
             )}
           </div>
@@ -58,7 +59,7 @@ class AcordeonItem extends Component {
           <div className="item-section">
             {green.map((i,k)=>
             <li key={k}>
-              <Item item={i} itemId={i.id} />
+              <Item item={i} eventName='desglose' />
             </li>
             )}
           </div> 
@@ -66,7 +67,7 @@ class AcordeonItem extends Component {
           <div className="item-section">
             {orange.map((i,k)=>
             <li key={k}>
-              <Item item={i} itemId={i.id} />
+              <Item item={i} eventName='desglose' />
             </li>
             )}
           </div>
