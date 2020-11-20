@@ -39,14 +39,14 @@ class MapItems extends Component {
   render() {
     if(this.state.itemSelected){
       const { made_by=[], mat_for=[] } = this.state.itemSelected;
-      console.log('el itemSelected', this.state.itemSelected)
-      console.log('lso BY', made_by, 'FOR', mat_for)
+      //console.log('el itemSelected', this.state.itemSelected)
+      //console.log('lso BY', made_by, 'FOR', mat_for)
 
       return (
         <div className="MapItems">
        
        	  <div className="svg-cointeiner">
-  		      <Svg by={ made_by } for={ mat_for } /> 
+  		      <Svg BY={ made_by } FOR={ mat_for } /> 
   		    </div>
 
           <div className="icon-conteiner">
