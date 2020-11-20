@@ -14,6 +14,7 @@ class MapItems extends Component {
 
     this.itemCentral = createRef();
     this.state = {
+      key: 0,
       itemSelected: null
     }
 
@@ -22,6 +23,13 @@ class MapItems extends Component {
 
   }
 
+  componentDidMount(){
+  /*  this.setState({ 
+      key: Math.random()
+    });*/  // dejarlo aca por ahora por las dudas
+
+   
+  }
 
   /* aqi tendre un event.on para mostrar el elejido y todo lo q conlleva, eso en el Item del centro */
 /* as u vez esta clase tiene un Event.on para el translate del icono, y es esta clase que dispara el emit */
@@ -32,13 +40,14 @@ class MapItems extends Component {
 
   getAndCharge({ id }){
 
-    console.log('el ad en getNcharge',id)
-    db.getById(id).then(itemSelected => this.setState({ itemSelected }))
+    //console.log('el ad en getNcharge',id)
+    db.getById(id).then(itemSelected => this.setState({ itemSelected, key: new Date().getTime() }))
   }
 
   render() {
     if(this.state.itemSelected){
       const { made_by=[], mat_for=[] } = this.state.itemSelected;
+      console.log('key denderizado mapItem',this.state)
       //console.log('el itemSelected', this.state.itemSelected)
       //console.log('lso BY', made_by, 'FOR', mat_for)
 
@@ -46,7 +55,7 @@ class MapItems extends Component {
         <div className="MapItems">
        
        	  <div className="svg-cointeiner">
-  		      <Svg BY={ made_by } FOR={ mat_for } /> 
+  		      <Svg BY={ made_by } FOR={ mat_for } key={this.state.key} /> 
   		    </div>
 
           <div className="icon-conteiner">

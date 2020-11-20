@@ -14,10 +14,10 @@ class Item extends Component {
   }
 
   handlerClick(e){
-    console.log('click en Item',e)
+    //console.log('click en Item',e)
     let eventName = this.itemRef.current.dataset.eventname;
     let id = this.itemRef.current.dataset.id;
-    console.log('el eventName', eventName, 'y el id', id)
+    //console.log('el eventName', eventName, 'y el id', id)
     Event.emit(eventName, { id })
     e.stopPropagation();
   }
