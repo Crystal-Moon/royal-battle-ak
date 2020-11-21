@@ -45,7 +45,7 @@ html,body{
 .PrincipalMini{
 	width:100%;
 	background-color: #333;
-	transition: all 0.9s ease;
+	transition: all 0.3s ease;
 	border-right: solid 5px black;
 	box-sizing: border-box;
 	max-width: 100%;
@@ -154,7 +154,7 @@ html,body{
 	top:0;
 	bottom: 0;margin:auto;
 }
-.Svg{transition: all 1s ease;}
+.Svg{transition: all 0.5s ease;}
 line{
 	stroke:  #333; /* color de fondo*/
 	fill: #333;
