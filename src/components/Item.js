@@ -1,3 +1,4 @@
+
 import { Component, createRef } from 'react';
 import { Event } from '../util/Event';
 
@@ -18,7 +19,7 @@ class Item extends Component {
     let eventName = this.itemRef.current.dataset.eventname;
     let id = this.itemRef.current.dataset.id;
     //console.log('el eventName', eventName, 'y el id', id)
-    Event.emit(eventName, { id })
+    Event.emit(eventName, { id, ref: this.itemRef })
     e.stopPropagation();
   }
 
@@ -35,31 +36,3 @@ class Item extends Component {
 }
 
 export default Item;
- /*
- el translate maneja  pixeles o valores del elemento llamado, para valores de padre usar js
- HTML:
-
-<div id="parent"> 
-    <div id="children"></div> 
-</div>​​​​​​​​​​​​​ 
-código CSS:
-
-#parent { 
-    width: 200px; 
-    height: 200px; 
-    background: #ff0; 
-} 
-#children { 
-    width: 10%; 
-    height: 10%; 
-    background: #f00; 
-} 
-código Javascript :
-
-parent = document.getElementById('parent'); 
-children = document.getElementById('children'); 
-
-parent_height = parent.clientHeight; 
-​children_translate = parent_height * 50/100; 
-children.style.webkitTransform = "translateY("+children_translate+"px)";​​​​​​​​​​​​​​​​​​​​​​​​​​ 
-*/

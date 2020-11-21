@@ -19,6 +19,7 @@ class MapItems extends Component {
     }
 
     Event.on('desglose',this.getAndCharge)
+    Event.on('moveToCentre',this.moveAndGet)
 
 
   }
@@ -34,13 +35,35 @@ class MapItems extends Component {
   /* aqi tendre un event.on para mostrar el elejido y todo lo q conlleva, eso en el Item del centro */
 /* as u vez esta clase tiene un Event.on para el translate del icono, y es esta clase que dispara el emit */
 
-  moveAndGet(){
+  moveAndGet({ id, ref }){
+    console.log('lo q llega de params', id, ref) //se saco target desde Item
+    let central = this.itemCentral.current.itemRef.current;
+    let item = ref;
+    let centerBound = central.getBoundingClientRect();
+    let itemBound = item.current.getBoundingClientRect()
+    //console.log('el item central', central, 'item tocado', item)
+    //console.log('obj bound de central', central.getBoundingClientRect())
+    //console.log('obj boun de tocado', item.current.getBoundingClientRect())
 
+    let x = centerBound.left - itemBound.left;
+    let y = centerBound.top - itemBound.top;
+    //console.log('el x y el y', x, y)
+    item.current.style.transform = `translate(${x}px, ${y}px)`
+    
+   // item.current.style.backgroundColor = 'red'
+  
+    //target.style.transform = `translate(${x}px, ${y}px)`
+
+    setTimeout(this.getAndCharge, 140, { id, ref })
   }
 
-  getAndCharge({ id }){
+  getAndCharge({ id, ref }){  //se saco target desde Item
 
-    //console.log('el ad en getNcharge',id)
+    
+    //if(target) target.style.transform = '' //perfect
+    if(ref) ref.current.style.transform = '' //perfect
+
+
     db.getById(id).then(itemSelected => this.setState({ itemSelected, key: new Date().getTime() }))
   }
 
@@ -61,7 +84,7 @@ class MapItems extends Component {
           <div className="icon-conteiner">
             <div className="icon-3">
               {
-                mat_for.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' onClick={ this.moveAndGet } /> )
+                mat_for.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' />)
               }
             </div>
             <div className="icon-3 central posible">
@@ -69,7 +92,7 @@ class MapItems extends Component {
             </div>
             <div className="icon-3">
               {
-                made_by.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' onClick={ this.moveAndGet } /> )
+                made_by.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' />)
               }
             </div> 
           </div>

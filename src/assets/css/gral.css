@@ -204,13 +204,14 @@ button span{display: block;margin:0;padding: 0;}
     position: relative;
     width: 1.2em;
     height: 1.2em;
+    cursor: pointer;
 }
 .Item:hover .Hover{
 	display:block;
 }
 .ItemIcon{
 	display:block;
-	border: 0.18rem solid white;
+	border: 0.2rem solid white;
 	border-radius: 10%;
 	width: 1.2em;
 	height: 1.2em;
@@ -230,6 +231,7 @@ button span{display: block;margin:0;padding: 0;}
 	font-size: 0.9em;
 	padding: 0.6em;
 	border-radius:0.5em;
+	color: white;
 }
 .Hover .ItemIcon{
 	width: inherit;

@@ -44,7 +44,7 @@ html,body{
 /**********************************************/
 .PrincipalMini{
 	width:100%;
-	background-color: grey;
+	background-color: #333;
 	transition: all 0.9s ease;
 	border-right: solid 5px black;
 	box-sizing: border-box;
@@ -53,7 +53,7 @@ html,body{
     padding-bottom:2%;
 }
 .AcordeonItem{
-	transition: all 0.3s ease;
+	transition: all 0.25s ease;
     /* height: 10em; */
     /* height: 1.6em; */
     overflow: hidden;
@@ -95,7 +95,7 @@ html,body{
     transition: max-height 0.25s ease-in;
 }
 .item-section{
-	/*font-size:1.3em;*/
+	font-size:1.1em;
 	position: relative;
 	display:flex;
 	flex-grow: 1;
@@ -105,6 +105,9 @@ html,body{
 	margin-bottom: 0.5em;
 	margin-top: 0.2em;
 	height: max-content;
+}
+.icon-3 .Item{
+	margin:0;
 }
 /*.item-section .ItemIcon, .item-section .ItemIcon{
 	width: 1.4em;
@@ -125,7 +128,7 @@ html,body{
 	height: max-content;
 	box-sizing: content-box;
 	background-color: #333;
-    padding-bottom: 1.4em;
+   /*padding-bottom: 1.4em;*/
 
    
    
@@ -139,7 +142,7 @@ html,body{
 .MapItems .hover-r{right: -1em;}
 *//*.svg-conteiner, .icon-conteiner{margin: 0.5em;margin-top: 0.8em;margin-bottom: 0.8em;}*/
 .ItemIcon{
-	transition: all 0.3s ease;
+	transition: all 0.15s ease;
 }
 
 /********************************************/
@@ -153,8 +156,8 @@ html,body{
 }
 .Svg{transition: all 1s ease;}
 line{
-	stroke: grey; /* color de fondo*/
-	fill:grey;
+	stroke:  #333; /* color de fondo*/
+	fill: #333;
 	stroke-width:2;
 }
 /*.icon-conteiner .ItemIcon{font-size:1.3em;}*/
@@ -164,21 +167,24 @@ line{
 	/*font-size:1.3em;*/
 }
 .icon-3{
+	font-size: 1.2em;
 	margin: 0;
 	width:100%;
 	display: flex;
 	justify-content: space-evenly;
 	position: relative;
+	z-index: 200;
 }
-.icon-3 .Item, .item-section .Item{position: unset;}
+.icon-3 .Item, .item-section .Item{position: unset;transition: all 0.15s ease;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{
 	left:0;right: 0;
 	margin-left: auto;
     margin-right: auto;
 }
 .icon-3.central{
-	margin-top: 1.3em;
-	margin-bottom: 1.3em;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	z-index: 10;
 }
 /*
 .icon-3.central.posible{
