@@ -7,16 +7,16 @@ import LineDown from './LineDown';
 class MapItems extends Component {
 
   render() {
-    const { BY=[], FOR=[] } = this.props;
+    const { made_by=[], mat_for=[] } = this.props;
     return (
      
-  		  <svg className="Svg" id='svg-map-items'>
+  		  <svg className="Svg">
          
           {
-            FOR.map((i,k)=> <LineUp key={k} item={i} x={100 / (FOR.length+1) * (k+1)} />)
+            mat_for.map((i,k)=> <LineUp key={k} item={i} x={100 / (mat_for.length+1) * (k+1)} />)
           }
           {
-            BY.map((i,k)=> <LineDown key={k} item={i} x={100 / (BY.length+1) * (k+1)} />)
+            made_by.map((i,k)=> <LineDown key={k} item={i} x={100 / (made_by.length+1) * (k+1)} />)
           }
 
         </svg>

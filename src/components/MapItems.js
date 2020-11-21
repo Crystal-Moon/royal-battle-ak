@@ -78,7 +78,7 @@ class MapItems extends Component {
         <div className="MapItems">
        
        	  <div className="svg-cointeiner">
-  		      <Svg BY={ made_by } FOR={ mat_for } key={this.state.key} /> 
+  		      <Svg made_by={ made_by } mat_for={ mat_for } key={this.state.key} /> 
   		    </div>
 
           <div className="icon-conteiner">
