@@ -26,7 +26,7 @@
     "desc": "Use to recover 25,000 HP instantly.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I01988.png",
     "qlty": "green",
-    "made_by": [{"id":2,"x":1},{"id":4,"x":3}],
+    "made_by": [2,4,4,4],
     "mat_for": []
   },
   {
@@ -56,7 +56,7 @@
     "desc": "Recovers 5,000 HP every second.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
     "qlty": "green",
-    "made_by": [{"id": 5,"x": 1},{"id": 7,"x": 3}],
+    "made_by": [5,7,7,7],
     "mat_for": [53]
   },
   {
@@ -66,8 +66,8 @@
     "desc": "Recovers 2,000 HP every second.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
     "qlty": "blue",
-    "made_by": [6],
-    "mat_for": []
+    "made_by": [],
+    "mat_for": [6]
   },
   {
     "id": 8,
@@ -416,7 +416,7 @@
     "desc": "Tasa CRIT +15% y Daño CRIT +10%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A40046.png",
     "qlty": "green",
-    "made_by": [{"id": 23,"x": 1},{"id": 34,"x": 1},{"id": 35,"x": 1}],
+    "made_by": [23,34,35],
     "mat_for": [57]
   },
   {
@@ -426,7 +426,7 @@
     "desc": "Tasa CRIT +8% y VEL Mov. +33%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A50078.png",
     "qlty": "green",
-    "made_by": [{"id": 22,"x": 1},{"id": 34,"x": 1},{"id": 37,"x": 1}],
+    "made_by": [22,34,37],
     "mat_for": []
   },
   {
@@ -436,7 +436,7 @@
     "desc": "Daño +12%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/W11002.png",
     "qlty": "green",
-    "made_by": [{"id": 21,"x": 1},{"id": 38,"x": 2}],
+    "made_by": [21,38,38],
     "mat_for": [55]
   },
   {
@@ -446,7 +446,7 @@
     "desc": "Daño +7% y VEL Mov. +31%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A50057.png",
     "qlty": "green",
-    "made_by": [{"id": 20,"x": 1},{"id": 38,"x": 1},{"id": 37,"x": 1}],
+    "made_by": [20,38,37],
     "mat_for": []
   },
   {
@@ -456,7 +456,7 @@
     "desc": "Daño recibido -8% y VEL Mov. +20%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A50034.png",
     "qlty": "green",
-    "made_by": [{"id": 19,"x": 1},{"id": 36,"x": 1},{"id": 39,"x": 1}],
+    "made_by": [19,36,39],
     "mat_for": []
   },
   {
@@ -466,7 +466,7 @@
     "desc": "Enfriamiento de skill -10% y VEL Mov. 31%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A50043.png",
     "qlty": "green",
-    "made_by": [{"id": 18,"x": 1},{"id": 36,"x": 2},{"id": 40,"x": 1}],
+    "made_by": [18,36,36,40],
     "mat_for": []
   },
   {
@@ -476,7 +476,7 @@
     "desc": "Tasa CRIT +13% y Enfriamiento de skill -8%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00709.png",
     "qlty": "green",
-    "made_by": [{"id": 17,"x": 1},{"id": 34,"x": 2},{"id": 40,"x": 1}],
+    "made_by": [17,34,34,40],
     "mat_for": []
   },
   {
@@ -486,7 +486,7 @@
     "desc": "Daño +8% y Enfriamiento de skill -15%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00805.png",
     "qlty": "green",
-    "made_by": [{"id": 16,"x": 1},{"id": 38,"x": 1},{"id": 40,"x": 2}],
+    "made_by": [16,38,40,40],
     "mat_for": [56]
   },
   {
@@ -496,7 +496,7 @@
     "desc": "Daño recibido -8% y Enfriamiento de skill -15%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A00012.png",
     "qlty": "green",
-    "made_by": [{"id": 15,"x": 1},{"id": 39,"x": 1},{"id": 40,"x": 2}],
+    "made_by": [15,39,40,40],
     "mat_for": [53]
   },
   {
@@ -516,7 +516,7 @@
     "desc": "CRIT +12% y Daño +5%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A70022.png",
     "qlty": "green",
-    "made_by": [{"id": 14,"x": 1},{"id": 35,"x": 1},{"id": 38,"x": 1}],
+    "made_by": [14,35,38],
     "mat_for": []
   },
   {
@@ -526,7 +526,7 @@
     "desc": "Daño recibido -20% y refleja el 20% del daño recibido",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A30092.png",
     "qlty": "green",
-    "made_by": [{"id": 13,"x": 1},{"id": 39,"x": 2}],
+    "made_by": [13,39,39],
     "mat_for": [54]
   },
   {
@@ -536,7 +536,7 @@
     "desc": "Daño recibido -18%, Enfriamiento de skill -15% y 20% posibilidad de generar un escudo que absorve 15,000 del daño",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00797.png",
     "qlty": "orange",
-    "made_by": [{"id": 8,"x": 1},{"id": 49,"x": 1},{"id": 39,"x": 1},{"id": 6,"x": 1}],
+    "made_by": [8,49,39,6],
     "mat_for": []
   },
   {
@@ -546,7 +546,7 @@
     "desc": "Daño recibido -25%, Enfriamiento de skill -10% y reduce 20% la VEL Mov. de los enemigo dentro de un radio de 20 metros.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/D22043.png",
     "qlty": "orange",
-    "made_by": [{"id": 9,"x": 1},{"id": 36,"x": 1},{"id": 40,"x": 1},{"id": 52,"x": 1}],
+    "made_by": [9,36,40,52],
     "mat_for": []
   },
   {
@@ -556,7 +556,7 @@
     "desc": "Daño +30% y convierte el 20% del daño en HP.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/W71801.png",
     "qlty": "orange",
-    "made_by": [{"id": 10,"x": 1},{"id": 43,"x": 1},{"id": 50,"x": 1}],
+    "made_by": [10,43,50],
     "mat_for": []
   },
   {
@@ -566,7 +566,7 @@
     "desc": "Daño +15%, Enfriamiento de skill -10% y 20% de posibilidad de incrementar tu siguiente ataque un 90% por 15 segundos. El efecto desaparece despues de atacar.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/WD1201.png",
     "qlty": "orange",
-    "made_by": [{"id": 11,"x": 1},{"id": 48,"x": 1},{"id": 40,"x": 2}],
+    "made_by": [11,48,40,40],
     "mat_for": []
   },
   {
@@ -576,7 +576,7 @@
     "desc": "CRIT +25%, Daño +5% y Daño CRIT +50%",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/A40070.png",
     "qlty": "orange",
-    "made_by": [{"id": 12,"x": 1},{"id": 35,"x": 1},{"id": 38,"x": 1},{"id": 41,"x": 1}],
+    "made_by": [12,35,38,41],
     "mat_for": []
   },
   {
@@ -586,7 +586,7 @@
     "desc": "Te transformarás en Quetzalcoatl",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00021.png",
     "qlty": "green",
-    "made_by": [{"id": 23,"x": 1},{"id": 32,"x": 2}],
+    "made_by": [23,32,32],
     "mat_for": [71,64]
   },
   {
@@ -596,7 +596,7 @@
     "desc": "Te transformarás en Apolo",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00006.png",
     "qlty": "green",
-    "made_by": [{"id": 24,"x": 1},{"id": 31,"x": 2}],
+    "made_by": [24,31,31],
     "mat_for": [74,72]
   },
   {
@@ -606,7 +606,7 @@
     "desc": "Te transformarás en Kitsune",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00024.png",
     "qlty": "green",
-    "made_by": [{"id": 25,"x": 1},{"id": 31,"x": 1},{"id": 32,"x": 1}],
+    "made_by": [25,31,32],
     "mat_for": [71,72]
   },
   {
@@ -616,7 +616,7 @@
     "desc": "Te transformarás en Hiperion",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00005.png",
     "qlty": "green",
-    "made_by": [{"id": 26,"x": 1},{"id": 29,"x": 2}],
+    "made_by": [26,29,29],
     "mat_for": [75]
   },
   {
@@ -626,7 +626,7 @@
     "desc": "Te transformarás en Gabrielle",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00013.png",
     "qlty": "green",
-    "made_by": [{"id": 27,"x": 1},{"id": 30,"x": 2}],
+    "made_by": [27,30,30],
     "mat_for": [74,73]
   },
   {
@@ -636,7 +636,7 @@
     "desc": "Te transformarás en Valkiria",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00011.png",
     "qlty": "green",
-    "made_by": [{"id": 28,"x": 1},{"id": 29,"x": 1},{"id": 30,"x": 1}],
+    "made_by": [28,29,30],
     "mat_for": [75]
   },
   {
@@ -646,7 +646,7 @@
     "desc": "Te transformarás en Suzaku",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00031.png",
     "qlty": "orange",
-    "made_by": [{"id": 66,"x": 1},{"id": 58,"x": 2}],
+    "made_by": [66,58,58],
     "mat_for": []
   },
   {
@@ -716,7 +716,7 @@
     "desc": "Te transformarás en Artemisa",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00029.png",
     "qlty": "orange",
-    "made_by": [{"id": 67,"x": 1},{"id": 58,"x": 1},{"id": 60,"x": 1}],
+    "made_by": [67,58,60],
     "mat_for": []
   },
   {
@@ -726,7 +726,7 @@
     "desc": "Te transformarás en Yukime",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00032.png",
     "qlty": "orange",
-    "made_by": [{"id": 68,"x": 1},{"id": 60,"x": 1},{"id": 59,"x": 1}],
+    "made_by": [68,60,59],
     "mat_for": []
   },
   {
@@ -736,7 +736,7 @@
     "desc": "Te transformarás en Lilit",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00030.png",
     "qlty": "orange",
-    "made_by": [{"id": 69,"x": 1},{"id": 62,"x": 2}],
+    "made_by": [69,62,62],
     "mat_for": []
   },
   {
@@ -746,7 +746,7 @@
     "desc": "Te transformarás en Bahamut",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00036.png",
     "qlty": "orange",
-    "made_by": [{"id": 70,"x": 2},{"id": 62,"x": 2},{"id": 59,"x": 2}],
+    "made_by": [70,62,62,59,59],
     "mat_for": []
   },
   {
@@ -756,17 +756,7 @@
     "desc": "Te transformarás en Balder",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/P00037.png",
     "qlty": "orange",
-    "made_by": [{"id": 65,"x": 1},{"id": 63,"x": 1},{"id": 61,"x": 1}],
-    "mat_for": []
-  },
-  {
-    "id": 0,
-    "name": "",
-    "type": "",
-    "desc": "",
-    "icon": "",
-    "qlty": "",
-    "made_by": [],
+    "made_by": [65,63,61],
     "mat_for": []
   }
 ]
