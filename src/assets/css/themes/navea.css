@@ -53,7 +53,7 @@
 	border-bottom: 1px double black;
 	color: black;
 }
-.Config:hover, .Config:active, .Config.active, .config{
+.Config:hover, .Config:active, .Config.show, .config{
 	background-color: #8AA686;
 }
 .AcordeonItem ul{
@@ -61,5 +61,5 @@
 }
 
 .LeftBar svg g{
-	fill: #ff6347;
+	fill: #d8f2f0;
 }

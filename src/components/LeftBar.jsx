@@ -1,9 +1,8 @@
-import { Component } from 'react';
+//import { Component } from 'react';
 
-import leftArrow from '../assets/imgs/left-arrow.svg'
+//import leftArrow from '../assets/imgs/left-arrow.svg'
 
-class LeftBar extends Component {
-  render() {
+function LeftBar(){
     return (
       <div className="LeftBar">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +18,6 @@ class LeftBar extends Component {
         </svg>
       </div>
     );
-  }
 }
 
 export default LeftBar;

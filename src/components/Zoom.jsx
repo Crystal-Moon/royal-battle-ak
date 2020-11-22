@@ -34,7 +34,7 @@ class Zoom extends Component{
           <span className="s" onClick={ this.changeZoom } data-zoom={-1} >-</span>
         
 		  <div className="s-txt">
-            <span>{ this.state.zoom }</span>
+            <span>{ this.state.zoom }%</span>
           </div>
         
           <span className="s" onClick={ this.changeZoom } data-zoom={1} >+</span>

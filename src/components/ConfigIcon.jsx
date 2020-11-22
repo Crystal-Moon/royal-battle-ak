@@ -1,9 +1,8 @@
-import { Component } from 'react';
+//import { Component } from 'react';
 
-import configImg from '../assets/imgs/config.svg';
+//import configImg from '../assets/imgs/config.svg';
 
-class ConfigIcon extends Component {
-  render() {
+function ConfigIcon(){
     return (  
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" className="ConfigIcon"
           width="223.000000pt" height="223.000000pt" viewBox="0 0 223.000000 223.000000"
@@ -38,8 +37,7 @@ class ConfigIcon extends Component {
                 79 90 182 118 310 84z"/>
         </g>
       </svg>
-    );
-  }
+  );
 }
 
 export default ConfigIcon;

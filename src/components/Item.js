@@ -16,18 +16,18 @@ class Item extends Component {
 
   handlerClick(e){
     //console.log('click en Item',e)
-    let eventName = this.itemRef.current.dataset.eventname;
+    let eventname = this.itemRef.current.dataset.eventname;
     let id = this.itemRef.current.dataset.id;
-    //console.log('el eventName', eventName, 'y el id', id)
-    Event.emit(eventName, { id, ref: this.itemRef })
+    //console.log('el eventname', eventname, 'y el id', id)
+    Event.emit(eventname, { id, ref: this.itemRef })
     e.stopPropagation();
   }
 
   render() {
    // console.log(this.props)
-    const { item={}, eventName } = this.props;
+    const { item={}, eventname } = this.props;
     return (
-      <div className="Item" onClick={ this.handlerClick } data-eventName={ eventName } data-id={ item.id } ref={ this.itemRef } >
+      <div className="Item" onClick={ this.handlerClick } data-eventname={ eventname } data-id={ item.id } ref={ this.itemRef } >
         	<ItemIcon item={ item } />
         	<Hover item={ item }></Hover>
       </div>

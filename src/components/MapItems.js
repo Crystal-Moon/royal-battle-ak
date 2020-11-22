@@ -84,7 +84,7 @@ class MapItems extends Component {
           <div className="icon-conteiner">
             <div className="icon-3">
               {
-                mat_for.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' />)
+                mat_for.map((i,k) => <Item key={k} item={i} eventname='moveToCentre' />)
               }
             </div>
             <div className="icon-3 central posible">
@@ -92,7 +92,7 @@ class MapItems extends Component {
             </div>
             <div className="icon-3">
               {
-                made_by.map((i,k) => <Item key={k} item={i} eventName='moveToCentre' />)
+                made_by.map((i,k) => <Item key={k} item={i} eventname='moveToCentre' />)
               }
             </div> 
           </div>
