@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className="Header">
         <Logo></Logo>
-        <Switch></Switch>
+        <Switch switchInGame={true} ></Switch>
         <Config />
       </div>
     );

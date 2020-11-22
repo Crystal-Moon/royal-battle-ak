@@ -44,14 +44,14 @@ class AcordeonItem extends Component {
     let { blue=[], green=[], orange=[] } = this.props.items;
     let { titleSection='Menu-Section' } = this.props;
     return (
-      <li className="AcordeonItem" ref={ this.acordeonItemRef } onClick={ this.showSection } >
-        <h4>{ titleSection }</h4>
+      <li className="AcordeonItem" ref={ this.acordeonItemRef }  >
+        <h4 onClick={ this.showSection } >{ titleSection }</h4>
         <ul className="ul">
           
           <div className="item-section">
             {blue.map((i,k)=>
             <li key={k}>
-              <Item item={i} eventName='desglose' />
+              <Item item={i} eventname='desglose' />
             </li>
             )}
           </div>
@@ -59,7 +59,7 @@ class AcordeonItem extends Component {
           <div className="item-section">
             {green.map((i,k)=>
             <li key={k}>
-              <Item item={i} eventName='desglose' />
+              <Item item={i} eventname='desglose' />
             </li>
             )}
           </div> 
@@ -67,7 +67,7 @@ class AcordeonItem extends Component {
           <div className="item-section">
             {orange.map((i,k)=>
             <li key={k}>
-              <Item item={i} eventName='desglose' />
+              <Item item={i} eventname='desglose' />
             </li>
             )}
           </div>

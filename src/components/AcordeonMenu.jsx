@@ -21,7 +21,7 @@ class Acordeon extends Component {
   render() {
   	if(this.state.items.eido){
     return (
-      <ul className="Acordeon ul">
+      <ul>
         <AcordeonItem items={this.state.items.eido} titleSection="Eidolons" />
         <AcordeonItem items={this.state.items.equipo} titleSection="Equipamiento" />
         <AcordeonItem items={this.state.items.potas} titleSection="Consumibles" />
@@ -29,10 +29,15 @@ class Acordeon extends Component {
     )
 	}else{
 		return(
-			<ul className="Acordeon ul"></ul>
+			<ul></ul>
 		)
 	};
   }
 }
 
 export default Acordeon;
+ 
+ /* 
+ <ul className="Acordeon ul"></ul>
+
+ */
