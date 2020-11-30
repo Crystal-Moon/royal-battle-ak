@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 //import AppMini from './AppMini'; // no importar en App
+//import 'react-app-polyfill/ie11';
+//import 'react-app-polyfill/stable';
 
 ReactDOM.render(
   <App />,
