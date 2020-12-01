@@ -207,20 +207,3 @@ line{
 .hidden-v{
 	height: 1%;
 }
-
-.white{
-	color:white;
-	border-color:white;
-}
-.blue{
-	color: blue;
-	border-color:blue;
-}
-.green{
-	color:green;
-	border-color:green;
-}
-.orange{
-	color:orange;
-	border-color:orange;
-}

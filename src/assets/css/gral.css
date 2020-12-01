@@ -275,3 +275,20 @@ button span{display: block;margin:0;padding: 0;}
 	margin-top:0.3em;
 	margin-bottom:0.3em;
 }
+
+.white{
+	color:white;
+	border-color:white;
+}
+.blue{
+	color: blue;
+	border-color:blue;
+}
+.green{
+	color:green;
+	border-color:green;
+}
+.orange{
+	color:orange;
+	border-color:orange;
+}

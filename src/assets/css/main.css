@@ -1,0 +1,58 @@
+
+/*
+.Item .ItemIcon{
+	width:1em;
+	height: 1em;
+}
+*/
+.Reward .Item .Hover{display: none;}
+.Item, .ItemIcon{
+	margin:auto;
+	/* margin-left: 1em; */
+}
+table{border-radius:0.3rem;padding: 0.4em;width: 90%;margin: auto;}
+table.main{
+/*	width: 90%;
+	margin: auto;*/
+	background-color: rgba(0,0,0,0.6);
+	margin-bottom: 1em;
+}
+table.sub{width: 100%;}
+table.sub td:last-child img{margin-left: 1.7em;}
+table.sub td:last-child p{margin-left: 0.5em;}
+tbody .ItemIcon{
+	font-size: 1.5em;
+	/* margin-left: 1em; */
+	display: inline;
+}
+table p,tr, td{
+	margin:0;
+	padding:0;
+	text-align: left;
+}
+tr{height: 3.1em;}
+td{
+	padding: 0.3em;
+	vertical-align: top;
+}
+tfoot td,th{
+	padding: 0.2em;
+}
+tfoot{
+	font-size: 0.7em;
+}
+.w50{
+	width: 50%;
+}
+
+img.npc{
+	width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.detail-item .Hover{display: block;position: relative;margin: auto;}
+/*
+git fetch <remote> <branchremoto>:<branchlocal> 
+git checkout <branchlocal>
+*/
