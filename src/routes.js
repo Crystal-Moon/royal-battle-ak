@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // Components
 import App from './App';
-import InGame from './AppMini';
+//import InGame from './AppMini';
 import Intro from './components/SectionIntroduccion';
 import Items from './components/SectionItems';
 import PVP from './components/SectionPVP';

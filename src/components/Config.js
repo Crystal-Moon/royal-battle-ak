@@ -31,7 +31,7 @@ class Config extends Component {
         <div onClick={ this.showConfig } style={{height:'2.5em',margin:'0'}} >
           <ConfigIcon />
         </div>
-        <div className="config" >
+        <div className="config-in" >
           <Switch userProp={ somePropUser } active={ somePropUser.active } />
           <Switch />
           <Switch />

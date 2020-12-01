@@ -1,14 +1,14 @@
 html,body{
 	background-color: rgba(0,0,0,0);
 }
-.Todo{
+.TodoMini{
 	display: flex;
 	flex-direction: row-reverse;
 	height:max-content;
 
 	/* float: right; */
 }
-
+.TodoMini .Logo{display: none;}
 /**********************************/
 .LeftBar{
 	border-top-left-radius: 1em;

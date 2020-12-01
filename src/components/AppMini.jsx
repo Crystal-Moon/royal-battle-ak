@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Event } from './util/Event';
+import { Event } from '../util/Event';
 
 //import logo from './logo.svg';
-import './assets/css/gral.css';
-import './assets/css/royal-mini.css'; // no llamar para app comun
+import '../assets/css/gral.css';
+import '../assets/css/royal-mini.css'; // no llamar para app comun
 
 // Components
-import PrincipalMini from "./components/PrincipalMini";
-import LeftBar from "./components/LeftBar";
+import PrincipalMini from "./PrincipalMini";
+import LeftBar from "./LeftBar";
 
 class AppMini extends Component {
 	constructor(){
@@ -34,10 +34,12 @@ class AppMini extends Component {
 
   render() {
     return (
-      <div className="Todo" style={ this.state.style } >
+     
+      <div className="Todo TodoMini" style={ this.state.style } >
         <PrincipalMini></PrincipalMini>
         <LeftBar></LeftBar>
       </div>
+    
     );
   }
 }

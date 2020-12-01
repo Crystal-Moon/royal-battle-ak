@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className="Header">
         <Logo></Logo>
-        <Switch switchInGame={true} ></Switch>
+        <Switch switchInGame={true} active={this.props.fromModal}></Switch>
         <Config />
       </div>
     );
