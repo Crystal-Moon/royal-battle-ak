@@ -4,7 +4,7 @@ class SectionPVP extends Component {
   render() {
     return (
       <section className="Section">
-        <h2 className="h2">SOme tittle</h2>
+        <h2 className="h2">Secoin pvp</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a
           accumsan risus. Donec sodales ex ut est faucibus vestibulum. Morbi sit

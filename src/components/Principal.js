@@ -7,8 +7,21 @@ import SectionSobreMi from "./SectionSobreMi";
 
 class Principal extends Component {
   render() {
+    const { body } = this.props;
+    console.log('el body',body)
+    
     return (
       <article className="Principal">
+        {body}
+      </article>
+    );
+  }
+}
+
+export default Principal;
+
+/*
+<article className="Principal">
         <SectionIntroduccion></SectionIntroduccion>
         <SectionPVP></SectionPVP>
         <SectionItems></SectionItems>
@@ -16,8 +29,4 @@ class Principal extends Component {
         <SectionSobreMi></SectionSobreMi>
         {}
       </article>
-    );
-  }
-}
-
-export default Principal;
+      */

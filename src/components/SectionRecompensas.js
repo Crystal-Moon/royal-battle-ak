@@ -3,7 +3,7 @@ import { Component } from 'react';
 class SectionRecompensas extends Component {
   render() {
     return (
-      <section className="Section">
+      <section className="Section Rewards">
         <h2 className="h2">Recompensas</h2>
         <table>
           <caption>table  title='' and/or explanatory text</caption>

@@ -37,11 +37,14 @@ class App extends Component {
   }
   
   render() {
+    const { children } = this.props;
+    //console.log('los children', children)
+    
     return (
       <div className="Todo" style={ this.state.style } >
-        <Header></Header>
-        <Main></Main>
-        <Footer></Footer>
+        <Header />
+        <Main body={children} />
+        <Footer />
       </div>
     );
   }

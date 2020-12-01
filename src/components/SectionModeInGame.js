@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
-class SectionSobreMi extends Component {
+class SectionModeInGame extends Component {
   render() {
     return (
       <section className="Section">
-        <h2 className="h2">Seccion sobremi</h2>
+        <h2 className="h2">SOme tutorial modo ingame</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a
           accumsan risus. Donec sodales ex ut est faucibus vestibulum. Morbi sit
@@ -35,4 +35,4 @@ class SectionSobreMi extends Component {
   }
 }
 
-export default SectionSobreMi;
+export default SectionModeInGame;

@@ -4,10 +4,12 @@ import Principal from "./Principal";
 
 class Main extends Component {
   render() {
+  	const { body } = this.props;
+
     return (
       <div className="Main">
-        <Nav></Nav>
-        <Principal></Principal>
+        <Nav />
+        <Principal body={body} />
       </div>
     );
   }
