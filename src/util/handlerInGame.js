@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
 import {Event} from './Event';
 import InGame from '../components/InGame';
-const rootMini=document.getElementById('root-mini');
+const ROOT=document.getElementById('root-mini');
 //let win={close:()=>{}}
-//console.log('el root mini', rootMini)
+//console.log('el root mini', ROOT)
 
 export default {
 	root: document.getElementById('root-mini'),
@@ -13,9 +13,10 @@ export default {
   	//	console.log('active en handler',active,switche)
  	 	if(active){
 		
-    	//rootMini.innerHTML=''
+    	//ROOT.innerHTML=''
     	let div=document.createElement('div')
     	window.ven = ReactDOM.render(<InGame />, div);
+    	window.ven.myWindow.current.window.focus();
     	window.ven.myWindow.current.window.addEventListener("beforeunload", (event)=>{
     //		console.log('dentro del onbefore')
     		window.postMessage({ miniClosed: true }, window.ven.myWindow.current.window)
@@ -23,12 +24,12 @@ export default {
     	 Event.emit('inGame',{ active:false, switche}) });
     	window.postMessage({ miniOpen: true })
     	//console.log('la ventana', window.ven)
-    	rootMini.appendChild(div)
+    	ROOT.appendChild(div)
 	}else{
 		//console.log('el else de ingame js', window.ven.myWindow)
 		window.ven.myWindow.current.window.close()
 		switche.setState({ active:false })
-		rootMini.innerHTML=''
+		ROOT.innerHTML=''
 		//win.close()
 	}
 

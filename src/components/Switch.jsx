@@ -18,15 +18,16 @@ class Switch extends Component {
     e.stopPropagation();
     let active = !this.state.active;
     this.setState({ active });
-    if(this.props.userProp.key){
+    if(this.props.userProp){
+      if(this.props.userProp.key){
  //   console.log('se detecto prop de user',this.props)
-      Event.emit('configUser',{ ...this.props.userProp, active })
+        Event.emit('configUser',{ ...this.props.userProp, active })
       }
       else{
    //     console.log('én el else de switch', this.props.userProp)
         Event.emit('inGame', { active, switche:this });
       }
-    
+    }
   }
 
   render() {
