@@ -8,7 +8,7 @@ import SectionSobreMi from "./SectionSobreMi";
 class Principal extends Component {
   render() {
     const { body } = this.props;
-    console.log('el body',body)
+   // console.log('el body',body)
     
     return (
       <article className="Principal">

@@ -10,7 +10,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
-import {InGame} from './util/InGame'; // el handler de util
+import {InGame} from './util/handlerInGame'; // el handler de util
 //import {InGame} from './components/InGame'; // el componente // ni existe , ni se crea aqui :(
 
 class App extends Component {

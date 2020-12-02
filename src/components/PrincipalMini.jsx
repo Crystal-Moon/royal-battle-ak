@@ -7,7 +7,7 @@ class PrincipalMini extends Component {
   render() {
     return (
       <div className="Principal PrincipalMini">
-        <Header fromModal={true} />
+        <Header />
         <AcordeonMenu />
         <MapItems />
       </div>
