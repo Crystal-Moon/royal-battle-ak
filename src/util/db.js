@@ -10,8 +10,10 @@ const DATA = (() => new Promise(done=>{
 }))();
 */
 
-import d from './royal-battle-akes.json';
-const DATA = Promise.resolve(d)
+import items from './royal-battle-akes.json';
+import themes from './royal-battle-themes.json';
+const DATA = Promise.resolve(items)
+const THEMES = Promise.resolve(themes)
 
 export default {
 	getById: id => DATA.then(d=>{
@@ -45,6 +47,8 @@ export default {
 	getByQlty: (data,qlty) => data.then(z=> z.filter(x=>x.qlty==qlty)),
 
 	getByType: (data,type) => data.then(z=> z.filter(x=>x.type==type)),
+
+	getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
 
 
 

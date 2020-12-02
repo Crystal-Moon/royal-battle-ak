@@ -199,6 +199,11 @@ h2, h3, h4, .ttl{
 button{position: relative;margin:0;padding: 0;color:white;}
 button span{display: block;margin:0;padding: 0;}
 /**************************************/
+.Theme label{ display:block;margin-bottom: 0.3em; }
+.Theme select{border-radius: 2em;}
+
+
+/************************************************/
 .Item{
     width: max-content;
     height: max-content;
