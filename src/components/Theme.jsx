@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import db from '../util/db';
 
 class Theme extends Component{
@@ -23,10 +24,13 @@ class Theme extends Component{
 	
   }
 
-  render(){
-    require(`../assets/css/themes/${this.state.select}.css`); 
+  render(){ 
     return (
       <div className='Theme'>
+      	<Helmet>
+      		<link rel="stylesheet" type="text/css" href={`/assets/css/themes/${this.state.select}.css`} />
+      	</Helmet>
+      	
       	<label htmlFor="themes">Tema</label>
     	<select name='themes' className='Theme' onChange={this.handlerTheme}>
     	  {
