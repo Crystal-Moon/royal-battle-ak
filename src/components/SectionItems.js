@@ -8,19 +8,54 @@ class SectionItems extends Component {
     return (
       <section className="Section">
         <h2 className="h2">seccion itens</h2>
-        <table>
-          <caption>table  title='' and/or explanatory text</caption>
+        
+
+<table class="main">
+ 
+  <tr>
+    <td class="w50">
+        <table class="sub">
           <thead>
             <tr>
-              <th>header</th>
+              <th colspan="2"><p>Recompensas disponibles</p></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>data</td>
+              <td>
+               <Item/>
+              </td>
+              <td>
+                <p class="blue">Nombre del item</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <Item/>
+              </td>
+              <td>
+                <p class="green">Nombre del item</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <Item/>
+              </td>
+              <td>
+                <p class="orange">Nombre del item</p>
+              </td>
             </tr>
           </tbody>
         </table>
+    </td>
+
+    <td class="w50 detail-item">
+        <Hover/>
+    </td>
+  </tr>
+</table>
       </section>
     );
   }
