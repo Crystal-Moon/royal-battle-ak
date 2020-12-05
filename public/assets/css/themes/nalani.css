@@ -52,6 +52,7 @@
 }
 .Config:hover, .Config:active, .Config.show, .config{
 	background-color: #F2D1C9;
+	color: black;
 }
 .AcordeonItem ul{
 	background-color: #4895D9;
@@ -59,4 +60,8 @@
 
 .LeftBar svg g{
 	fill: #ff6347;
+}
+.Theme select, .Theme select:focus{
+	border-color:#2e578c;
+	outline: 0;
 }

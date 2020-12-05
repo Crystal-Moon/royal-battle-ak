@@ -19,9 +19,8 @@ const Rutas = () =>
       <Route exact path="/pvp" component={PVP} />
       <Route exact path="/items" component={Items} />
       <Route exact path="/rewards" component={Rewards} />
-      <Route exact path="/mode_in_game" component={SobreMi} />
+      <Route exact path="/mode_in_game" component={ModeInGame} />
       <Route exact path="/abaut" component={SobreMi} />
-     
       <Route exact path="/" component={Intro} />
       <Route component={Page404} />
     </Switch>

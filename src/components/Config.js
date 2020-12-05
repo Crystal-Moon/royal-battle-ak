@@ -3,6 +3,7 @@ import { Component, createRef } from 'react';
 import ConfigIcon from './ConfigIcon';
 import Switch from './Switch';
 import Zoom from './Zoom';
+import Theme from './Theme';
 
 class Config extends Component {
   constructor(){
@@ -35,6 +36,7 @@ class Config extends Component {
           <Switch userProp={ somePropUser } active={ somePropUser.active } />
           <Switch />
           <Switch />
+          <Theme />
           <Zoom />
         </div>	
       </div>
