@@ -127,4 +127,7 @@ psd
 thumb
 sketch
 
+### Others ###
+src/test-db/
+
 # End of https://www.toptal.com/developers/gitignore/api/react,web,node

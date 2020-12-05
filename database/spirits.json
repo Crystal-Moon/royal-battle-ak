@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"name": "Golden Horn",
+    	"desc": "Nivel S1 o superior. \nDMG +4781 \nCRIT +1423\nVEL +1067\nDMG +1911\nCada ataque tiene 10% de probabilidad de activar Armor Smasher, reduciendo la DEF del enemigo en 2425 y causando 3638 de daño por segundo durante 5 segundos",
+    	"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02530.png",
+    	"qlty": "orange"
+    },
+    {
+		"id": 2,
+		"name": "Night Owl Arrow",
+    	"desc": "Nivel S1 o superior. \nDMG +4553\nCRIT +1494\nVEL +1067\nCRIT +1493\nCada ataque tiene 15% de posibilidad de activar Sharp Demon Gaze, incrementando la Tasa CRIT en 10% y decresiendo la VEL. Mov en 15% por 10 seg.",
+    	"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02531.png",
+    	"qlty": "orange"
+    },
+    {
+		"id": 3,
+		"name": "Green Jade",
+    	"desc": "Nivel S1 o superior. \nVEL +1245\nPS +5902\nEVA +1707\nVEL +1866\nTus ataques tienen 30% de posibilidad de activar Deep Blue Breeze, incrementando la VEL en 3031 y la VEL Mov. en 8% por 8 seg. Se puede usar una vez cada 20 segundos.",
+    	"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02532.png",
+    	"qlty": "orange"
+    },
+    {
+		"id": 4,
+		"name": "Peony Root",
+    	"desc": "Nivel S1 o superior. \nVEL +889\nPS +6197\nEVA +1897\nDEF +1379\nTienes 20%  de posibilidad de activar New Leaf Drops al atacar, reduciendo el Daño del enemigo en 3638 y su CRIT en 1516 por 10 segundos.",
+    	"icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I02533.png",
+    	"qlty": "orange"
+    },
+]

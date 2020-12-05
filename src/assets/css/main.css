@@ -5,6 +5,7 @@
 	height: 1em;
 }
 */
+.SectionItems .Item:hover .Hover{display: none;}
 .Reward .Item .Hover{display: none;}
 .Item, .ItemIcon{
 	margin:auto;

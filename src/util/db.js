@@ -1,3 +1,9 @@
+import s from '../test-db/spirits.json';
+import d from '../test-db/items.json';
+import r from '../test-db/rewards.json';
+
+const SPIRITS = Promise.resolve(s);
+const REWARDS = Promise.resolve(r);
 /*
 const DATA = (() => new Promise(done=>{
 	fetch('http://localhost:3100')
@@ -10,7 +16,7 @@ const DATA = (() => new Promise(done=>{
 }))();
 */
 
-import d from './royal-battle-akes.json';
+//import d from '../test-db/items.json';
 const DATA = Promise.resolve(d)
 
 export default {
@@ -41,6 +47,9 @@ export default {
       })
       return R
 	}),
+
+	getHolySpirit: (qlty) => SPIRITS.then(z=> !qlty? z : z.filter(x=>x.qlty==qlty)),
+	getRewads: ()=> REWARDS.then(r=>r),
 	
 	getByQlty: (data,qlty) => data.then(z=> z.filter(x=>x.qlty==qlty)),
 

@@ -266,6 +266,7 @@ button span{display: block;margin:0;padding: 0;}
 	margin-top:0.3em;
 	margin-bottom:0.3em;
 	padding: 0.4em;
+	white-space: pre-line;
 }
 .item-body hr{
 	display:block;
