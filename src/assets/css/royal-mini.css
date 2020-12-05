@@ -1,14 +1,25 @@
 html,body{
-	background-color: rgba(0,0,0,0);
+	/*background-color: rgba(0,0,0,0);*/
+	background-color: #333;
 }
-.Todo{
+.TodoMini{
 	display: flex;
 	flex-direction: row-reverse;
-	height:max-content;
+	/*height:max-content;*/
+	height:100%;
 
 	/* float: right; */
 }
+.TodoMini .Logo h1{display: none;}
+.TodoMini .Header{font-size: 0.7em;}
 
+.TodoMini .Header>.Switch{
+ display: none;
+}
+.TodoMini .Config{margin-left: auto;}
+.TodoMini .Item:hover .Hover.no-hover{
+	display:none;
+}
 /**********************************/
 .LeftBar{
 	border-top-left-radius: 1em;
@@ -35,11 +46,7 @@ html,body{
 
 
 /************************************************/
-.Header{font-size: 0.7em;}
 
-.Switch{
-
-}
 
 /**********************************************/
 .PrincipalMini{
@@ -173,7 +180,7 @@ line{
 	display: flex;
 	justify-content: space-evenly;
 	position: relative;
-	z-index: 200;
+	/*z-index: 100;*/
 }
 .icon-3 .Item, .item-section .Item{position: unset;transition: all 0.15s ease;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{

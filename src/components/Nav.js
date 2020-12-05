@@ -6,6 +6,26 @@ import { Link } from 'react-router-dom';
 //import Principal from './Principal';
 
 class Nav extends Component {
+/*
+  constructor(){
+    super();
+    this.testOpen = this.testOpen.bind(this)
+  }
+
+  testOpen(e){
+    //ReactDOM.createPortal(<Modal />, document.getElementById('root-mini')); 
+    //document.getElementById('root-mini').innerHTML=''
+    //window.ven = undefined
+    let rootMini=document.getElementById('root-mini');
+    rootMini.innerHTML=''
+    let div=document.createElement('div')
+    window.ven = ReactDOM.render(<AppMini />, div);
+    console.log('la ventana', window.ven)
+    rootMini.appendChild(div)
+   
+  }
+
+*/
   render() {
     return (
       <nav className="Nav">

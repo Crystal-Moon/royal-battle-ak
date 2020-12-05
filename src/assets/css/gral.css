@@ -88,7 +88,7 @@ h2, h3, h4, .ttl{
     margin: 0.5em;
     margin-bottom: 0;
 }
-.config{
+.config-in{
 	display: none;
 	position: absolute;
     right: 0;
@@ -99,7 +99,7 @@ h2, h3, h4, .ttl{
     height: max-content;
     z-index: 500;
 }
-.Config.show .config{
+.Config.show .config-in{
 	display:block;
 }
 /***********************************/
@@ -224,7 +224,7 @@ button span{display: block;margin:0;padding: 0;}
 	height:100%;
 }
 .Hover{
-	z-index: 400;
+	z-index: 500;
 	display:none;
 	position: absolute;
 	background-color: #161616;
