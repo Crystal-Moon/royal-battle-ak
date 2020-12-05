@@ -8,7 +8,7 @@ class Theme extends Component{
 	this.handlerTheme = this.handlerTheme.bind(this)
 	this.state = {
 	  themes: [],
-	  select: 'default'
+	  select: 0
 	}
   }
 
@@ -26,7 +26,7 @@ class Theme extends Component{
 
   render(){ 
     return (
-      <div className='Theme'>
+      <div className='Theme' style={{display: this.props.parent=='app'? 'block':'none' }} >
       	<Helmet>
       		<link rel="stylesheet" type="text/css" href={`/assets/css/themes/${this.state.select}.css`} />
       	</Helmet>

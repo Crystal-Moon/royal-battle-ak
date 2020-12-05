@@ -97,7 +97,7 @@ h2, h3, h4, .ttl{
     padding-left: 0.9em;
     width: max-content;
     height: max-content;
-    z-index: 500;
+    z-index: 1500;
 }
 .Config.show .config-in{
 	display:block;
@@ -199,6 +199,7 @@ h2, h3, h4, .ttl{
 button{position: relative;margin:0;padding: 0;color:white;}
 button span{display: block;margin:0;padding: 0;}
 /**************************************/
+.Theme{ font-size: inherit; }
 .Theme label{ display:block;margin-bottom: 0.3em; }
 .Theme select{border-radius: 2em;}
 

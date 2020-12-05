@@ -45,7 +45,7 @@ class App extends Component {
     
     return (
       <div className="Todo" style={ this.state.style } >
-        <Header />
+        <Header parent="app" />
         <Main body={children} />
         <Footer />
       </div>

@@ -1,9 +1,12 @@
-import s from '../test-db/spirits.json';
-import d from '../test-db/items.json';
-import r from '../test-db/rewards.json';
+import spirit from '../test-db/spirits.json';
+import items from '../test-db/items.json';
+import rewards from '../test-db/rewards.json';
+import themes from './royal-battle-themes.json';
 
-const SPIRITS = Promise.resolve(s);
-const REWARDS = Promise.resolve(r);
+const SPIRITS = Promise.resolve(spirit);
+const REWARDS = Promise.resolve(rewards);
+const DATA = Promise.resolve(items);
+const THEMES = Promise.resolve(themes);
 /*
 const DATA = (() => new Promise(done=>{
 	fetch('http://localhost:3100')
@@ -15,11 +18,6 @@ const DATA = (() => new Promise(done=>{
 	})
 }))();
 */
-
-import items from './royal-battle-akes.json';
-import themes from './royal-battle-themes.json';
-const DATA = Promise.resolve(items)
-const THEMES = Promise.resolve(themes)
 
 export default {
 	getById: id => DATA.then(d=>{

@@ -34,8 +34,7 @@ class AppMini extends Component {
 
   render() {
     return (
-     
-      <div className="Todo TodoMini" style={ this.state.style } >
+      <div className="TodoMini" style={ this.state.style } >
         <PrincipalMini></PrincipalMini>
         <LeftBar></LeftBar>
       </div>

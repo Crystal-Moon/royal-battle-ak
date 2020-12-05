@@ -6,7 +6,7 @@ import MapItems from './MapItems';
 class PrincipalMini extends Component {
   render() {
     return (
-      <div className="Principal PrincipalMini">
+      <div className="PrincipalMini">
         <Header />
         <AcordeonMenu />
         <MapItems />
