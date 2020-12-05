@@ -19,24 +19,21 @@ class App extends Component {
     super();
     this.changeZoom = this.changeZoom.bind(this)
     this.state = {
-      style: {
-        fontSize: '1rem'
-      }
+      zoom: 100
     }
 
 
-    Event.on('changeZoom', this.changeZoom)
+    Event.on('zoom', this.changeZoom)
   }
-
+/*
 
   componentDidMount(){
-  	
-  	//require('./assets/css/themes/nowa.css'); //funciona genial :D
+  	 
   }
-
-  changeZoom({ zoom }){
-    let z = zoom / 100
-    this.setState({ style:{ fontSize:`${z}rem`}})
+*/
+  changeZoom(zoom){
+    //let z = zoom / 100
+    this.setState({ zoom })
   }
   
   render() {
@@ -44,7 +41,7 @@ class App extends Component {
     //console.log('los children', children)
     
     return (
-      <div className="Todo" style={ this.state.style } >
+      <div className="Todo" style={ {fontSize: `${this.state.zoom/100}rem` } } >
         <Header parent="app" />
         <Main body={children} />
         <Footer />

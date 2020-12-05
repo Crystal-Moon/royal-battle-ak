@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Event } from '../util/Event';
+import configUser from '../util/configUser';
 
 class Zoom extends Component{
   
@@ -16,6 +17,10 @@ class Zoom extends Component{
   	/* llamar a los datos del store y setear el state con el vcalor del usuario */
   	// this.setState({ zoom: })
   	// Event.emit('changeZoom',{ zoom })
+    let zoom = parseInt(configUser.get('zoom') || 100)
+   // console.log('el zoom rescatado de user', zoom)
+    //configUser.set('zoom',zoom)
+    this.setState({ zoom })
   }
 
   changeZoom(e){
@@ -23,8 +28,10 @@ class Zoom extends Component{
   	let z = e.target.dataset.zoom
   	let zoom = this.state.zoom + (10*z)
   	zoom = zoom<100? 100 : zoom>200? 200 : zoom;
-	this.setState({ zoom })
-	Event.emit('changeZoom',{ zoom })
+    console.log('el zomm a st',zoom)
+	  this.setState({ zoom })
+    configUser.set('zoom',zoom)
+	//Event.emit('changeZoom',{ zoom })
   }
 
   render(){

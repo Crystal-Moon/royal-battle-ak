@@ -14,27 +14,25 @@ class AppMini extends Component {
     super();
     this.changeZoom = this.changeZoom.bind(this)
     this.state = {
-      style: {
-        fontSize: '1rem'
-      }
+      zoom: 100
     }
-    Event.on('changeZoom', this.changeZoom)
+    Event.on('zoom', this.changeZoom)
   }
 
-
+/*
   componentDidMount(){
+  
     
-    //require('./assets/css/themes/nowa.css'); //funciona genial :D
   }
-
-  changeZoom({ zoom }){
-    let z = zoom / 100
-    this.setState({ style:{ fontSize:`${z}rem`}})
+*/
+  changeZoom(zoom){
+    //let z = zoom / 100
+    this.setState({ zoom })
   }
 
   render() {
     return (
-      <div className="TodoMini" style={ this.state.style } >
+      <div className="TodoMini" style={ {fontSize: `${this.state.zoom/100}rem` } } >
         <PrincipalMini></PrincipalMini>
         <LeftBar></LeftBar>
       </div>
