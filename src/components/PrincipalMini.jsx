@@ -16,8 +16,3 @@ class PrincipalMini extends Component {
 }
 
 export default PrincipalMini;
- /*
-         <div className="Menu">
-          <Acordeon></Acordeon>
-        </div>
-        */

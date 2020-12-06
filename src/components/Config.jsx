@@ -1,5 +1,6 @@
 import { Component, createRef } from 'react';
 //import ConfigOption from './ConfigOption';
+import userConfig from '../util/configUser';
 import ConfigIcon from './ConfigIcon';
 import Switch from './Switch';
 import Zoom from './Zoom';
@@ -14,6 +15,7 @@ class Config extends Component {
   }
 
   componentDidMount(){
+    //let 
 
   }
 
@@ -25,8 +27,19 @@ class Config extends Component {
 
   render() { /*<ConfigOption />*/ /* aqui recibe un array de string con las opciones a cargar 
   y segun ello la cantidad de Switch q tendra y lo q hara cada uno, ya sea de la ventana principal o la mini */
-    let somePropUser = { key: 'someProp', displayName: 'Some Prop', default: 'some value', active: false }
+    //let somePropUser = { key: 'someProp', displayName: 'Some Prop', default: 'some value', active: false }
+    //let hover = { key: 'hover', displayName: 'Preview Items', active: true }
     console.log('prop en config',this.props)
+
+    let configDiv = this.props.parent=='app'? (
+          <div>
+            <Theme parent={this.props.parent}/>
+            <Zoom />
+          </div>) 
+      : ( <div>
+            <Switch userProp={{ key: 'hover', displayName: 'Vista Previa', active: true }} parent='app' />
+            <Zoom />
+          </div> ); 
   
     return (
       <div className="Config"  ref={ this.refConfig } >
@@ -34,11 +47,7 @@ class Config extends Component {
           <ConfigIcon />
         </div>
         <div className="config-in" >
-          <Switch userProp={ somePropUser } active={ somePropUser.active } />
-          <Switch />
-          <Switch />
-          <Theme parent={this.props.parent}/>
-          <Zoom />
+          {configDiv}
         </div>	
       </div>
     );
@@ -46,3 +55,19 @@ class Config extends Component {
 }
 
 export default Config;
+ /*
+
+ return (
+      <div className="Config"  ref={ this.refConfig } >
+        <div onClick={ this.showConfig } style={{height:'2.5em',margin:'0'}} >
+          <ConfigIcon />
+        </div>
+        <div className="config-in" >
+          <Switch userProp={ { key: 'hover', displayName: 'Preview Items', active: true } } />
+          <Theme parent={this.props.parent}/>
+          <Zoom />
+        </div>  
+      </div>
+    );
+
+    */

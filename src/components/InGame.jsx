@@ -1,7 +1,8 @@
 import { Component, createRef } from 'react';
 import NewWindow from 'react-new-window';
 import ReactDOM from 'react-dom';
-import {Event} from '../util/Event'; 
+import {Event} from '../util/Event';
+import configUser from '../util/configUser';
 import AppMini from './AppMini';
 
 class InGame extends Component {
@@ -9,6 +10,7 @@ class InGame extends Component {
   	super();
   	 console.log('in game creado')
   	//this.handlerModal = this.handlerModal.bind(this);
+     this.state = { hover: configUser.get('hover') }
   	this.myWindow = createRef()
   /*	this.state = {
   		root: document.getElementById('root-mini'),
@@ -30,7 +32,8 @@ class InGame extends Component {
         title='Desafio Divino - AKES'
         features={{
           width: 320,
-          height: 440, /* si en localStore el hover esta activado usar 650 */
+          //height: 440, /* si en localStore el hover esta activado usar 650 */
+          height: this.state.hover? 650 : 440,
           left: 12000,
           screenX: 12000,
           top: 300,

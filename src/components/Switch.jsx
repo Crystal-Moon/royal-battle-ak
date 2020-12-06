@@ -1,5 +1,6 @@
 import { Component, createRef } from 'react';
 import { Event } from '../util/Event';
+import userConfig from '../util/configUser';
 
 class Switch extends Component {
   constructor(props){
@@ -10,7 +11,8 @@ class Switch extends Component {
 
   componentDidMount(){
 
-    this.setState({ active: Boolean(this.props.active) })
+    //this.setState({ active: Boolean(this.props.active) })
+    this.setState({ active: Boolean(userConfig.get(this.props.userProp.key)) })
 
   }
 
@@ -20,8 +22,9 @@ class Switch extends Component {
     this.setState({ active });
     if(this.props.userProp){
       if(this.props.userProp.key){
- //   console.log('se detecto prop de user',this.props)
-        Event.emit('configUser',{ ...this.props.userProp, active })
+    console.log('se detecto prop de user',this.props, active)
+       // Event.emit('configUser',{ ...this.props.userProp, active })
+      userConfig.set(this.props.userProp.key, active)
       }
       else{
    //     console.log('én el else de switch', this.props.userProp)
@@ -33,7 +36,10 @@ class Switch extends Component {
   render() {
     const { userProp={} } = this.props;
     return (
-      <div className={`Switch ${this.state.active?'active':''} `} onClick={ this.handlerSwitch } >
+      <div className={`Switch ${this.state.active?'active':''} `} 
+           onClick={ this.handlerSwitch } 
+           style={{display: this.props.parent=='app'? 'inline-flex':'none' }}
+      >
         <div className="s-txt">
           <span>{ userProp.displayName }</span>
         </div>

@@ -17,7 +17,8 @@ class Zoom extends Component{
   	/* llamar a los datos del store y setear el state con el vcalor del usuario */
   	// this.setState({ zoom: })
   	// Event.emit('changeZoom',{ zoom })
-    let zoom = parseInt(configUser.get('zoom') || 100)
+    //let zoom = parseInt(configUser.get('zoom') || 100)
+  let zoom = configUser.get('zoom') || 100
    // console.log('el zoom rescatado de user', zoom)
     //configUser.set('zoom',zoom)
     this.setState({ zoom })

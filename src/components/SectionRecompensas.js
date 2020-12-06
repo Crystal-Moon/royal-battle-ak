@@ -35,7 +35,6 @@ class SectionRecompensas extends Component {
       <section className="Section Rewards">
         <h2 className="h2">Recompensas</h2>
         <table className="main">
-      <div>
           <tbody>
             <tr>
               <td className="w50">
@@ -63,12 +62,11 @@ class SectionRecompensas extends Component {
               </td>
             </tr>
           </tbody>
-     </div>
         </table>
         <table className="main">
           <thead><tr><th><ItemIcon item={this.state.caja} /></th><th colSpan="3"><p>caja de holy spirit</p></th></tr></thead>
           <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} /></td>)}</tr></tbody>
-          <tfoot><tr><td colspan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
+          <tfoot><tr><td colSpan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
         </table>
       </section>
     );

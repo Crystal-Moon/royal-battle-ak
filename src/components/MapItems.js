@@ -36,7 +36,7 @@ class MapItems extends Component {
 /* as u vez esta clase tiene un Event.on para el translate del icono, y es esta clase que dispara el emit */
 
   moveAndGet({ id, ref }){
-    console.log('lo q llega de params', id, ref) //se saco target desde Item
+    //console.log('lo q llega de params', id, ref) //se saco target desde Item
     let central = this.itemCentral.current.itemRef.current;
     let item = ref;
     let centerBound = central.getBoundingClientRect();
@@ -70,7 +70,7 @@ class MapItems extends Component {
   render() {
     if(this.state.itemSelected){
       const { made_by=[], mat_for=[] } = this.state.itemSelected;
-      console.log('key denderizado mapItem',this.state)
+      //console.log('key denderizado mapItem',this.state)
       //console.log('el itemSelected', this.state.itemSelected)
       //console.log('lso BY', made_by, 'FOR', mat_for)
 
