@@ -1,14 +1,16 @@
 import { Component, createRef } from 'react';
+import { Event } from '../util/Event';
 
 class Switch extends Component {
   constructor(props){
     super(props);
-    //this.refSwitch = createRef();   ref={ this.refSwitch }
     this.handlerSwitch = this.handlerSwitch.bind(this);
     this.state = { active: false }
   }
 
   componentDidMount(){
+
+    this.setState({ active: Boolean(this.props.active) })
 
   }
 
@@ -16,10 +18,16 @@ class Switch extends Component {
     e.stopPropagation();
     let active = !this.state.active;
     this.setState({ active });
-    console.log('state del switch', active)
-    //if(this.props.switchInGame) Event.emit('inGame', { active });
-    //else Event.emit('configUser',{ ...this.props.userProp, active })
-
+    if(this.props.userProp){
+      if(this.props.userProp.key){
+ //   console.log('se detecto prop de user',this.props)
+        Event.emit('configUser',{ ...this.props.userProp, active })
+      }
+      else{
+   //     console.log('én el else de switch', this.props.userProp)
+        Event.emit('inGame', { active, switche:this });
+      }
+    }
   }
 
   render() {

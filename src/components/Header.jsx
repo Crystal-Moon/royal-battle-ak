@@ -5,11 +5,13 @@ import Config from './Config';
 
 class Header extends Component {
   render() {
+    const inGameProp = { displayName: 'In-game', active: false }
+    console.log('el prop en header', this.props)
     return (
       <div className="Header">
         <Logo></Logo>
-        <Switch switchInGame={true} ></Switch>
-        <Config />
+        <Switch userProp={ inGameProp } />
+        <Config parent={this.props.parent} />
       </div>
     );
   }

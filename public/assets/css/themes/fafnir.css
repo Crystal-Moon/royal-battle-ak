@@ -24,7 +24,7 @@
 .Config.show .ConfigIcon, .Config:hover .ConfigIcon{
 	fill: #932D2B;
 }
-.config .s-back, .Zoom .s-txt{
+.config-in .s-back, .Zoom .s-txt{
 	background-color: #8c8264;
 	border: 1px solid red;
 }
@@ -58,7 +58,7 @@
 	border-bottom: 1px double black;
 	color: white;
 }
-.Config:hover, .Config:active, .Config.show, .config{
+.Config:hover, .Config:active, .Config.show, .config-in{
 	background-color: #F2BB13;
 	color: black;
 }

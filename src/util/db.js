@@ -1,3 +1,12 @@
+import spirit from '../test-db/spirits.json';
+import items from '../test-db/items.json';
+import rewards from '../test-db/rewards.json';
+import themes from './royal-battle-themes.json';
+
+const SPIRITS = Promise.resolve(spirit);
+const REWARDS = Promise.resolve(rewards);
+const DATA = Promise.resolve(items);
+const THEMES = Promise.resolve(themes);
 /*
 const DATA = (() => new Promise(done=>{
 	fetch('http://localhost:3100')
@@ -9,9 +18,6 @@ const DATA = (() => new Promise(done=>{
 	})
 }))();
 */
-
-import d from './royal-battle-akes.json';
-const DATA = Promise.resolve(d)
 
 export default {
 	getById: id => DATA.then(d=>{
@@ -41,10 +47,15 @@ export default {
       })
       return R
 	}),
+
+	getHolySpirit: (qlty) => SPIRITS.then(z=> !qlty? z : z.filter(x=>x.qlty==qlty)),
+	getRewads: ()=> REWARDS.then(r=>r),
 	
 	getByQlty: (data,qlty) => data.then(z=> z.filter(x=>x.qlty==qlty)),
 
 	getByType: (data,type) => data.then(z=> z.filter(x=>x.type==type)),
+
+	getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
 
 
 

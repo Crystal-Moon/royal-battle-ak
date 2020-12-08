@@ -23,7 +23,7 @@
 /**********************************************************/
 
 .PrincipalMini{
-	background-color:#2a1c5f;
+	/*background-color:#2a1c5f;*/
 }
 .Header{
 	background-color:#F2856D;
@@ -47,7 +47,7 @@
     border-bottom: 1px double #61378c;
     color: #f35e3e;
 }
-.Config:hover, .Config:active, .Config.show, .config{
+.Config:hover, .Config:active, .Config.show, .config-in{
 	background-color: #79e6f2;
 }
 .AcordeonItem ul{

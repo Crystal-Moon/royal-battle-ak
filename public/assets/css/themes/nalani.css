@@ -23,7 +23,7 @@
 /**********************************************************/
 
 .PrincipalMini{
-	background-color: #4895D9;
+	/*background-color: #4895D9;*/
 }
 .Header{
 	background-color: #F2B988;
@@ -50,8 +50,9 @@
 	border-bottom: 1px double black;
 	color: white;
 }
-.Config:hover, .Config:active, .Config.show, .config{
+.Config:hover, .Config:active, .Config.show, .config-in{
 	background-color: #F2D1C9;
+	color: black;
 }
 .AcordeonItem ul{
 	background-color: #4895D9;
@@ -59,4 +60,8 @@
 
 .LeftBar svg g{
 	fill: #ff6347;
+}
+.Theme select, .Theme select:focus{
+	border-color:#2e578c;
+	outline: 0;
 }

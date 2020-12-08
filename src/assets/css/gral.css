@@ -33,7 +33,7 @@ html, body, #root{
 	/* overflow: hidden; */
 	/* background-color: grey; */
 }
-a, a:hover, a:active, a:visited{color:inherit;}
+a, a:hover, a:active, a:visited{color:inherit;text-decoration: none;}
 ul{list-style: none;margin: 0;padding: 0;}
 p, .prrfs{
 	font-family: 'Hind Siliguri', sans-serif;
@@ -88,7 +88,7 @@ h2, h3, h4, .ttl{
     margin: 0.5em;
     margin-bottom: 0;
 }
-.config{
+.config-in{
 	display: none;
 	position: absolute;
     right: 0;
@@ -97,9 +97,9 @@ h2, h3, h4, .ttl{
     padding-left: 0.9em;
     width: max-content;
     height: max-content;
-    z-index: 500;
+    z-index: 1500;
 }
-.Config.show .config{
+.Config.show .config-in{
 	display:block;
 }
 /***********************************/
@@ -199,6 +199,12 @@ h2, h3, h4, .ttl{
 button{position: relative;margin:0;padding: 0;color:white;}
 button span{display: block;margin:0;padding: 0;}
 /**************************************/
+.Theme{ font-size: inherit; }
+.Theme label{ display:block;margin-bottom: 0.3em; }
+.Theme select{border-radius: 2em;}
+
+
+/************************************************/
 .Item{
     width: max-content;
     height: max-content;
@@ -224,7 +230,7 @@ button span{display: block;margin:0;padding: 0;}
 	height:100%;
 }
 .Hover{
-	z-index: 400;
+	z-index: 500;
 	display:none;
 	position: absolute;
 	background-color: #161616;
@@ -266,6 +272,7 @@ button span{display: block;margin:0;padding: 0;}
 	margin-top:0.3em;
 	margin-bottom:0.3em;
 	padding: 0.4em;
+	white-space: pre-line;
 }
 .item-body hr{
 	display:block;
@@ -274,4 +281,21 @@ button span{display: block;margin:0;padding: 0;}
 	border:none;
 	margin-top:0.3em;
 	margin-bottom:0.3em;
+}
+
+.white{
+	color:white;
+	border-color:white;
+}
+.blue{
+	color: blue;
+	border-color:blue;
+}
+.green{
+	color:green;
+	border-color:green;
+}
+.orange{
+	color:orange;
+	border-color:orange;
 }
