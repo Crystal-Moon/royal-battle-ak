@@ -11,7 +11,7 @@ class Principal extends Component {
    // console.log('el body',body)
     
     return (
-      <article className="Principal">
+      <article className="Principal scrollable">
         {body}
       </article>
     );

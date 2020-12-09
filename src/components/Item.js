@@ -25,11 +25,11 @@ class Item extends Component {
 
   render() {
    // console.log(this.props)
-    const { item={}, eventname } = this.props;
+    const { item={}, eventname, hoverup=false } = this.props;
     return (
       <div className="Item" onClick={ this.handlerClick } data-eventname={ eventname } data-id={ item.id } ref={ this.itemRef } >
         	<ItemIcon item={ item } />
-        	<Hover item={ item }></Hover>
+        	<Hover item={ item } hoverup={ hoverup }></Hover>
       </div>
     );
   }

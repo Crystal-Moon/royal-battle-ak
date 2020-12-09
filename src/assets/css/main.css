@@ -11,12 +11,24 @@
 	margin:auto;
 	/* margin-left: 1em; */
 }
-table{border-radius:0.3rem;padding: 0.4em;width: 90%;margin: auto;}
+div.table-conteiner{
+	height: 30em;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 90%;
+    margin: auto;
+    margin-top:1.2em;
+    margin-bottom: 1.5em;
+    padding: 0;
+    position: relative;
+}
+table{border-radius:0.3rem;padding: 0.8em;width: 90%;margin: auto;}
 table.main{
 /*	width: 90%;
 	margin: auto;*/
 	background-color: rgba(0,0,0,0.6);
-	margin-bottom: 1em;
+	/*margin-bottom: 1em;*/
+	width: 100%;
 }
 table.sub{width: 100%;}
 table.sub td:last-child img{margin-left: 1.7em;}
@@ -31,11 +43,17 @@ table p,tr, td{
 	padding:0;
 	text-align: left;
 }
+th, th p{ text-align: center; }
 tr{height: 3.1em;}
 td{
 	padding: 0.3em;
 	vertical-align: top;
 }
+td.crystal{ text-align: center; }
+/*td.crystal{ min-width: 2em; display:block; }
+td.crystal, td.txt{ width:2em; }
+td.txt{ vertical-align: middle; }*/
+/*td:last-child{padding-left: 1.3em;}*/
 tfoot td,th{
 	padding: 0.2em;
 }

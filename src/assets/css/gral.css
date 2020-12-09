@@ -216,6 +216,7 @@ button span{display: block;margin:0;padding: 0;}
 }
 .Item:hover .Hover{
 	display:block;
+	left: -4em;
 }
 .ItemIcon{
 	display:block;
@@ -244,7 +245,9 @@ button span{display: block;margin:0;padding: 0;}
 .Hover .ItemIcon{
 	width: inherit;
     height: inherit;
-
+}
+.Hover.hover-up{
+	bottom: 0;
 }
 
 .item-head{
@@ -252,14 +255,14 @@ button span{display: block;margin:0;padding: 0;}
 	flex-direction:row;
 }
 .item-head span{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-head span:first-child{
-	flex:1;
+	/*flex:1;*/
 }
 .item-head span:last-child{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-name{

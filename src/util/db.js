@@ -1,12 +1,12 @@
 import spirit from '../test-db/spirits.json';
 import items from '../test-db/items.json';
 import rewards from '../test-db/rewards.json';
-import themes from './royal-battle-themes.json';
+//import themes from './royal-battle-themes.json';
 
 const SPIRITS = Promise.resolve(spirit);
 const REWARDS = Promise.resolve(rewards);
 const DATA = Promise.resolve(items);
-const THEMES = Promise.resolve(themes);
+//const THEMES = Promise.resolve(themes);
 /*
 const DATA = (() => new Promise(done=>{
 	fetch('http://localhost:3100')
@@ -48,6 +48,8 @@ export default {
       return R
 	}),
 
+	getAllArray: () => DATA.then(all=>all), 
+
 	getHolySpirit: (qlty) => SPIRITS.then(z=> !qlty? z : z.filter(x=>x.qlty==qlty)),
 	getRewads: ()=> REWARDS.then(r=>r),
 	
@@ -55,7 +57,7 @@ export default {
 
 	getByType: (data,type) => data.then(z=> z.filter(x=>x.type==type)),
 
-	getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
+	//getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
 
 
 
