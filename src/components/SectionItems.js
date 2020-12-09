@@ -21,9 +21,10 @@ class SectionItems extends Component {
   }
 
   componentDidMount(){
-    db.getAll().then(all=>{
+    db.getAllArray().then(items=>{
+      //let items = all.potas.blue.concat(all.potas.green).concat(all.equipo.blue).concat(all.equipo.green).concat(all.equipo.orange).concat(all.eido.blue).concat(all.eido.green)
      // console.log('el items',all)
-      this.setState({ items: all.spirit.orange })
+      this.setState({ items, selected: items[0] })
     })
    /* db.getHolySpirit().then(items => {
       console.log('items',items)
@@ -45,7 +46,8 @@ class SectionItems extends Component {
         <table className="main">
           <tbody>
             <tr>
-              <td className="w50">
+              <td>
+            <div className="table-conteiner scrollable scrollable-in">
                 <table className="sub">
                   <thead><tr><th colSpan="2"><p>Recompensas disponibles</p></th></tr></thead>
                   <tbody>
@@ -59,9 +61,10 @@ class SectionItems extends Component {
                   }
                   </tbody>
                 </table>
+          </div>
               </td>
               <td className="w50 detail-item">
-                <Hover item={this.state.selected} />
+                <Hover item={this.state.selected} />   
               </td>
             </tr>
           </tbody>

@@ -22,7 +22,7 @@ div.table-conteiner{
     padding: 0;
     position: relative;
 }
-table{border-radius:0.3rem;padding: 0.8em;width: 90%;margin: auto;}
+table{border-radius:0.3rem;/*padding: 0.8em;*/width: 90%;margin: auto;}
 table.main{
 /*	width: 90%;
 	margin: auto;*/
@@ -60,16 +60,21 @@ tfoot td,th{
 tfoot{
 	font-size: 0.7em;
 }
-.w50{
-	width: 50%;
+/*
+.w65{
+	width: 65%;
 }
-
+*/
 img.npc{
 	width: 90%;
     margin: auto;
     display: block;
 }
 
+.detail-item{
+	padding-top: 1.5em;
+
+}
 .detail-item .Hover{display: block;position: relative;margin: auto;}
 /*
 git fetch <remote> <branchremoto>:<branchlocal> 

@@ -30,25 +30,31 @@ export default {
 			return ({ ...z, ...x })
 		})
 	*/
-		item.made_by = item.made_by.map(x=> d.find(z=> z.id == x) )
+		item.made_by = item.made_by.map(x=> d.find(z=> z.id == x));
 		//item.made_by = z.filter(x=>item.by.includes(x.id)) // review
 		//item.made_by.forEach(i=>i.cant=(item.by.find(y=>y.id)).x)
-		item.mat_for = item.mat_for.map(x=> d.find(z=> z.id == x) )
+		item.mat_for = item.mat_for.map(x=> d.find(z=> z.id == x));
 		//console.log('item Por id',item)
 		return item;
 	}),
 
 	getAll: () => DATA.then(all=>{
-	  let R={}
+	  let R={};
 	  all.forEach(x=>{
-		if(!R[x.type]) R[x.type] = {}
-	    if(!R[x.type][x.qlty]) R[x.type][x.qlty] = []
-	    R[x.type][x.qlty].push(x)
+		if(!R[x.type]) R[x.type] = {};
+	    if(!R[x.type][x.qlty]) R[x.type][x.qlty] = [];
+	    R[x.type][x.qlty].push(x);
       })
-      return R
+      return R;
 	}),
 
-	getAllArray: () => DATA.then(all=>all), 
+	getAllArray: () => DATA.then(all=>{
+	  const type={ potas: 1, equipo: 2, eido: 3 };
+	  const qlty={ blue: 1, green: 2, orange: 3 };
+	  let R = all.filter(i=>i.type!='formula')
+	 		.sort((a,b)=>type[a.type] - type[b.type] || qlty[a.qlty] - qlty[b.qlty]);
+	  return R;	
+	}), 
 
 	getHolySpirit: (qlty) => SPIRITS.then(z=> !qlty? z : z.filter(x=>x.qlty==qlty)),
 	getRewads: ()=> REWARDS.then(r=>r),

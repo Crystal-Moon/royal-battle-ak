@@ -19,6 +19,13 @@
         scrollbar-dark-shadow-color: #666666;
   }
   
+  .scrollable-in {
+        scrollbar-face-color:  rgba(87, 87, 87, 1);
+        scrollbar-track-color: rgba(51, 51, 51, 1);
+        scrollbar-arrow-color: rgba(128, 128, 128, 1);
+        scrollbar-shadow-color:  rgba(87, 87, 87, 1);
+  }
+
     /*  .scrollable:after {
         content: "";
         height: 32px;
