@@ -117,10 +117,10 @@ html, body{
 }
 .Footer .tech{
 	
-	    margin: auto;
+	margin: auto;
     margin-left: 0.3em;
     margin-right: 0.3em;
-    background-color: red;
+   
     /* height: 1.1em; */
     top: 0;
     bottom: 0;
@@ -135,9 +135,6 @@ html, body{
 
 
 
-}
-#react{
-	background-image: url('https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/react-512.png');
 }
 
 /*****************************************/
