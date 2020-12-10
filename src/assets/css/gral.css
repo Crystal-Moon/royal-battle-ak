@@ -62,7 +62,15 @@ h2, h3, h4, .ttl{
 	flex-direction: row;
 	background-color: #443838;
 }
+.Logo{
+	height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5em;
+}
+.Logo img{ height: 2em; }
 /**********************************/
+/*
 .Config{
 	margin-left: 0.3em;
     margin-right: 0.3em;
@@ -101,35 +109,60 @@ h2, h3, h4, .ttl{
 }
 .Config.show .config-in{
 	display:block;
-}
+}*/
+
 /***********************************/
+
 .Switch, .Zoom{
 	display: flex;
 	flex-direction: row;
 	margin-right: 0.5em;
 	margin-top: 0.3em;
     margin-bottom: 0.3em;
-	margin-left: auto;
+	margin-left: 1em;
 	width: max-content;
 	font-family: 'Hind Siliguri', sans-serif;
+
+	width: 10em;
+    justify-content: space-between;
+    height: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-.Switch *{
-	display:flex;
-	align-items:center;
-	transition: all 0.3s ease;
+.Zoom span{ display:inline; text-align:center; }
+.s{
+	border-radius: 5em;
+	width: 1.5em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 2rem;
+	background-color: black;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: all 0.4s ease;
 }
 .s-txt{
-	height: 100%;
-	display: flex;
+	
 }
-.s-txt span{
-	margin:auto;
-	/* top: 0; */
-	/* bottom: 0; */
-	display: block;
-	width: max-content;
-	/* position: relative; */
+.s.s-txt{
+	width: 3em;
+	background-color: white;
+	color: black;
+	width: 3em;
+    max-width: 3em;
 }
+
+/**************************************/
+.Switch{
+	width: auto;
+	margin-left: auto;
+}
+.Switch *{
+	white-space: pre;
+	transition: all 0.3s ease;
+}
+
 .s-back{
 	margin: auto;
 	margin-left: 0.3em;
@@ -143,6 +176,7 @@ h2, h3, h4, .ttl{
 	background-color: #a0a0a0;
 	text-align: center;
 }
+/*
 .s{
 	border-radius: 50%;
 	width: 1.5em;
@@ -150,14 +184,14 @@ h2, h3, h4, .ttl{
 	max-height: 2rem;
 	max-width: 2rem;
 	background-color: black;
-	/* left:0; */
+*/	/* left:0; *//*
 	margin-right: auto;
 	right: auto;
 	margin-left:0;
 	text-align: center;
-	/*transition: all 0.4s ease;*/
+	
 }
-
+*/
 .Switch.active .s-back{
 	background-color: skyblue;
 }
@@ -169,40 +203,12 @@ h2, h3, h4, .ttl{
 	margin-right: 0;
 }
 
-.Zoom{
-	width: 100%;
-    justify-content: space-between;
-}
-.Zoom span, .Zoom button{
-	
-}
-.Zoom .s-txt{
-	padding: 0.3em;
-    border: 1px solid;
-    width: 40%;
-    text-align: center;
-    line-height: 1em;
-    height: 1em;
-    font-size: 1em;
-    border: none;
-    border-radius: 1em;
-    line-height: 1.1em;
-}
-.Zoom .s{margin: 0;cursor: pointer;}
-.Zoom button{
-	margin:0;
-}
 
-.Zoom button span{
-	
-}
-button{position: relative;margin:0;padding: 0;color:white;}
-button span{display: block;margin:0;padding: 0;}
-/**************************************/
+/*
 .Theme{ font-size: inherit; }
 .Theme label{ display:block;margin-bottom: 0.3em; }
 .Theme select{border-radius: 2em;}
-
+*/
 
 /************************************************/
 .Item{
