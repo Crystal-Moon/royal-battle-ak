@@ -224,12 +224,15 @@ button span{display: block;margin:0;padding: 0;}
 	border-radius: 10%;
 	width: 1.2em;
 	height: 1.2em;
+	position: relative;
 	/*margin: 0.1em;*/
 }
 .ItemIcon img{
 	width:100%;
 	height:100%;
 }
+
+/******************************************/
 .Hover{
 	z-index: 500;
 	display:none;
@@ -277,7 +280,7 @@ button span{display: block;margin:0;padding: 0;}
 	padding: 0.4em;
 	white-space: pre-line;
 }
-.item-body hr{
+.item-body hr, .for-by hr{
 	display:block;
 	background: linear-gradient(90deg, rgba(2,0,36,1) -15%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 115%);
 	height: 1px;

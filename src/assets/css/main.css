@@ -71,11 +71,33 @@ img.npc{
     display: block;
 }
 
+
+div.for-by{
+    padding: 0.5em;
+    padding-bottom: 2em;
+    background-color: rgba(22, 22, 22, 1);
+    border-radius: 0.3em;
+    width: 80%;
+    margin: auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+div.for-by>span{
+	width: 100%;
+    display: block;
+    text-align: center;
+}
+div.for-by>div{
+	margin-top: 0.5em;
+	display: flex;
+	display: -ms-flexbox;
+}
 .detail-item{
 	padding-top: 1.5em;
 
 }
-.detail-item .Hover{display: block;position: relative;margin: auto;}
+.detail-item>.Hover{display: block;position: relative;margin: auto;}
+.SectionItems .detail-item .Item:hover .Hover{ display: block; }
 /*
 git fetch <remote> <branchremoto>:<branchlocal> 
 git checkout <branchlocal>

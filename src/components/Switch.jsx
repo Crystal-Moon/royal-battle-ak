@@ -5,37 +5,40 @@ class Switch extends Component {
   constructor(props){
     super(props);
     this.handlerSwitch = this.handlerSwitch.bind(this);
-    this.state = { active: false }
+    this.state = { active: false, eventname: '' }
+    Event.on('closeInGame', this.setState)
   }
 
   componentDidMount(){
-
     this.setState({ active: Boolean(this.props.active) })
-
   }
 
   handlerSwitch(e){
     e.stopPropagation();
     let active = !this.state.active;
-    this.setState({ active });
-    if(this.props.userProp){
-      if(this.props.userProp.key){
+    let eventname=this.props.eventname;
+    this.setState({ active, eventname });
+   // if(this.props.userProp && this.props.userProp.key)
+     
  //   console.log('se detecto prop de user',this.props)
-        Event.emit('configUser',{ ...this.props.userProp, active })
-      }
-      else{
+      //  Event.emit('configUser',{ ...this.props.userProp, active })
+  //    }
+ //     else{
    //     console.log('én el else de switch', this.props.userProp)
-        Event.emit('inGame', { active, switche:this });
-      }
-    }
+   //     Event.emit('inGame', { active, switche:this });
+  //    }
+  //  }
   }
 
   render() {
-    const { userProp={} } = this.props;
+    const { eventname, displayname, active } = this.props;
+    console.log('las props en switch',this.props)
     return (
-      <div className={`Switch ${this.state.active?'active':''} `} onClick={ this.handlerSwitch } >
+      <div className={`Switch ${this.state.active?'active':''} `} 
+           onClick={ this.handlerSwitch } 
+           data-eventname={ eventname } >
         <div className="s-txt">
-          <span>{ userProp.displayName }</span>
+          <span>{ displayname }</span>
         </div>
         <div className="s-back">
           <div className="s" />

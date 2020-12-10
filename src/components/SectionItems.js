@@ -24,6 +24,7 @@ class SectionItems extends Component {
     db.getAllArray().then(items=>{
       //let items = all.potas.blue.concat(all.potas.green).concat(all.equipo.blue).concat(all.equipo.green).concat(all.equipo.orange).concat(all.eido.blue).concat(all.eido.green)
      // console.log('el items',all)
+     // items=items;
       this.setState({ items, selected: items[0] })
     })
    /* db.getHolySpirit().then(items => {
@@ -47,12 +48,12 @@ class SectionItems extends Component {
           <tbody>
             <tr>
               <td>
-            <div className="table-conteiner scrollable scrollable-in">
+                <div className="table-conteiner scrollable scrollable-in">
                 <table className="sub">
-                  <thead><tr><th colSpan="2"><p>Recompensas disponibles</p></th></tr></thead>
+                  <thead><tr><th colSpan="2"><p>Items de la arena</p></th></tr></thead>
                   <tbody>
                   {
-                    this.state.items.map((i,k)=>
+                    this.state.items.filter(i=>i.type!='formula').map((i,k)=>
                       <tr key={k}>
                         <td><Item item={i} eventname="detailItem" /></td>
                         <td><p className={i.qlty}>{i.name}</p></td>
@@ -61,11 +62,33 @@ class SectionItems extends Component {
                   }
                   </tbody>
                 </table>
-          </div>
+                </div>
               </td>
+              {this.state.selected.name?
               <td className="w50 detail-item">
-                <Hover item={this.state.selected} />   
+                <div className="for-by"> 
+                  <span>Creado por</span>
+                  <hr/>  
+                  <div>
+                    {
+                    this.state.selected.made_by.map((i,k)=><ItemIcon key={k} item={i}/>)
+                    }
+                  </div>
+                </div>
+                <Hover item={this.state.selected} /> 
+                <div className="for-by">
+                  <span>Material para</span>
+                  <hr/> 
+                  <div>
+                    {
+                    this.state.selected.mat_for.map((i,k)=><Item key={k} item={i}/>)
+                    }
+                  </div>
+                </div>
               </td>
+              :
+              <td className="w50 detail-item"><span>select item</span></td>
+              }
             </tr>
           </tbody>
         </table>

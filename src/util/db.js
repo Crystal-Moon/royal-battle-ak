@@ -51,8 +51,7 @@ export default {
 	getAllArray: () => DATA.then(all=>{
 	  const type={ potas: 1, equipo: 2, eido: 3 };
 	  const qlty={ blue: 1, green: 2, orange: 3 };
-	  let R = all.filter(i=>i.type!='formula')
-	 		.sort((a,b)=>type[a.type] - type[b.type] || qlty[a.qlty] - qlty[b.qlty]);
+	  let R = all.sort((a,b)=>type[a.type] - type[b.type] || qlty[a.qlty] - qlty[b.qlty]);
 	  return R;	
 	}), 
 
