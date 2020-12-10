@@ -2,7 +2,7 @@ html,body{
 	/*background-color: rgba(0,0,0,0);*/
 	background-color: #333;
 }
-.Todo{height:100%;}
+/*.Todo{height:100%;}*/
 .Todo .Logo h1{display: none;}
 .Todo .Header{font-size: 0.7em;}
 
@@ -42,7 +42,7 @@ html,body{
 
 
 /**********************************************/
-.Principal{
+/*.Principal{
 	width:100%;
 	background-color: #333;
 	transition: all 0.3s ease;
@@ -51,7 +51,7 @@ html,body{
 	max-width: 100%;
     overflow: hidden;
     padding-bottom:2%;
-}
+}*/
 .AcordeonItem{
 	transition: all 0.25s ease;
     /* height: 10em; */

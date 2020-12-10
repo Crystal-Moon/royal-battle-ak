@@ -20,13 +20,13 @@ class Header extends Component {
   render() {
     //const inGameProp = { displayName: 'In-game', active: false }
     //console.log('el prop en header', this.props)
-    let { nohover } = this.props;
+    //let { nohover } = this.props;
     return (
       <div className="Header">
         <Logo/>
         {/* <Switch userProp={ inGameProp } /> */}
         {/* <Config parent={this.props.parent} /> */}
-        <Switch eventname="nohover" active={ nohover } displayname="Ocultar detalles" 
+        <Switch eventname="nohover" displayname="Ocultar detalles" 
           tooltip="Ocultar los detalles del Item al pasar el mouse por encima" />
         <Zoom/>
       </div>

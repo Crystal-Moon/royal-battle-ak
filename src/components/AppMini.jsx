@@ -3,7 +3,7 @@ import { Event } from '../util/Event';
 
 //import logo from './logo.svg';
 import '../assets/css/gral.css';
-import '../assets/css/royal-mini.css'; // no llamar para app comun
+import '../assets/css/royal-mini.css';
 
 // Components
 import PrincipalMini from "./PrincipalMini";
