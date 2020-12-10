@@ -26,24 +26,18 @@ class SectionRecompensas extends Component {
 
   componentDidMount(){
     db.getRewads().then(items=>{
-     // console.log('el items',all)
       let caja= items.find(i=>i.id==21)
       this.setState({ items, caja })
     })
-    db.getAll().then(all=>{
-     // console.log('el items',all)
-      this.setState({ cajaItems: all.spirit.orange })
-    })
-   /* db.getHolySpirit().then(items => {
-      console.log('items',items)
-      this.setState({ items })
-    })*/
+
+    db.getHolySpirit().then(spirits=> 
+      this.setState({ cajaItems:spirits }))
   }
 
   render() {
-    return (
-      <section className="Section Rewards">
-        <h2 className="h2">Recompensas</h2>
+   return (
+    <section className="Section Rewards">
+      <h2 className="h2">Recompensas</h2>
 
       <div className='table-conteiner scrollable'>
         <table className="main">
@@ -61,15 +55,13 @@ class SectionRecompensas extends Component {
             }
           </tbody>
         </table>
-   </div>
-   {/* <div className='table-conteiner'> */}
-        <table className="main">
-          <thead><tr><th style={{fontSize:'1.6em'}}><ItemIcon item={this.state.caja} /></th><th colSpan="3"><p>caja de holy spirit</p></th></tr></thead>
-          <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} hoverup={true} /></td>)}</tr></tbody>
-          <tfoot><tr><td colSpan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
-        </table>
-       {/* </div> */}
-      </section>
+      </div>
+      <table className="main">
+        <thead><tr><th style={{fontSize:'1.6em'}}><ItemIcon item={this.state.caja} /></th><th colSpan="3"><p>caja de holy spirit</p></th></tr></thead>
+        <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} hoverup={true} /></td>)}</tr></tbody>
+        <tfoot><tr><td colSpan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
+      </table>
+    </section>
     );
   }
 }

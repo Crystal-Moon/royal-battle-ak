@@ -25,7 +25,8 @@ class SectionItems extends Component {
       //let items = all.potas.blue.concat(all.potas.green).concat(all.equipo.blue).concat(all.equipo.green).concat(all.equipo.orange).concat(all.eido.blue).concat(all.eido.green)
      // console.log('el items',all)
      // items=items;
-      this.setState({ items, selected: items[0] })
+      //console.log(items)
+      this.setState({ items, selected: items[30] })
     })
    /* db.getHolySpirit().then(items => {
       console.log('items',items)
