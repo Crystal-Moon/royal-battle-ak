@@ -35,7 +35,21 @@ class SectionItems extends Component {
 
   selectItem({ id, ref }){
     console.log('en select item', id, ref)
-    db.getById(id).then(selected=> this.setState({ selected }))
+    //db.getById(id).then(selected=> this.setState({ selected }))
+    db.getById(id).then(selected=>{
+      //var x = [1, 2, 3, 4, 5, 6, 7, 3, 4, 4, 5, 5, 6];
+      let i=selected.made_by.map(m=>m.id);
+      let m={}
+      //var indices = new Array(i.length).fill(0);
+      selected.made_by=Array.from(new Set(selected.made_by.map(JSON.stringify))).map(JSON.parse);
+      
+      //console.log('el select simple 1', selected.made_by)      
+      i.forEach((n)=> m[String(n)] = (m[String(n)] || 0) + 1 );
+      selected.by=m;
+      //console.log('i resumen',m)
+      this.setState({ selected })
+
+    })
   }
 
 /* aqi tendre un event.on para mostrar en el costado */
@@ -71,7 +85,11 @@ class SectionItems extends Component {
                   <hr/>  
                   <div>
                     {
-                    this.state.selected.made_by.map((i,k)=><ItemIcon key={k} item={i}/>)
+                    this.state.selected.made_by.map((i,k)=>
+                      <>
+                      <ItemIcon item={i} key={k} />
+                      <span key={(k+1)*10}>x{this.state.selected.by[String(i.id)]}</span>
+                      </>)
                     }
                   </div>
                 </div>

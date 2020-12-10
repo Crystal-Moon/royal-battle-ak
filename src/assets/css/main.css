@@ -97,6 +97,14 @@ div.for-by>div{
 
 }
 .detail-item>.Hover{display: block;position: relative;margin: auto;}
+.for-by:first-child .ItemIcon{margin-right: 0.2em;}
+.for-by:first-child span{
+	display: inline;
+    line-height: 2em;
+    margin: auto;
+    margin-left: 0;
+}
+.for-by:last-child{padding-right: 1.7em;}
 .SectionItems .detail-item .Item:hover .Hover{ display: block; }
 /*
 git fetch <remote> <branchremoto>:<branchlocal> 
