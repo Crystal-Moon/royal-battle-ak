@@ -306,6 +306,7 @@ h2, h3, h4, .ttl{
 }
 .blue{
 	color: blue;
+	color: rgba(56, 89, 255, 1);
 	border-color:blue;
 }
 .green{

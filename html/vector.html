@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vectores</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+
+    <script>
+
+    const c=document.getElementById('myCanvas');
+    let ctx=c.getContext('2d');
+
+function draw (by,forr) {
+  //  ctx.clearRect(0, 0, c.width, c.height);
+    ctx.fillStyle='#333'
+    ctx.fillRect(0, 0, c.width, c.height);
+    //console.log('canvas','w',c.width,'h',c.height);
+
+    
+    ctx.strokeStyle='red';
+    ctx.lineWidth = 3;
+
+
+    let xTotal = c.width; 
+    let yTotal = c.height;
+    let y5per = c.height/20 // 5%
+    let y95per= c.height - (c.height/20);
+    let xM = xTotal/2;
+    let yM = yTotal/2;
+
+    ctx.moveTo(xM,yM);
+
+    //console.log(xTotal,yTotal,y5per,y95per)
+
+
+    by.forEach((_,i)=> {
+        let x1=c.width/(by.length+1) * (i+1),
+        x2= xM,
+        y1= 85*c.height/100,
+        y2= yM;
+      //  console.log('a draw',x1,x2,y1,y2)
+        setTimeout(()=>{ 
+            drawLine(ctx,{ x1, x2, y1, y2 },{ xM, yM },'by')
+        },10)
+    }
+    )
+    
+    forr.forEach((_,i)=> {
+        let x1=xM,
+        x2= c.width/(forr.length+1) * (i+1),
+        y1= yM,
+        y2= 15*c.height/100;
+      //  console.log('a draw',x1,x2,y1,y2)
+        setTimeout(()=>{ 
+            drawLine(ctx,{ x1, x2, y1, y2 },{ xM, yM },'by')
+        },10)
+    }
+    )
+
+
+}
+
+
+function drawLine (ctx,{x1,y1,x2,y2},{ xM, yM },l) {
+
+//console.log('en drawline')
+//var c = document.getElementById("myCanvas");
+//var ctx = c.getContext("2d");
+    let zt=100
+for (let z=1; z<=zt; z++){
+    //console.log('en el for')
+            setTimeout(()=>{
+            //    new Date().getTime();
+    //ctx.fillStyle='blue';
+    //console.log('el fill react', xM*2, yM*2)
+    //ctx.fillRect(0, 0, xM*2, yM*2);
+                //console.log('en el set')
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                let xa=x1 + ((x2-x1)/zt * z);
+                let ya=y1 + ((y2-y1)/zt * z);
+                //console.log('linea',z,'de',l,'x1',x1,'y1',y1,'x2',x2,'y2',y2,'xa',xa,'xy',ya)
+                ctx.lineTo(xa, ya);
+                ctx.stroke();
+            },z*5)
+        }
+
+//console.log('fin del for')
+/*
+ctx.fillStyle='white'
+ctx.fillRect(0, 0, c.width, c.height);
+ctx.moveTo(0,0);
+ctx.strokeStyle='red'
+ctx.lineTo(20,10);
+//ctx.stroke();
+ctx.strokeStyle='blue'
+ctx.lineTo(50,100);
+//ctx.stroke();
+ctx.strokeStyle='green'
+ctx.lineTo(200,100);
+ctx.lineWidth = 5;
+ctx.stroke();
+*/
+
+}
+
+const BY=[
+    {
+    "id": 1,
+    "name": "Gaia Teleportation Stone",
+    "type": "potas",
+    "desc": "Right-click to teleport to any location on the map.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00064.png",
+    "qlty": "blue",
+    "made_by": [],
+    "mat_for": []
+  },
+  {
+    "id": 2,
+    "name": "Intermediate Healing Holy Water Formula",
+    "type": "formula",
+    "desc": "Formula for making Intermediate Healing Holy Water.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00201.png",
+    "qlty": "green",
+    "made_by": [],
+    "mat_for": []
+  },
+  {
+    "id": 3,
+    "name": "Intermediate Healing Holy Water",
+    "type": "potas",
+    "desc": "Use to recover 25,000 HP instantly.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I01988.png",
+    "qlty": "green",
+    "made_by": [2,4,4,4],
+    "mat_for": []
+  }
+]
+
+const FOR=[
+    {
+    "id": 5,
+    "name": "Intermediate Healing Salve Formula",
+    "type": "formula",
+    "desc": "Formula for making Intermediate Healing Salve.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00201.png",
+    "qlty": "green",
+    "made_by": [],
+    "mat_for": [6]
+  },
+  {
+    "id": 6,
+    "name": "Intermediate Healing Salve",
+    "type": "potas",
+    "desc": "Recovers 5,000 HP every second.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
+    "qlty": "green",
+    "made_by": [5,7,7,7],
+    "mat_for": [53]
+  },
+  {
+    "id": 7,
+    "name": "Basic Healing Salve",
+    "type": "potas",
+    "desc": "Recovers 2,000 HP every second.",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00154.png",
+    "qlty": "blue",
+    "made_by": [],
+    "mat_for": [6]
+  },
+  {
+    "id": 8,
+    "name": "Heruka Dazzling Necklace Formula",
+    "type": "formula",
+    "desc": "",
+    "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00201.png",
+    "qlty": "orange",
+    "made_by": [],
+    "mat_for": [53]
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
