@@ -5,6 +5,7 @@ import db from '../util/db';
 import Svg from './Svg';
 import Item from './Item';
 import ItemIcon from './ItemIcon';
+import Canva from './Canva';
 
 class MapItems extends Component {
   constructor(){
@@ -77,9 +78,10 @@ class MapItems extends Component {
       return (
         <div className="MapItems">
        
-       	  <div className="svg-cointeiner">
-  		      <Svg made_by={ made_by } mat_for={ mat_for } key={this.state.key} /> 
-  		    </div>
+       	{/*  <div className="svg-cointeiner"> */ }
+            <Canva made_by={ made_by } mat_for={ mat_for } key={this.state.key} />
+  		     {/* <Svg made_by={ made_by } mat_for={ mat_for } key={this.state.key} /> */}
+  		  {/*  </div> */}
 
           <div className="icon-conteiner">
             <div className="icon-3">
