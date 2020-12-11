@@ -249,7 +249,7 @@ h2, h3, h4, .ttl{
 	display:none;
 	position: absolute;
 	background-color: #161616;
-	width: max-content;
+	width: 12em;
 	max-width: 13.5em;
 	font-size: 0.9em;
 	padding: 0.6em;
@@ -259,7 +259,9 @@ h2, h3, h4, .ttl{
 .Hover .ItemIcon{
 	width: inherit;
     height: inherit;
-
+}
+.Hover.hover-up{
+	bottom: 0;
 }
 
 .item-head{
@@ -267,14 +269,14 @@ h2, h3, h4, .ttl{
 	flex-direction:row;
 }
 .item-head span{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-head span:first-child{
-	flex:1;
+	/*flex:1;*/
 }
 .item-head span:last-child{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-name{

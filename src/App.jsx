@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Event } from './util/Event';
 
 import './assets/css/gral.css';
@@ -11,21 +11,21 @@ import AcordeonMenu from './components/AcordeonMenu';
 import MapItems from './components/MapItems';
 
 
-import {InGame} from './util/handlerInGame'; // el handler de util
+//import {InGame} from './util/handlerInGame'; // el handler de util
 //import {InGame} from './components/InGame'; // el componente // ni existe , ni se crea aqui :(
 
 class App extends Component {
   
   constructor(){
     super();
-    this.changeZoom = this.changeZoom.bind(this)
-    this.changeHover = this.changeHover.bind(this)
+    this.changeZoom = this.changeZoom.bind(this);
+    this.changeHover = this.changeHover.bind(this);
     this.state = {
       zoom: 100,
       nohover: 0
     }
-    Event.on('changeZoom', this.changeZoom)
-    Event.on('nohover', this.changeHover)
+    Event.on('changeZoom', this.changeZoom);
+    Event.on('nohover', this.changeHover);
   }
 
 

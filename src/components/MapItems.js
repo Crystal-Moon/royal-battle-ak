@@ -2,7 +2,7 @@ import { Component, createRef } from 'react';
 import { Event } from '../util/Event';
 import db from '../util/db';
 
-import Svg from './Svg';
+//import Svg from './Svg';
 import Item from './Item';
 import ItemIcon from './ItemIcon';
 import Canva from './Canva';
@@ -79,23 +79,27 @@ class MapItems extends Component {
         <div className="MapItems">
        
        	{/*  <div className="svg-cointeiner"> */ }
-            <Canva made_by={ made_by } mat_for={ mat_for } key={this.state.key} />
+          <Canva made_by={ made_by } mat_for={ mat_for } key={this.state.key} />
   		     {/* <Svg made_by={ made_by } mat_for={ mat_for } key={this.state.key} /> */}
   		  {/*  </div> */}
 
           <div className="icon-conteiner">
             <div className="icon-3">
+              <div>
               {
                 mat_for.map((i,k) => <Item key={k} item={i} eventname='moveToCentre' />)
               }
+              </div>
             </div>
             <div className="icon-3 central posible">
-              <Item item={ this.state.itemSelected } ref={ this.itemCentral } />
+              <div><Item item={ this.state.itemSelected } ref={ this.itemCentral } /></div>
             </div>
             <div className="icon-3">
+              <div>
               {
                 made_by.map((i,k) => <Item key={k} item={i} eventname='moveToCentre' />)
               }
+              </div>
             </div> 
           </div>
 

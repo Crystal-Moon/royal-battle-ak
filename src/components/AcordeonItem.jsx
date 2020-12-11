@@ -1,6 +1,6 @@
 import { Component, createRef } from 'react';
-import Item from "./Item";
-import db from '../util/db';
+import Item from './Item';
+//import db from '../util/db';
 import { Event } from '../util/Event';
 
 class AcordeonItem extends Component {

@@ -154,12 +154,13 @@ html,body{
 	top:0;
 	bottom: 0;margin:auto;
 }
+/*
 .Svg{transition: all 0.5s ease;}
 line{
-	stroke:  #333; /* color de fondo*/
+	stroke:  #333; // color de fondo
 	fill: #333;
 	stroke-width:2;
-}
+}*/
 /*.icon-conteiner .ItemIcon{font-size:1.3em;}*/
 .icon-conteiner{
 	z-index: 50; 
@@ -170,12 +171,14 @@ line{
 	font-size: 1.2em;
 	margin: 0;
 	width:100%;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-evenly;
+	/*justify-content: space-evenly;*/
 	position: relative;
 	/*z-index: 100;*/
 }
-.icon-3 .Item, .item-section .Item{position: unset;transition: all 0.15s ease;}
+/*.icon-3 .Item{ margin: auto; }*/
+.icon-3 .Item, .item-section .Item{/*position: unset;*/transition: all 0.15s ease;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{
 	left:0;right: 0;
 	margin-left: auto;
@@ -185,6 +188,19 @@ line{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	z-index: 10;
+}
+.icon-3{ justify-content: space-between; }
+.icon-3>div{ 
+	display: -ms-flexbox;
+	display: flex; 
+	justify-content: space-between;
+	width: 100%;
+}
+.icon-3>div:before, .icon-3>div:after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 2px;
 }
 /*
 .icon-3.central.posible{
