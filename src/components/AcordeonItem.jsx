@@ -1,23 +1,21 @@
+
 import { Component, createRef } from 'react';
-import Item from './Item';
-//import db from '../util/db';
 import { Event } from '../util/Event';
 
+import Item from './Item';
+
 class AcordeonItem extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.showSection = this.showSection.bind(this);
     this.hideSection = this.hideSection.bind(this);
-
     this.state = { is_show: false }
     this.acordeonItemRef = createRef();
     
     Event.on('showSection', this.hideSection);
   }
 
-  componentDidMount(){
-
-  }
+  componentDidMount(){}
 
   hideSection({ref}){
     this.acordeonItemRef.current.classList.remove('show');
@@ -27,7 +25,6 @@ class AcordeonItem extends Component {
       if(!this.state.is_show) this.acordeonItemRef.current.classList.add('show');
       this.setState({ is_show: true })
     }
-    
   }
 
   showSection(e){
@@ -38,7 +35,6 @@ class AcordeonItem extends Component {
     }else
       Event.emit('showSection', { ref: this.acordeonItemRef })
   }
-
 
   render() {
     let { blue=[], green=[], orange=[] } = this.props.items;

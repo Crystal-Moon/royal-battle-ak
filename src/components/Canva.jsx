@@ -1,12 +1,10 @@
 
 import { Component, createRef } from 'react';
-import {Event} from '../util/Event';
-
-
+import { Event } from '../util/Event';
 
 class Canva extends Component {
-  constructor(){
-	super();
+  constructor(props){
+	super(props);
 	this.refCanva = createRef();
 	this.resizeComponent=this.resizeComponent.bind(this);
 	this.doneResizing=this.doneResizing.bind(this)
@@ -24,9 +22,6 @@ class Canva extends Component {
   }
 
   componentDidMount(){
-		//this.setState({ ...this.props })
-		//this.drawing();
-		//this.resizeComponent()
 	this.doneResizing();
   }
 
@@ -45,8 +40,8 @@ class Canva extends Component {
 	let ctx = cnv.getContext('2d');
 	ctx.fillStyle='#333';
 	ctx.fillRect(0, 0, cnv.width, cnv.height);
-	ctx.strokeStyle='red';
-    ctx.lineWidth = 2;
+	ctx.strokeStyle='#FFF';
+    ctx.lineWidth = 1;
 
     let xM = cnv.width/2;
     let yM = cnv.height/2;

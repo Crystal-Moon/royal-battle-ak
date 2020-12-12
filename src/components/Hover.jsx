@@ -1,11 +1,9 @@
-import { Component } from 'react';
 
 import ItemIcon from './ItemIcon';
 
-class Hover extends Component {
-  render() {
-    const { item={} } = this.props;
-    return( 
+function Hover(props) {
+  const { item={} } = props;
+  return( 
       <div className="Hover" >
     	  <div className="item-head">
             <span>
@@ -19,8 +17,7 @@ class Hover extends Component {
             <hr />
         </div>
     </div>
-    );
-  }
+  );
 }
 
 export default Hover;
