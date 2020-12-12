@@ -14,6 +14,7 @@ html,body{
 	display:none;
 }
 /**********************************/
+/*
 .LeftBar{
 	border-top-left-radius: 1em;
 	border-bottom-left-radius: 1em;
@@ -37,7 +38,7 @@ html,body{
 	background-color: #8a8989;
 }
 
-
+*/
 /************************************************/
 
 
@@ -56,7 +57,7 @@ html,body{
 	transition: all 0.25s ease;
     /* height: 10em; */
     /* height: 1.6em; */
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-height: 1.7em;
     transition: max-height 0.25s ease-out;
     overflow: hidden;
@@ -74,12 +75,15 @@ html,body{
 
 }
 .AcordeonItem ul{
+	display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 0.1em;
     padding-bottom:0.6em;
-    height: max-content;
-    min-height: max-content;
+    overflow: visible;
+   /* height: max-content;*/
+    /*min-height: max-content;*/
 }
 /*
 .AcordeonItem.hidden{
@@ -96,7 +100,7 @@ html,body{
 }
 .item-section{
 	font-size:1.1em;
-	position: relative;
+	/*position: relative;*/
 	display:flex;
 	flex-grow: 1;
 	/*flex-flow: column wrap;
@@ -105,6 +109,9 @@ html,body{
 	margin-bottom: 0.5em;
 	margin-top: 0.2em;
 	height: max-content;
+}
+.item-section li{
+	overflow: visible;
 }
 .icon-3 .Item{
 	margin:0;
