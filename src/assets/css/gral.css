@@ -34,7 +34,6 @@ html, body, #root{
 	width:100%;
 	background-color: #333;
 	transition: all 0.3s ease;
-	border-right: solid 5px black;
 	box-sizing: border-box;
 	max-width: 100%;
     overflow: hidden;
@@ -79,9 +78,9 @@ h2, h3, h4, .ttl{
 }
 .Logo img{ height: 2em; }
 /**********************************/
-/*
+
 .Config{
-	margin-left: 0.3em;
+	/*margin-left: 0.3em;*/
     margin-right: 0.3em;
     margin-top: 0.3em;
        border-top-left-radius: 0.4em;
@@ -89,16 +88,19 @@ h2, h3, h4, .ttl{
     position: relative;
     width: 2.8em;
     cursor: pointer;
+    margin-left: auto;
 }
 .Config:hover, .Config:active, .Config.show{
 	background-color: dimgrey;
 }
+/*
 .Config img{
 	position: relative;
 	height: 100%;
     width: 100%;
     display: block;
 }
+*/
 .ConfigIcon{
     height: 70%;
     width: auto;
@@ -116,9 +118,13 @@ h2, h3, h4, .ttl{
     height: max-content;
     z-index: 1500;
 }
+.config-in>div{
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+}
 .Config.show .config-in{
 	display:block;
-}*/
+}
 
 /***********************************/
 
@@ -231,6 +237,7 @@ h2, h3, h4, .ttl{
 }
 .Item:hover .Hover{
 	display:block;
+	left: -4em;
 }
 .ItemIcon{
 	display:block;
