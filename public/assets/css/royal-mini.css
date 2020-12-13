@@ -20,9 +20,6 @@ html,body{
 .TodoMini .Item:hover .Hover.no-hover{
 	display:none;
 }
-.TodoMini .Nav, .TodoMini .Footer, .TodoMini>.Header{
-	display:none;
-}
 /**********************************/
 .LeftBar{
 	border-top-left-radius: 1em;
@@ -49,7 +46,10 @@ html,body{
 
 
 /************************************************/
-
+.Nav, .Footer, .Todo>.Header{
+	display:none;
+}
+.Principal{width:100%;}
 
 /**********************************************/
 .PrincipalMini{

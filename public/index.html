@@ -7,13 +7,17 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/themes/default.css">
     <title>React App</title>
+    <style>#SwitchInGame{position: fixed;top: 0.5em;right: 1em;margin-left: auto;}</style>
   </head>
   <body>
-  	<!--
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-    -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="./handlerInGame.js"></script>
     <div id="root"></div>
-    <div id="root-mini"></div>
+    <div id="SwitchInGame" class="Switch" onclick="handlerInGame()" data-status="off">
+      <div class="s-txt"><span>In-Game</span></div>
+      <div class="s-back"><div class="s" /></div>
+    </div>
   </body>
 </html>
