@@ -16,7 +16,7 @@ function handlerInGame(){
 
 function openMini() {
 	window.mini= window.open('in_game','mini_in_game',
-		'height=420,width=420,toolbar=no,location=no');
+		'height=420,width=420,scrollbars=1,location=no,menubar=no,toolbar=no,resizable=yes,status=no');
 
 	window.miniIsOpen=true;
 	//console.log('ventna papa', window.mini.opener)

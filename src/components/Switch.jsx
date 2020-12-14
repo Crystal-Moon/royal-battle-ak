@@ -1,42 +1,40 @@
-import { Component, createRef } from 'react';
+import { Component } from 'react';
 import { Event } from '../util/Event';
 
 class Switch extends Component {
-  constructor(props){
+    constructor(props){
     super(props);
     this.handlerSwitch = this.handlerSwitch.bind(this);
-    this.state = { active: false, eventname: '' }
-    Event.on('closeInGame', this.setState)
+    this.state = { 
+      active: false, 
+      eventname: '' 
+    }
   }
 
   componentDidMount(){
-    this.setState({ active: Boolean(this.props.active) })
+    let active = parseInt(window.localStorage.getItem(this.props.eventname) || 0)
+    console.log('el active de localstrage', active)
+    this.setState({ active: Boolean(active) })
+    Event.emit(this.props.eventname || '',{ active })
   }
 
   handlerSwitch(e){
     e.stopPropagation();
-    let active = !this.state.active;
-    let eventname=this.props.eventname;
-    this.setState({ active, eventname });
-   // if(this.props.userProp && this.props.userProp.key)
-     
- //   console.log('se detecto prop de user',this.props)
-      //  Event.emit('configUser',{ ...this.props.userProp, active })
-  //    }
- //     else{
-   //     console.log('én el else de switch', this.props.userProp)
-   //     Event.emit('inGame', { active, switche:this });
-  //    }
-  //  }
+    let active = !Boolean(this.state.active)*1;
+    let eventname = this.props.eventname || '';
+    
+    this.setState({ active: Boolean(active), eventname });
+    window.localStorage.setItem(eventname, active);
+    Event.emit(eventname,{ active })
   }
 
   render() {
-    const { eventname, displayname, active } = this.props;
-    console.log('las props en switch',this.props)
+    const { eventname, displayname, tooltip="" } = this.props;
     return (
       <div className={`Switch ${this.state.active?'active':''} `} 
            onClick={ this.handlerSwitch } 
-           data-eventname={ eventname } >
+           data-eventname={ eventname }
+           title={ tooltip } >
         <div className="s-txt">
           <span>{ displayname }</span>
         </div>

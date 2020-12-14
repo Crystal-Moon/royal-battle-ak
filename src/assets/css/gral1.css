@@ -1,0 +1,330 @@
+
+
+
+/* traido de AppMini, ervisar comop afecta a gral y a App */
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap');
+
+/*
+  logo
+  font-family: 'Carter One', cursive;
+
+  titles
+  font-family: 'Vollkorn', serif;
+
+  sub
+  font-family: 'Bree Serif', serif;
+
+  prrfs
+  font-family: 'Hind Siliguri', sans-serif;
+*/
+
+html, body, #root{
+	margin:0;
+	padding:0;
+	height: 100%;
+	width: 100%;
+	/* background-color: grey; */
+}
+.Todo{
+	font-size: 1rem;
+	color: white;
+	width: 100%;
+	height: 100%;
+
+	width:100%;
+	background-color: #333;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	max-width: 100%;
+    overflow: hidden;
+    padding-bottom:2%;
+	/* overflow: hidden; */
+	/* background-color: grey; */
+}
+a, a:hover, a:active, a:visited{color:inherit;text-decoration: none;}
+ul{list-style: none;margin: 0;padding: 0;}
+p, .prrfs{
+	font-family: 'Hind Siliguri', sans-serif;
+	line-height: 1.3em;
+}
+.sub-ttl{
+	font-family: 'Bree Serif', serif;
+}
+h1, h2, h3, h4, h5, h6{margin: 0; padding: 0;}
+h2, h3, h4, .ttl{
+	font-family: 'Vollkorn', serif;
+	font-size: 1.8em;
+}
+
+
+/***********************************/
+.Header{
+	font-size:1em;
+	/* position: fixed; */
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 3em;
+	display:flex;
+	flex-direction: row;
+	background-color: #443838;
+}
+.Logo{
+	height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5em;
+}
+.Logo img{ height: 2em; }
+/**********************************/
+
+.Config{
+	/*margin-left: 0.3em;*/
+    margin-right: 0.3em;
+    margin-top: 0.3em;
+       border-top-left-radius: 0.4em;
+    border-top-right-radius: 0.4em;
+    position: relative;
+    width: 2.8em;
+    cursor: pointer;
+    margin-left: auto;
+}
+.Config:hover, .Config:active, .Config.show{
+	background-color: dimgrey;
+}
+/*
+.Config img{
+	position: relative;
+	height: 100%;
+    width: 100%;
+    display: block;
+}
+*/
+.ConfigIcon{
+    height: 70%;
+    width: auto;
+    margin: 0.5em;
+    margin-bottom: 0;
+}
+.config-in{
+	display: none;
+	position: absolute;
+    right: 0;
+    background-color: dimgrey;
+    padding: 0.4em;
+    padding-left: 0.9em;
+    width: max-content;
+    height: max-content;
+    z-index: 1500;
+}
+.config-in>div{
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+}
+.Config.show .config-in{
+	display:block;
+}
+
+/***********************************/
+
+.Switch, .Zoom{
+	display: flex;
+	flex-direction: row;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+    margin-bottom: 0.3em;
+	margin-left: 1em;
+	width: max-content;
+	font-family: 'Hind Siliguri', sans-serif;
+
+	width: 10em;
+    justify-content: space-between;
+    height: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.Zoom span{ display:inline; text-align:center; }
+.s{
+	border-radius: 5em;
+	width: 1.5em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 2rem;
+	background-color: black;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+.s-txt{
+	
+}
+.s.s-txt{
+	width: 3em;
+	background-color: white;
+	color: black;
+	width: 3em;
+    max-width: 3em;
+}
+
+/**************************************/
+.Switch{
+	width: auto;
+	margin-left: auto;
+}
+.Switch *{
+	white-space: pre;
+	transition: all 0.3s ease;
+}
+
+.s-back{
+	margin: auto;
+	margin-left: 0.3em;
+	/* margin-right: 1em; */
+	border-radius: 2em;
+	width: 3em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 4rem;
+	cursor: pointer;
+	background-color: #a0a0a0;
+	text-align: center;
+}
+/*
+.s{
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 2rem;
+	background-color: black;
+*/	/* left:0; *//*
+	margin-right: auto;
+	right: auto;
+	margin-left:0;
+	text-align: center;
+	
+}
+*/
+.Switch.active .s-back{
+	background-color: skyblue;
+}
+.Switch.active .s{
+	right: 0;
+	/* float: right; */
+	margin-left: 50%;
+	/* left: auto; */
+	margin-right: 0;
+}
+
+
+/*
+.Theme{ font-size: inherit; }
+.Theme label{ display:block;margin-bottom: 0.3em; }
+.Theme select{border-radius: 2em;}
+*/
+
+/************************************************/
+.Item{
+    width: max-content;
+    height: max-content;
+    margin: 0.3em;
+    position: relative;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+}
+.Item:hover .Hover{
+	display:block;
+	left: -4em;
+}
+.ItemIcon{
+	display:block;
+	border: 0.2rem solid white;
+	border-radius: 10%;
+	width: 1.2em;
+	height: 1.2em;
+	/*margin: 0.1em;*/
+}
+.ItemIcon img{
+	width:100%;
+	height:100%;
+}
+.Hover{
+	z-index: 500;
+	display:none;
+	position: absolute;
+	background-color: #161616;
+	width: 12em;
+	max-width: 13.5em;
+	font-size: 0.9em;
+	padding: 0.6em;
+	border-radius:0.5em;
+	color: white;
+}
+.Hover .ItemIcon{
+	width: inherit;
+    height: inherit;
+}
+.Hover.hover-up{
+	bottom: 0;
+}
+
+.item-head{
+	display: flex;
+	flex-direction:row;
+}
+.item-head span{
+	/*flex:3;*/
+}
+
+.item-head span:first-child{
+	/*flex:1;*/
+}
+.item-head span:last-child{
+	/*flex:3;*/
+}
+
+.item-name{
+	font-family: 'Bree Serif', serif;
+	padding: 0.2em;
+}
+.stat{
+	background-color: #0d0d0d;
+	border-radius: 0.5em;
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+	padding: 0.4em;
+	white-space: pre-line;
+}
+.item-body hr{
+	display:block;
+	background: linear-gradient(90deg, rgba(2,0,36,1) -15%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 115%);
+	height: 1px;
+	border:none;
+	margin-top:0.3em;
+	margin-bottom:0.3em;
+}
+
+.white{
+	color:white;
+	border-color:white;
+}
+.blue{
+	color: blue;
+	color: rgba(56, 89, 255, 1);
+	border-color:blue;
+}
+.green{
+	color:green;
+	border-color:green;
+}
+.orange{
+	color:orange;
+	border-color:orange;
+}

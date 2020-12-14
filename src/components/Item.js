@@ -27,9 +27,13 @@ class Item extends Component {
    // console.log(this.props)
     const { item={}, eventname, hoverup=false } = this.props;
     return (
-      <div className="Item" onClick={ this.handlerClick } data-eventname={ eventname } data-id={ item.id } ref={ this.itemRef } >
+      <div className="Item" 
+        onClick={ this.handlerClick } 
+        data-eventname={ eventname } 
+        data-id={ item.id } 
+        ref={ this.itemRef } >
           <ItemIcon item={ item } />
-          <Hover item={ item } hoverup={ hoverup }></Hover>
+          <Hover item={ item } hoverup={ hoverup } />
       </div>
     );
   }

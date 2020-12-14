@@ -82,4 +82,4 @@ const DATA = (() => Promise.resolve(new Promise(done=>{
 	})
 })))();
 */
-console.log('data global',DATA)
+//console.log('data global',DATA)

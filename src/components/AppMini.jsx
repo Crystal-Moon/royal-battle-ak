@@ -8,20 +8,24 @@ import { Event } from '../util/Event';
 //import '../assets/css/royal-mini.css'; // no llamar para app comun
 
 // Components
-import PrincipalMini from "./PrincipalMini";
-import LeftBar from "./LeftBar";
+import Header from './Header';
+import AcordeonMenu from './AcordeonMenu';
+import MapItems from './MapItems';
+
+//import PrincipalMini from "./PrincipalMini";
+//import LeftBar from "./LeftBar";
 
 class AppMini extends Component {
 	constructor(){
     super();
     this.changeZoom = this.changeZoom.bind(this)
+    this.changeHover = this.changeHover.bind(this)
     this.state = {
-      style: {
-        fontSize: '1rem'
-      }
+      zoom: 100,
+      nohover: 0
     }
     Event.on('changeZoom', this.changeZoom)
-    //Event.on('inGame')
+    Event.on('nohover', this.changeHover);
   }
 
 
@@ -35,19 +39,28 @@ class AppMini extends Component {
   }
 
   changeZoom({ zoom }){
-    let z = zoom / 100
-    this.setState({ style:{ fontSize:`${z}rem`}})
+    this.setState({ zoom })
+  }
+
+  changeHover({ active }){
+
+  console.log('hover cambia en app', active)
+    this.setState({ nohover: active })
+    //window.localStorage.setItem('nohover', active)
   }
 
   render() {
     return (
-      <div className="TodoMini" style={ this.state.style } >
+      <div className={`TodoMini ${this.state.nohover?'no-hover':''}`} 
+        style={ {fontSize: `${this.state.zoom/100}rem` } } >
         <Helmet>
           <link rel="stylesheet" type="text/css" href={`/assets/css/royal-mini.css`} />
         </Helmet>
 
-        <PrincipalMini></PrincipalMini>
-        <LeftBar></LeftBar>
+        <Header />
+        <AcordeonMenu />
+        <MapItems />
+
       </div>
     
     );
@@ -56,3 +69,43 @@ class AppMini extends Component {
 
 export default AppMini;
 
+/*
+
+class App extends Component {
+  
+  constructor(){
+    super();
+    this.changeZoom = this.changeZoom.bind(this);
+    this.changeHover = this.changeHover.bind(this);
+    this.state = {
+      zoom: 100,
+      nohover: 0
+    }
+    Event.on('changeZoom', this.changeZoom);
+    Event.on('nohover', this.changeHover);
+  }
+
+
+  changeHover({ active }){
+
+  console.log('hover cambia en app', active)
+    this.setState({ nohover: active })
+  }
+
+  render() {
+    return (
+      <div className={`Todo ${this.state.nohover?'no-hover':''}`} style={ {fontSize: `${this.state.zoom/100}rem` } } >
+   
+          <Header />
+          <AcordeonMenu />
+          <MapItems />
+    
+      </div>
+    
+    );
+  }
+}
+
+export default App;
+
+*/

@@ -17,7 +17,9 @@ html, body{
 	line-height: 3em;
 }
 /*****/
-
+.Todo .Config{
+	display: none;
+}
 /**********************************/
 .Main{
 	font-size:1em;
@@ -25,7 +27,8 @@ html, body{
 	flex-direction: row;
 	width: 100%;
 	margin: 0;
-	height: calc(100% - 3em - 1.5em);
+	/*height: calc(100% - 3em - 1.5em);*/
+	height: 100%;
 	overflow: hidden;
 }
 .Nav{width: 20%;height: 100%;background-color: dimgrey;min-width: max-content;/* max-width: 16em; */height: auto;}

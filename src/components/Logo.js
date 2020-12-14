@@ -1,14 +1,12 @@
-import { Component } from 'react';
 
-class Logo extends Component {
-  render() {
-    return (
+import logo from '../assets/imgs/logo.png';
+
+function Logo() {
+  return (
       <div className="Logo">
-        <img src=''alt="logo" />
-        <h1>NOMBRE APPLICATION</h1>
+        <img src={logo} alt="logo" title="Desafio Divino - AuraKingdom ES" />
       </div>
-    );
-  }
+  );
 }
 
 export default Logo;

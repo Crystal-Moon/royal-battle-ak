@@ -3,11 +3,10 @@ html,body{
 	background-color: #333;
 }
 .TodoMini{
-	display: flex;
-	flex-direction: row-reverse;
+	/* display: flex; */
+	/* flex-direction: row-reverse; */
 	/*height:max-content;*/
 	height:100%;
-
 	/* float: right; */
 }
 .TodoMini .Logo h1{display: none;}
@@ -16,11 +15,15 @@ html,body{
 .TodoMini .Header>.Switch{
  display: none;
 }
-.TodoMini .Config{margin-left: auto;}
+.TodoMini .Config{display:block;margin-left: auto;}
 .TodoMini .Item:hover .Hover.no-hover{
 	display:none;
 }
+.Todo .Nav, .Todo .Footer, .Todo>.Header{
+	display:none;
+}
 /**********************************/
+/*
 .LeftBar{
 	border-top-left-radius: 1em;
 	border-bottom-left-radius: 1em;
@@ -44,14 +47,16 @@ html,body{
 	background-color: #8a8989;
 }
 
-
+*/
 /************************************************/
-.Nav, .Footer, .Todo>.Header{
-	display:none;
-}
-.Principal{width:100%;}
+
 
 /**********************************************/
+.Principal, .Main{
+	background-color: #333;
+	height: 100%;
+	width: 100%;
+}
 .PrincipalMini{
 	width:100%;
 	background-color: #333;
@@ -66,7 +71,7 @@ html,body{
 	transition: all 0.25s ease;
     /* height: 10em; */
     /* height: 1.6em; */
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-height: 1.7em;
     transition: max-height 0.25s ease-out;
     overflow: hidden;
@@ -84,12 +89,15 @@ html,body{
 
 }
 .AcordeonItem ul{
+	display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 0.1em;
     padding-bottom:0.6em;
-    height: max-content;
-    min-height: max-content;
+    overflow: visible;
+   /* height: max-content;*/
+    /*min-height: max-content;*/
 }
 /*
 .AcordeonItem.hidden{
@@ -106,7 +114,7 @@ html,body{
 }
 .item-section{
 	font-size:1.1em;
-	position: relative;
+	/*position: relative;*/
 	display:flex;
 	flex-grow: 1;
 	/*flex-flow: column wrap;
@@ -116,6 +124,10 @@ html,body{
 	margin-top: 0.2em;
 	height: max-content;
 }
+.item-section li{
+	overflow: visible;
+}
+
 .icon-3 .Item{
 	margin:0;
 }
@@ -123,6 +135,10 @@ html,body{
 	width: 1.4em;
 	height: 1.4em;
 }*/
+.AcordeonItem .Item:hover .Hover:hover{
+	display:none;
+}
+
 .hover-l{
 	left:0;
 }
@@ -139,11 +155,10 @@ html,body{
 	box-sizing: content-box;
 	background-color: #333;
    /*padding-bottom: 1.4em;*/
-
-   
-   
-  
-
+}
+.MapItems .Hover{
+	/*bottom: 0;*/
+	bottom: 1.5em;
 }
 /*.MapItems .central .Hover{
 	left: calc(-7 * 1em);
@@ -180,12 +195,14 @@ line{
 	font-size: 1.2em;
 	margin: 0;
 	width:100%;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-evenly;
+	/*justify-content: space-evenly;*/
 	position: relative;
 	/*z-index: 100;*/
 }
-.icon-3 .Item, .item-section .Item{position: unset;transition: all 0.15s ease;}
+/*.icon-3 .Item{ margin: auto; }*/
+.icon-3 .Item, .item-section .Item{position: static;transition: all 0.15s ease;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{
 	left:0;right: 0;
 	margin-left: auto;
@@ -196,24 +213,27 @@ line{
 	margin-bottom: 1rem;
 	z-index: 10;
 }
-/*
-.icon-3.central.posible{
-	text-align: center;
-	width: min-content;
-	margin-left: auto;
-	margin-right: auto;
+.icon-3{ justify-content: space-between; }
+.icon-3>div{ 
+	display: -ms-flexbox;
+	display: flex; 
+	justify-content: space-between;
+	width: 100%;
 }
-*/
-.Svg{
-    width:100%;
-    height:100%;
+.icon-3>div:before, .icon-3>div:after{
+	content: '';
+	display: block;
+	width: 1px;
+	height: 2px;
 }
 
 
 /***************************************/
+/*
 .hidden-h{
 	width: 1%;
 }
 .hidden-v{
 	height: 1%;
 }
+*/
