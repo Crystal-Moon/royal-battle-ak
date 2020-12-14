@@ -11,7 +11,6 @@ import PVP from './components/SectionPVP';
 import Rewards from './components/SectionRecompensas';
 import ModeInGame from './components/SectionModeInGame';
 import SobreMi from './components/SectionSobreMi';
-import Page404 from './components/Page404';
 
 const Rutas = () =>
   <App>
@@ -23,7 +22,7 @@ const Rutas = () =>
       <Route exact path="/abaut" component={SobreMi} />
       <Route exact path="/in_game" component={InGame} />
       <Route exact path="/" component={Intro} />
-      <Route component={Page404} />
+      <Route component={Intro} />
     </Switch>
   </App>;
 

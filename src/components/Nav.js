@@ -1,53 +1,50 @@
+
 import { Component } from 'react';
-//import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// Component
-//import Principal from './Principal';
+const routes = [
+  { name: 'Noticias',  url: '/' },
+  { name: 'PVP', url: '/pvp' },
+  { name: 'Items', url: '/items' },
+  { name: 'Recompnesas', url: '/rewards' },
+  { name: 'Modo In-Game', url: '/mode_in_game' },
+  { name: 'Sobre mí', url: '/abaut' }
+];
 
 class Nav extends Component {
-/*
   constructor(){
     super();
-    this.testOpen = this.testOpen.bind(this)
+    this.selectTab = this.selectTab.bind(this)
+    this.testWin = this.testWin.bind(this)
   }
 
-  testOpen(e){
-    //ReactDOM.createPortal(<Modal />, document.getElementById('root-mini')); 
-    //document.getElementById('root-mini').innerHTML=''
-    //window.ven = undefined
-    let rootMini=document.getElementById('root-mini');
-    rootMini.innerHTML=''
-    let div=document.createElement('div')
-    window.ven = ReactDOM.render(<AppMini />, div);
-    console.log('la ventana', window.ven)
-    rootMini.appendChild(div)
-   
+  selectTab(e){
+    Array.from(document.getElementsByClassName('selected'))
+      .forEach(x=>x.classList.remove('selected'));
+    
+    if(e.target.tagName=='A') 
+      e.target.parentNode.classList.add('selected')
   }
 
-*/
+  testWin(){
+    console.log('en testW')
+   // let ven = window.open('testpag/test_html.html', '_blank',
+     //   'left=1200,top=0,height=420,width=320,menubar=no,toolbar=no,location=1,personalbar=no,z-lock=1,navigationtoolbar=no')
+    let ven1 = window.open('./testpag/buildmini/index.html', '_blank',
+      'left=1200,top=0,height=420,width=320,menubar=no,toolbar=no,location=1,personalbar=no,z-lock=1,navigationtoolbar=no')
+  }
+
   render() {
     return (
       <nav className="Nav">
         <ul className="ul">
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/' className="Deep"><span>Introduccion</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/pvp' className="Deep"><span>PVP</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/items' className="Deep"><span>Items</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/rewards' className="Deep"><span>Recompensas</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl selected">
-            <Link to='/mode_in_game' className="Deep"><span>Mode In-Game</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/abaut' className="Deep"><span>Sobre mi</span></Link>
-          </li>
+        {
+          routes.map((l,k)=>
+            <li className="Li sub-ttl" key={k}>
+              <Link to={l.url} className="Deep" onClick={this.selectTab}>{l.name}</Link>
+            </li>)
+        }
+        <button type='button' onClick={ this.testWin } >ventana</button>
         </ul>
       </nav>
     );
@@ -55,40 +52,3 @@ class Nav extends Component {
 }
 
 export default Nav;
-
-/*
-      <nav className="Nav">
-        <ul className="ul">
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Introduccion</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>PVP</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Items</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Recompensas</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl selected">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Esta herramienta</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Sobre mi</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-*/

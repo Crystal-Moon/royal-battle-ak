@@ -21,9 +21,12 @@ class SectionItems extends Component {
   }
 
   componentDidMount(){
-    db.getAll().then(all=>{
+    db.getAllArray().then(items=>{
+      //let items = all.potas.blue.concat(all.potas.green).concat(all.equipo.blue).concat(all.equipo.green).concat(all.equipo.orange).concat(all.eido.blue).concat(all.eido.green)
      // console.log('el items',all)
-      this.setState({ items: all.spirit.orange })
+     // items=items;
+      //console.log(items)
+      this.setState({ items, selected: items[30] })
     })
    /* db.getHolySpirit().then(items => {
       console.log('items',items)
@@ -33,7 +36,21 @@ class SectionItems extends Component {
 
   selectItem({ id, ref }){
     console.log('en select item', id, ref)
-    db.getById(id).then(selected=> this.setState({ selected }))
+    //db.getById(id).then(selected=> this.setState({ selected }))
+    db.getById(id).then(selected=>{
+      //var x = [1, 2, 3, 4, 5, 6, 7, 3, 4, 4, 5, 5, 6];
+      let i=selected.made_by.map(m=>m.id);
+      let m={}
+      //var indices = new Array(i.length).fill(0);
+      selected.made_by=Array.from(new Set(selected.made_by.map(JSON.stringify))).map(JSON.parse);
+      
+      //console.log('el select simple 1', selected.made_by)      
+      i.forEach((n)=> m[String(n)] = (m[String(n)] || 0) + 1 );
+      selected.by=m;
+      //console.log('i resumen',m)
+      this.setState({ selected })
+
+    })
   }
 
 /* aqi tendre un event.on para mostrar en el costado */
@@ -45,12 +62,13 @@ class SectionItems extends Component {
         <table className="main">
           <tbody>
             <tr>
-              <td className="w50">
+              <td>
+                <div className="table-conteiner scrollable scrollable-in">
                 <table className="sub">
-                  <thead><tr><th colSpan="2"><p>Recompensas disponibles</p></th></tr></thead>
+                  <thead><tr><th colSpan="2"><p>Items de la arena</p></th></tr></thead>
                   <tbody>
                   {
-                    this.state.items.map((i,k)=>
+                    this.state.items.filter(i=>i.type!='formula').map((i,k)=>
                       <tr key={k}>
                         <td><Item item={i} eventname="detailItem" /></td>
                         <td><p className={i.qlty}>{i.name}</p></td>
@@ -59,10 +77,37 @@ class SectionItems extends Component {
                   }
                   </tbody>
                 </table>
+                </div>
               </td>
+              {this.state.selected.name?
               <td className="w50 detail-item">
-                <Hover item={this.state.selected} />
+                <div className="for-by"> 
+                  <span>Creado por</span>
+                  <hr/>  
+                  <div>
+                    {
+                    this.state.selected.made_by.map((i,k)=>
+                      <>
+                      <ItemIcon item={i} key={k} />
+                      <span key={(k+1)*10}>x{this.state.selected.by[String(i.id)]}</span>
+                      </>)
+                    }
+                  </div>
+                </div>
+                <Hover item={this.state.selected} /> 
+                <div className="for-by">
+                  <span>Material para</span>
+                  <hr/> 
+                  <div>
+                    {
+                    this.state.selected.mat_for.map((i,k)=><Item key={k} item={i}/>)
+                    }
+                  </div>
+                </div>
               </td>
+              :
+              <td className="w50 detail-item"><span>select item</span></td>
+              }
             </tr>
           </tbody>
         </table>

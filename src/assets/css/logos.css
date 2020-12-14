@@ -1,0 +1,9 @@
+.emoji {
+  font-family: apple color emoji, segoe ui emoji, noto color emoji, android emoji, emojisymbols, emojione mozilla, twemoji mozilla, segoe ui symbol;
+  font-family: "Segoe UI Emoji";
+}
+
+#react{ background-image: url('../imgs/react.png'); }
+#neu{ background-image: url('../imgs/neu.png'); }
+#ie{ background-image: url('../imgs/ie.png'); }
+#CM_logo{ background-image: url('../imgs/CM_logo.png'); }

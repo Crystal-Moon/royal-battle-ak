@@ -4,28 +4,20 @@ import { Event } from '../util/Event';
 class Switch extends Component {
   constructor(props){
     super(props);
-    this.refSwitch = createRef();
     this.handlerSwitch = this.handlerSwitch.bind(this);
     this.state = { active: false, eventname: '' }
-    //Event.on('closeInGame', this.closeInGame)
+    Event.on('closeInGame', this.setState)
   }
 
   componentDidMount(){
     this.setState({ active: Boolean(this.props.active) })
   }
 
- /* closeInGame({ active, switch }){
-
-  }*/
-
   handlerSwitch(e){
     e.stopPropagation();
     let active = !this.state.active;
     let eventname=this.props.eventname;
     this.setState({ active, eventname });
-    Event.emit(eventname, { active, switche: this.refSwitch })
-
-
    // if(this.props.userProp && this.props.userProp.key)
      
  //   console.log('se detecto prop de user',this.props)
@@ -44,8 +36,7 @@ class Switch extends Component {
     return (
       <div className={`Switch ${this.state.active?'active':''} `} 
            onClick={ this.handlerSwitch } 
-           data-eventname={ eventname }
-           ref={ this.refSwitch } >
+           data-eventname={ eventname } >
         <div className="s-txt">
           <span>{ displayname }</span>
         </div>

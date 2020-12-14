@@ -216,6 +216,7 @@ button span{display: block;margin:0;padding: 0;}
 }
 .Item:hover .Hover{
 	display:block;
+	left: -4em;
 }
 .ItemIcon{
 	display:block;
@@ -223,6 +224,7 @@ button span{display: block;margin:0;padding: 0;}
 	border-radius: 10%;
 	width: 1.2em;
 	height: 1.2em;
+	position: relative;
 	/*margin: 0.1em;*/
 }
 .ItemIcon img{
@@ -244,22 +246,23 @@ button span{display: block;margin:0;padding: 0;}
 .Hover .ItemIcon{
 	width: inherit;
     height: inherit;
-
 }
-
+.Hover.hover-up{
+	bottom: 0;
+}
 .item-head{
 	display: flex;
 	flex-direction:row;
 }
 .item-head span{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-head span:first-child{
-	flex:1;
+	/*flex:1;*/
 }
 .item-head span:last-child{
-	flex:3;
+	/*flex:3;*/
 }
 
 .item-name{
@@ -274,7 +277,7 @@ button span{display: block;margin:0;padding: 0;}
 	padding: 0.4em;
 	white-space: pre-line;
 }
-.item-body hr{
+.item-body hr, .for-by hr{
 	display:block;
 	background: linear-gradient(90deg, rgba(2,0,36,1) -15%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 115%);
 	height: 1px;
