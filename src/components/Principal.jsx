@@ -1,5 +1,5 @@
 
-import { Component } from 'react';
+import { Component, createRef } from 'react';
 import { Event } from '../util/Event';
 
 import InGame from './AppMini';
@@ -13,11 +13,22 @@ import SobreMi from './SectionSobreMi';
 class Principal extends Component{
   constructor(){
     super();
+   // this.main = createRef();
     this.changeTab = this.changeTab.bind(this);
     this.state={
       tab: 'home'
     }
     Event.on('changeTab', this.changeTab)
+  }
+
+  componentDidMount(){
+  //	console.log('location?', this.props.location)
+  //  window.mini=this.main;
+
+  	//console.log('el loc de win', window.location.search)
+  	//let in_game = window.location.search
+  	//if(/(in_game)/g.test(in_game)) this.setState({ tab: 'in_game' })
+  window.myEvent=Event
   }
 
   changeTab({ tab }){

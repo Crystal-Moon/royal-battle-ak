@@ -15,7 +15,7 @@ function handlerInGame(){
 }
 
 function openMini() {
-	window.mini= window.open('in_game','mini_in_game',
+	window.mini= window.open('/royalappmain','mini_in_game',
 		'height=420,width=420,scrollbars=1,location=no,menubar=no,toolbar=no,resizable=yes,status=no');
 
 	window.miniIsOpen=true;
@@ -51,3 +51,5 @@ window.onCloseMini = function () {
 }
 
 window.handlerInGame=handlerInGame;
+
+if(window.opener) window.myEvent.emit('changeTab',{ tab: 'in_game' })

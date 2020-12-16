@@ -3,7 +3,7 @@ import 'react-app-polyfill/stable';
 
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
+//import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
 
 //import Rutas from './routes';
 import App from './App';
