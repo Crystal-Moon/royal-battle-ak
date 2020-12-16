@@ -8,11 +8,12 @@ import './assets/css/royal.css';
 import './assets/css/scrollbar.css';
 
 // Components
-import Header from './components/Header';
+//import Header from './components/Header';
+import Logo from './components/Logo';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
-import {InGame} from './util/handlerInGame'; // el handler de util
+//import {InGame} from './util/handlerInGame'; // el handler de util
 //import {InGame} from './components/InGame'; // el componente // ni existe , ni se crea aqui :(
 
 class App extends Component {
@@ -47,7 +48,9 @@ class App extends Component {
     
     return (
       <div className="Todo" >
-        <Header parent="app" />
+        <div className="Header">
+          <Logo/>
+        </div>
         <Main body={children} />
         <Footer />
       </div>

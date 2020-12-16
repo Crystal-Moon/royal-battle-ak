@@ -13,7 +13,7 @@ class Switch extends Component {
 
   componentDidMount(){
     let active = parseInt(window.localStorage.getItem(this.props.eventname) || 0)
-    console.log('el active de localstrage', active)
+    console.log('el active de localstrage', this.props.eventname,active)
     this.setState({ active: Boolean(active) })
     Event.emit(this.props.eventname || '',{ active })
   }

@@ -1,14 +1,16 @@
 
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Event } from '../util/Event';
 
 const routes = [
-  { name: 'Noticias',  url: '/' },
-  { name: 'PVP', url: '/pvp' },
-  { name: 'Items', url: '/items' },
-  { name: 'Recompnesas', url: '/rewards' },
-  { name: 'Modo In-Game', url: '/mode_in_game' },
-  { name: 'Sobre mí', url: '/abaut' }
+  { name: 'Noticias',  url: 'home' },
+  { name: 'PVP', url: 'pvp' },
+  { name: 'Items', url: 'items' },
+  { name: 'Recompnesas', url: 'rewards' },
+  { name: 'Modo In-Game', url: 'mode_in_game' },
+  { name: 'Sobre mí', url: 'abaut' },
+  { name: 'test inGame', url: 'in_game' }
 ];
 
 class Nav extends Component {
@@ -22,8 +24,11 @@ class Nav extends Component {
     Array.from(document.getElementsByClassName('selected'))
       .forEach(x=>x.classList.remove('selected'));
     
-    if(e.target.tagName=='A') 
+    if(e.target.tagName=='SPAN'){ 
       e.target.parentNode.classList.add('selected')
+      Event.emit('changeTab', { tab:e.target.dataset.to })
+    }
+    
   }
 
   testWin(){
@@ -41,7 +46,10 @@ class Nav extends Component {
         {
           routes.map((l,k)=>
             <li className="Li sub-ttl" key={k}>
-              <Link to={l.url} className="Deep" onClick={this.selectTab}>{l.name}</Link>
+              <span data-to={l.url} 
+                className="Deep" 
+                onClick={this.selectTab}>{l.name}
+              </span>
             </li>)
         }
         <button type='button' onClick={ this.testWin } >ventana</button>

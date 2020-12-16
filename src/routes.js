@@ -14,16 +14,17 @@ import SobreMi from './components/SectionSobreMi';
 
 const Rutas = () =>
   <App>
-    <Switch>
-      <Route exact path="/pvp" component={PVP} />
-      <Route exact path="/items" component={Items} />
-      <Route exact path="/rewards" component={Rewards} />
-      <Route exact path="/mode_in_game" component={ModeInGame} />
-      <Route exact path="/abaut" component={SobreMi} />
-      <Route exact path="/in_game" component={InGame} />
+    
+      <Route exact path="/?a=pvp" component={PVP} />
+      <Route exact path="/?a=items" component={Items} />
+      <Route exact path="/?a=rewards" component={Rewards} />
+      <Route exact path="/?a=mode_in_game" component={ModeInGame} />
+      <Route exact path="/?a=abaut" component={SobreMi} />
+      <Route exact path="/?a=in_game" component={InGame} />
+      <Route exact path="/?a=in_game1" component={InGame} />
       <Route exact path="/" component={Intro} />
       <Route component={Intro} />
-    </Switch>
+    
   </App>;
 
 export default Rutas;
