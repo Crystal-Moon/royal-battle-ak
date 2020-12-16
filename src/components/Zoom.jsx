@@ -13,7 +13,7 @@ class Zoom extends Component{
 
   componentDidMount(){
     let zoom = parseInt(window.localStorage.getItem('zoom') || 100);
-
+    console.log('zoom reuperado de local', zoom)
     this.setState({ zoom });
     Event.emit('changeZoom',{ zoom });
   }

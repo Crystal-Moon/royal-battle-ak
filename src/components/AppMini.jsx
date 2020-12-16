@@ -31,14 +31,19 @@ class AppMini extends Component {
 
   componentDidMount(){
     let SwitchInGame = document.getElementById('SwitchInGame');
+    console.log('el switch en did mount', SwitchInGame)
     if(SwitchInGame){
       SwitchInGame.dataset.status='on'
       SwitchInGame.style.display='none';
     }
+
+    console.log('cargado el app mini y se enviara el event')
+    Event.emit('changeTab', { tab: 'in_game' })
     //require('./assets/css/themes/nowa.css'); //funciona genial :D
   }
 
   changeZoom({ zoom }){
+    console.log('cambiando zoom', zoom)
     this.setState({ zoom })
   }
 
@@ -53,9 +58,9 @@ class AppMini extends Component {
     return (
       <div className={`TodoMini ${this.state.nohover?'no-hover':''}`} 
         style={ {fontSize: `${this.state.zoom/100}rem` } } >
-        <Helmet>
+       <Helmet>
           <link rel="stylesheet" type="text/css" href={`/assets/css/royal-mini.css`} />
-        </Helmet>
+        </Helmet> 
 
         <Header />
         <AcordeonMenu />

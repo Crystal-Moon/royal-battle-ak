@@ -41,7 +41,7 @@ window.onbeforeunload = function (e) {
 	if(window.opener) window.opener.onCloseMini();
   	//(e || window.event).returnValue = null;
   		//window.alert('salido')
-  	return 'some_return';
+  	//return 'some_return';
 };
 
 window.onCloseMini = function () {
