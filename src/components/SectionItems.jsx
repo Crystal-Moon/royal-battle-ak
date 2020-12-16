@@ -59,6 +59,7 @@ class SectionItems extends Component {
     return (
       <section className="Section SectionItems">
         <h2 className="h2">seccion itens</h2>
+        <p>En este apartado podrás ver todos los items que hay dentro de la arena y su descripción.</p>
         <table className="main">
           <tbody>
             <tr>

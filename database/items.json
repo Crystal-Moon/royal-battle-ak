@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Gaia Teleportation Stone",
+    "name": "Piedra teletransportadora de Gea",
     "type": "potas",
-    "desc": "Right-click to teleport to any location on the map.",
+    "desc": "Click derecho para usar. Te movera a una zona sin obstaculos cercana a tu posición. Usala si quedas atrapado en el terreno.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00064.png",
     "qlty": "blue",
     "made_by": [],
@@ -331,9 +331,9 @@
   },
   {
     "id": 33,
-    "name": "Fairy Wing Pill",
+    "name": "Pildora de Alas de Hada",
     "type": "potas",
-    "desc": "Use to temporarily obtain Fairy Wings to descend into the air and enter Gliding mode. Gliding will be removed upon landing.Right-click to enter Gliding mode.",
+    "desc": "Consumible. Usa esto para tener unas alas de Hada temporales para descender en el aire al igual que al usar la skill de Levitacion.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00500.png",
     "qlty": "blue",
     "made_by": [],
