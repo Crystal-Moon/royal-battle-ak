@@ -13,7 +13,7 @@ class SectionRecompensas extends Component {
     this.state = { 
       crystal: {
         name: 'Holy Spirit Crystal',
-        desc: 'No canjeable. No se puede poner en banco comun. You can obtain this Rare Crystal through the Divine Trial. You can exchange it with the PVP Trial Quartermaster at the Military Hall in Navea.',
+        desc: 'No canjeable. No se puede poner en banco comun. Puedes obtenerlo como recompensa del Desafio Divino.',
         icon: 'https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00855.png',
         qlty: 'orange'
       }, 

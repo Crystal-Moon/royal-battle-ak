@@ -19,7 +19,7 @@ function SectionPVP() {
           alcancen 20 jugadores (modo 1J), o 7 grupos (modo multi), se transportarán 
           automáticamente al área de espera. El máximo de jugadores individuales es 
           40 y el máximo de grupos por arena es 10.</p>
-        <img src="" alt="contador_ingreso" />
+        <img src="https://www.dropbox.com/s/5ufu24ka38mgh9l/contador.png?dl=1" alt="contador_ingreso" />
         <p>Cuando ingreses a la zona de espera, tendrás un tiempo de preparación 
           de 5 minutos. Todos los jugadores tendrán las mismas stats y la barra de 
           skill cambia a una genérica con skills básicos de supervivencia.</p>
@@ -31,7 +31,7 @@ function SectionPVP() {
         <p>Los elementos se pueden utilizar haciendo click con el botón derecho del 
           ratón y se pueden tirar al suelo arrastrándose fuera del marco de acceso 
           directo.</p>
-        <img src="" alt="accesos_directos" />
+        <img src="https://www.dropbox.com/s/nldth6gxghbm560/barra_mochi.png?dl=1" alt="accesos_directos" />
 
         <h3>La partida</h3>
         <p>Pasado el tiempo de preparación, todos los participantes serán 
@@ -43,9 +43,10 @@ function SectionPVP() {
           en el campo de batalla. Puedes reconocerlos por el brillo dorado que tienen.
            Los jugadores pueden adquirir varios elementos destruyéndolos con sus 
            habilidades.</p>
+        <img src="https://www.dropbox.com/s/hb5puwq7h0m4l5q/objetos.png?dl=1" alt="obj_battle" />
+
         <p>También hay varios tipos de monstruos que no te atacarán a menos que 
           tu lo hagas primero.</p>
-        <img src="" alt="obj_battle" />
 
         <p>Los artículos son principalmente equipos que aumentan las habilidades, 
           recetas que fabrican artículos, pociones para recuperar HP y piedras 
