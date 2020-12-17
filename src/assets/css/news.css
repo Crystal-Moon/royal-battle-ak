@@ -1,0 +1,34 @@
+.news{
+	width: 100%;
+	margin: auto;
+	/* background-color: red; */
+}
+.noticia{
+	margin: 0.6em;
+	background-color: blue;
+    border-radius: 0.6em;
+    padding: 0.7em;
+    border: 2px solid skyblue;
+}
+.noticia p{
+	margin:0;
+	padding: 0;
+}
+.noticia span{
+	margin:0;
+	padding:0;
+	display: block;
+	margin-left: auto;
+	margin-right: 1em;
+	text-align: right;
+	
+}
+
+/*
+<div class="news">
+	<div class="noticia">
+		<span>11-22-2020</span>
+		<p>Lorem.</p>
+	</div>
+</div>
+*/

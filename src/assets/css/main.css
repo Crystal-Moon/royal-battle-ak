@@ -71,6 +71,13 @@ img.npc{
     display: block;
 }
 
+img.imgs{
+	width: auto;
+    height: auto;
+    display: block;
+    margin: 1em;
+    border: 2px solid white;
+}
 
 div.for-by{
     padding: 0.5em;

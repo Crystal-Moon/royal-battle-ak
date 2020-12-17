@@ -1,4 +1,8 @@
 
+
+
+/* traido de AppMini, ervisar comop afecta a gral y a App */
+
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
@@ -30,6 +34,14 @@ html, body, #root{
 	color: white;
 	width: 100%;
 	height: 100%;
+
+	width:100%;
+	background-color: #333;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	max-width: 100%;
+    overflow: hidden;
+    padding-bottom:2%;
 	/* overflow: hidden; */
 	/* background-color: grey; */
 }
@@ -47,6 +59,7 @@ h2, h3, h4, .ttl{
 	font-family: 'Vollkorn', serif;
 	font-size: 1.8em;
 }
+h2{font-size: 2.2em;}
 
 
 /***********************************/
@@ -62,9 +75,17 @@ h2, h3, h4, .ttl{
 	flex-direction: row;
 	background-color: #443838;
 }
+.Logo{
+	height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5em;
+}
+.Logo img{ height: 2em; }
 /**********************************/
+
 .Config{
-	margin-left: 0.3em;
+	/*margin-left: 0.3em;*/
     margin-right: 0.3em;
     margin-top: 0.3em;
        border-top-left-radius: 0.4em;
@@ -72,16 +93,19 @@ h2, h3, h4, .ttl{
     position: relative;
     width: 2.8em;
     cursor: pointer;
+    margin-left: auto;
 }
 .Config:hover, .Config:active, .Config.show{
 	background-color: dimgrey;
 }
+/*
 .Config img{
 	position: relative;
 	height: 100%;
     width: 100%;
     display: block;
 }
+*/
 .ConfigIcon{
     height: 70%;
     width: auto;
@@ -99,37 +123,66 @@ h2, h3, h4, .ttl{
     height: max-content;
     z-index: 1500;
 }
+.config-in>div{
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
+}
 .Config.show .config-in{
 	display:block;
 }
+
 /***********************************/
+
 .Switch, .Zoom{
 	display: flex;
 	flex-direction: row;
 	margin-right: 0.5em;
 	margin-top: 0.3em;
     margin-bottom: 0.3em;
-	margin-left: auto;
+	margin-left: 1em;
 	width: max-content;
 	font-family: 'Hind Siliguri', sans-serif;
+
+	width: 10em;
+    justify-content: space-between;
+    height: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
 }
-.Switch *{
-	display:flex;
-	align-items:center;
-	transition: all 0.3s ease;
+.Zoom span{ display:inline; text-align:center; }
+.s{
+	border-radius: 5em;
+	width: 1.5em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 2rem;
+	background-color: black;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: all 0.4s ease;
 }
 .s-txt{
-	height: 100%;
-	display: flex;
+	
 }
-.s-txt span{
-	margin:auto;
-	/* top: 0; */
-	/* bottom: 0; */
-	display: block;
-	width: max-content;
-	/* position: relative; */
+.s.s-txt{
+	width: 3em;
+	background-color: white;
+	color: black;
+	width: 3em;
+    max-width: 3em;
 }
+
+/**************************************/
+.Switch{
+	width: auto;
+	margin-left: auto;
+}
+.Switch *{
+	white-space: pre;
+	transition: all 0.3s ease;
+}
+
 .s-back{
 	margin: auto;
 	margin-left: 0.3em;
@@ -143,6 +196,7 @@ h2, h3, h4, .ttl{
 	background-color: #a0a0a0;
 	text-align: center;
 }
+/*
 .s{
 	border-radius: 50%;
 	width: 1.5em;
@@ -150,14 +204,14 @@ h2, h3, h4, .ttl{
 	max-height: 2rem;
 	max-width: 2rem;
 	background-color: black;
-	/* left:0; */
+*/	/* left:0; *//*
 	margin-right: auto;
 	right: auto;
 	margin-left:0;
 	text-align: center;
-	/*transition: all 0.4s ease;*/
+	
 }
-
+*/
 .Switch.active .s-back{
 	background-color: skyblue;
 }
@@ -169,40 +223,12 @@ h2, h3, h4, .ttl{
 	margin-right: 0;
 }
 
-.Zoom{
-	width: 100%;
-    justify-content: space-between;
-}
-.Zoom span, .Zoom button{
-	
-}
-.Zoom .s-txt{
-	padding: 0.3em;
-    border: 1px solid;
-    width: 40%;
-    text-align: center;
-    line-height: 1em;
-    height: 1em;
-    font-size: 1em;
-    border: none;
-    border-radius: 1em;
-    line-height: 1.1em;
-}
-.Zoom .s{margin: 0;cursor: pointer;}
-.Zoom button{
-	margin:0;
-}
 
-.Zoom button span{
-	
-}
-button{position: relative;margin:0;padding: 0;color:white;}
-button span{display: block;margin:0;padding: 0;}
-/**************************************/
+/*
 .Theme{ font-size: inherit; }
 .Theme label{ display:block;margin-bottom: 0.3em; }
 .Theme select{border-radius: 2em;}
-
+*/
 
 /************************************************/
 .Item{
@@ -224,7 +250,6 @@ button span{display: block;margin:0;padding: 0;}
 	border-radius: 10%;
 	width: 1.2em;
 	height: 1.2em;
-	position: relative;
 	/*margin: 0.1em;*/
 }
 .ItemIcon img{
@@ -236,7 +261,7 @@ button span{display: block;margin:0;padding: 0;}
 	display:none;
 	position: absolute;
 	background-color: #161616;
-	width: max-content;
+	width: 12em;
 	max-width: 13.5em;
 	font-size: 0.9em;
 	padding: 0.6em;
@@ -250,6 +275,7 @@ button span{display: block;margin:0;padding: 0;}
 .Hover.hover-up{
 	bottom: 0;
 }
+
 .item-head{
 	display: flex;
 	flex-direction:row;
@@ -277,7 +303,7 @@ button span{display: block;margin:0;padding: 0;}
 	padding: 0.4em;
 	white-space: pre-line;
 }
-.item-body hr, .for-by hr{
+.item-body hr{
 	display:block;
 	background: linear-gradient(90deg, rgba(2,0,36,1) -15%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 115%);
 	height: 1px;
@@ -292,6 +318,7 @@ button span{display: block;margin:0;padding: 0;}
 }
 .blue{
 	color: blue;
+	color: rgba(56, 89, 255, 1);
 	border-color:blue;
 }
 .green{

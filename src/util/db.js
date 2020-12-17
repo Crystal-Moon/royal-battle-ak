@@ -1,11 +1,26 @@
-import spirit from '../test-db/spirits.json';
-import items from '../test-db/items.json';
-import rewards from '../test-db/rewards.json';
+//import spirit from '../test-db/spirits.json';
+//import items from '../test-db/items.json';
+//import rewards from '../test-db/rewards.json';
 //import themes from './royal-battle-themes.json';
 
-const SPIRITS = Promise.resolve(spirit);
-const REWARDS = Promise.resolve(rewards);
-const DATA = Promise.resolve(items);
+const SPIRITS = Promise.resolve([]);
+const REWARDS = Promise.resolve([]);
+const DATA = Promise.resolve([]);
+const NEWS = Promise.resolve([
+
+{
+	date: '2020-12-15T00:00:00.000Z',
+	body: 'Some mesagge'
+},
+{
+	date: '2020-12-24T00:00:00.000Z',
+	body: `Lorem	Todos los jugadores empiezan con el mínimo de recursos y equipamiento y deben ir consiguiendo mejores objetos mientras son desafiados constantemente por los otros jugadores y por una constante reducción de "área segura" (el campo de juego se hace más pequeño).</p>
+        <p>Participando en esta arena puedes llegar a obtener una nueva pieza de equipamiento: El Espíritu Luminoso. Un accesorio que está disponible para usar desde el nivel sup. 1.</p>
+        <p>La naturaleza aleatoria del punto de partida, la ubicación de los elementos y la reducción del área segura, convierte este género de pvp en un desafío de pensar y reaccionar rápidamente y mejorar las estrategias durante el juego para ser el último que quede vivo.</p>
+        <p>Para eso mismo fue creado este programa tipo 'helper'.`
+}
+
+	])
 //const THEMES = Promise.resolve(themes);
 /*
 const DATA = (() => new Promise(done=>{
@@ -64,7 +79,7 @@ export default {
 
 	//getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
 
-
+	getNews: ()=> NEWS.then(z=>z.sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime())),
 
 }
 

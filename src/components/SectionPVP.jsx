@@ -1,10 +1,12 @@
-import { Component } from 'react';
+//import { Component } from 'react';
 
-class SectionPVP extends Component {
-  render() {
-    return (
+function SectionPVP() {
+  return (
       <section className="Section">
         <h2 className="h2">Desafio Divino</h2>
+        <h3>Horario</h3>
+        <p>La arena abre todos los dias a las <b>2.00am</b>, <b>7.00am</b>, 
+          <b>12.00pm</b> y <b>5.00pm</b> (horario servidor)</p>
         <h3>Inscripción</h3>
         <p>Podrás anotarte para la arena desde el icono de espadas cruzadas del 
           minimapa cuando abra la inscripción en el horario preestablecido. Debes 
@@ -20,7 +22,7 @@ class SectionPVP extends Component {
         <img src="" alt="contador_ingreso" />
         <p>Cuando ingreses a la zona de espera, tendrás un tiempo de preparación 
           de 5 minutos. Todos los jugadores tendrán las mismas stats y la barra de 
-          skill cambia una genérica con skills básicos de supervivencia.</p>
+          skill cambia a una genérica con skills básicos de supervivencia.</p>
         <p>La mochila y otras funciones se desactivan y los elementos adquiridos 
           en el campo de batalla se colocarán automáticamente en un acceso directo 
           dedicado.</p>
@@ -29,11 +31,12 @@ class SectionPVP extends Component {
         <p>Los elementos se pueden utilizar haciendo click con el botón derecho del 
           ratón y se pueden tirar al suelo arrastrándose fuera del marco de acceso 
           directo.</p>
-        <img src="" alt="accessos_directos" />
+        <img src="" alt="accesos_directos" />
 
         <h3>La partida</h3>
         <p>Pasado el tiempo de preparación, todos los participantes serán 
-          transportados a la aeronave y comenzará el evento.</p>
+          transportados a la aeronave y comenzará el evento. Para bajarte de la 
+          nave simplementa salta.</p>
         <p>El jugador recibe un efecto de escudo al inicio que se pierde una vez 
           ataques a un objeto, un monstruo u a otro jugador.</p>
         <p>Hay varias cajas de suministros, capullos de insectos, cristales, etc. 
@@ -109,13 +112,8 @@ class SectionPVP extends Component {
         <p>Al morir tienes la opción de salir de la arena y anotarte para otra 
           ronda si aun no termino el tiempo de inscripción.</p>
 
-        <p>Los horarios son:</p>
-        <table>
-          
-        </table>
       </section>
-    );
-  }
+  );
 }
 
 export default SectionPVP;

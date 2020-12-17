@@ -3,7 +3,7 @@ import { Event } from './util/Event';
 
 //import logo from './logo.svg';
 //import './assets/css/gral.css'; 
-import './assets/css/gral1.css'; // probar para ver vien diff, viene de AppMini branch
+import './assets/css/gral.css'; // probar para ver vien diff, viene de AppMini branch
 import './assets/css/royal.css';
 import './assets/css/scrollbar.css';
 

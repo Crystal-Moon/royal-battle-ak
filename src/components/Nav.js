@@ -9,8 +9,7 @@ const routes = [
   { name: 'Items', url: 'items' },
   { name: 'Recompnesas', url: 'rewards' },
   { name: 'Modo In-Game', url: 'mode_in_game' },
-  { name: 'Sobre mí', url: 'abaut' },
-  { name: 'test inGame', url: 'in_game' }
+  { name: 'Sobre mí', url: 'abaut' }
 ];
 
 class Nav extends Component {
@@ -52,7 +51,6 @@ class Nav extends Component {
               </span>
             </li>)
         }
-        <button type='button' onClick={ this.testWin } >ventana</button>
         </ul>
       </nav>
     );

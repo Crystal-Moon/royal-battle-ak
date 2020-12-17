@@ -83,7 +83,7 @@ html, body{
 	/* height: calc(100% - 3em - 1.5em); */
 	/* height: max-content; */
 }
-.Section{margin: 0.7em;}
+.Section{margin: 0.7em;padding-bottom:3em;}
 .h2{margin: 0;padding: 0;}
 
 
