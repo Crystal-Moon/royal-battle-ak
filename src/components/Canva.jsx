@@ -32,7 +32,7 @@ class Canva extends Component {
 
   doneResizing(){
   	let size = this.refCanva.current.getBoundingClientRect();
-	this.setState({ width: size.width, height: size.height }, this.drawing);
+	this.setState({ width: (size.width-3), height: size.height }, this.drawing);
   }
 
   drawing(){

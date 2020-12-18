@@ -96,7 +96,8 @@ function SectionPVP() {
           podrás verla en el mapa y minimapa. Si sales de la barrera, el gas 
           venenoso te dañará y moriras en segundos.</p>
         <p>Además, la barrera se reduce con el tiempo y el área donde los 
-          jugadores pueden sobrevivir disminuye constantemente.</p>
+          jugadores pueden sobrevivir disminuye constantemente y no siempre 
+          se cierra en el mismo lugar.</p>
 
         <img src="https://imgur.com/5XouHda.png" alt="barrera_mapa" className="imgs c" />
 

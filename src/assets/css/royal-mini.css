@@ -1,15 +1,9 @@
 
 html,body{
-	/*background-color: rgba(0,0,0,0);*/
 	background-color: #333;
 }
 .TodoMini{
-	/*display: flex;*/
-	/*flex-direction: row-reverse;*/
-	/*height:max-content;*/
 	height:100%;
-
-	/* float: right; */
 }
 .TodoMini .Logo h1{display: none;}
 .TodoMini .Header{font-size: 0.7em;}
@@ -21,36 +15,6 @@ html,body{
 .TodoMini.no-hover .Item:hover .Hover{
 	display:none;
 }
-/**********************************/
-/*
-.LeftBar{
-	border-top-left-radius: 1em;
-	border-bottom-left-radius: 1em;
-	background-color: dimgrey;
-	display: flex;
-	align-items: center;
-	width: 1.3em;
-	max-width: 1.3em;
-	min-width: 1em;
-	height: auto;
-}
-.LeftBar svg{
-	width: 70%;
-    margin: auto;
-    height: 1em;
-}
-.LeftBar:hover{
-	background-color: darkgrey;
-}
-.LeftBar:active{
-	background-color: #8a8989;
-}
-*/
-
-/************************************************/
-
-
-/**********************************************/
 .PrincipalMini{
 	width:100%;
 	background-color: #333;
@@ -63,8 +27,6 @@ html,body{
 }
 .AcordeonItem{
 	transition: all 0.25s ease;
-    /* height: 10em; */
-    /* height: 1.6em; */
     overflow: hidden;
     max-height: 1.7em;
     transition: max-height 0.25s ease-out;
@@ -75,12 +37,10 @@ html,body{
     font-size: 1em;
     padding-left: 0.5em;
     background-color: #7d8ea2;
-   /* margin-bottom: 0.3em;*/
     padding-top: 0.2em;
     font-weight: 200;
     border: none;
     border-bottom: 1px double white;
-
 }
 .AcordeonItem ul{
     display: flex;
@@ -90,26 +50,15 @@ html,body{
     height: max-content;
     min-height: max-content;
 }
-/*
-.AcordeonItem.hidden{
-	overflow:hidden;
-	height: 1.6em;
-}
-*/
 .AcordeonItem.show{
 	overflow: visible; /* necesario para los hover */
-    /* height: 1.6em; */
-    
     max-height: 20em;
     transition: max-height 0.25s ease-in;
 }
 .item-section{
 	font-size:1.1em;
-	/*position: relative;*/
 	display:flex;
 	flex-grow: 1;
-	/*flex-flow: column wrap;
-	height: 3.8em;*/
 	flex-flow: row wrap;
 	margin-bottom: 0.5em;
 	margin-top: 0.2em;
@@ -128,7 +77,6 @@ html,body{
 .hover-r{
 	right:0;
 }
-/**************************************/
 .MapItems{
 	position:relative;
 	padding: 0;
@@ -137,42 +85,25 @@ html,body{
 	height: max-content;
 	box-sizing: content-box;
 	background-color: #333;
-   /*padding-bottom: 1.4em;*/
+	border: 2px solid #FFD700;
+    border-radius: 0.5em;
 }
 .MapItems .Hover{
-	/*bottom: 0;*/
 	bottom: 1.5em;
 }
-/*.MapItems .central .Hover{
-	left: calc(-7 * 1em);
-}*//*
-.MapItems .hover-c{left: -7em;}
-.MapItems .hover-r{right: -1em;}
-*//*.svg-conteiner, .icon-conteiner{margin: 0.5em;margin-top: 0.8em;margin-bottom: 0.8em;}*/
 .ItemIcon{
 	transition: all 0.15s ease;
 }
-
-/********************************************/
 .svg-cointeiner{
 	position:absolute;
 	height: calc(90% - 1.6em);
-	/*width: calc(100% - 1em);*/
 	width: 100%;
 	top:0;
 	bottom: 0;margin:auto;
 }
-.Svg{transition: all 0.5s ease;}
-line{
-	stroke:  #333; /* color de fondo*/
-	fill: #333;
-	stroke-width:2;
-}
-/*.icon-conteiner .ItemIcon{font-size:1.3em;}*/
 .icon-conteiner{
 	z-index: 50; 
 	position: relative;
-	/*font-size:1.3em;*/
 }
 .icon-3{
 	font-size: 1.2em;
@@ -180,13 +111,10 @@ line{
 	width:100%;
 	display: -ms-flexbox;
 	display: flex;
-	/*justify-content: space-evenly;*/
 	position: relative;
-	/*z-index: 100;*/
 }
-/*.icon-3 .Item{ margin: auto; }*/
 .icon-3 .Item, .item-section .Item{position: static;transition: all 0.15s ease;}
-.item-section .Item{margin-left:0.4em;margin-right: 0.4em;}
+.item-section .Item{margin:0.4em;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{
 	left:0;right: 0;
 	margin-left: auto;
@@ -209,13 +137,4 @@ line{
 	display: block;
 	width: 1px;
 	height: 2px;
-}
-
-
-/***************************************/
-.hidden-h{
-	width: 1%;
-}
-.hidden-v{
-	height: 1%;
 }

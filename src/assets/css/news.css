@@ -1,7 +1,6 @@
 .news{
 	width: 100%;
 	margin: auto;
-	/* background-color: red; */
 }
 .noticia{
 	margin: 0.6em;
@@ -10,7 +9,6 @@
     padding: 0.7em;
     color: black;
     border: 2px solid #6495ed;
-
 }
 .noticia p{
 	margin:0;
@@ -25,12 +23,3 @@
 	text-align: right;
 	
 }
-
-/*
-<div class="news">
-	<div class="noticia">
-		<span>11-22-2020</span>
-		<p>Lorem.</p>
-	</div>
-</div>
-*/

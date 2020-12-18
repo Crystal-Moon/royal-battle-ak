@@ -12,10 +12,9 @@ class Switch extends Component {
   }
 
   componentDidMount(){
-    let active = parseInt(window.localStorage.getItem(this.props.eventname) || 0)
-    console.log('el active de localstrage', this.props.eventname,active)
-    this.setState({ active: Boolean(active) })
-    Event.emit(this.props.eventname || '',{ active })
+    //let active = parseInt(window.localStorage.getItem(this.props.eventname) || 0)
+    //this.setState({ active: Boolean(active) })
+    //Event.emit(this.props.eventname || '',{ active })
   }
 
   handlerSwitch(e){
@@ -24,7 +23,6 @@ class Switch extends Component {
     let eventname = this.props.eventname || '';
     
     this.setState({ active: Boolean(active), eventname });
-    window.localStorage.setItem(eventname, active);
     Event.emit(eventname,{ active })
   }
 

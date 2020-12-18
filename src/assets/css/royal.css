@@ -1,11 +1,6 @@
 html, body{
 	overflow: hidden;
 }
-/*
-.Todo{ height: max-content; } 
-*/
-/************************************/
-
 .Logo{
 	margin-left: 1em;
 	display: flex;
@@ -17,18 +12,15 @@ html, body{
 	line-height: 2em;
     margin-left: 0.5em;
 }
-/*****/
 .Todo .Config{
 	display: none;
 }
-/**********************************/
 .Main{
 	font-size:1em;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	margin: 0;
-	/*height: calc(100% - 3em - 1.5em);*/
 	height: 100%;
 	overflow: hidden;
 }
@@ -48,49 +40,22 @@ html, body{
 	display:block;
 	width: 100%;
 	font-size: 1.3em;
-	/* text-align: center; */
 	text-decoration: none;
 	height: 100%;
-	/* line-height: 50%; */
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 }
-/*
-.Li:before{
-	content:'_';
-	display: block;
-	left: auto;
-	right: 0;
-	width: 1em;
-	margin-left: auto;
-}
-.Li:after{
-	content:'_';
-	display: block;
-	margin-left: auto;
-	right: 0;
-	width: 1em;
-}
-*/
-/****/
+
 .Principal{
 	width: 80%;
 	overflow: auto;
 	overflow-x: hidden;
 	height: 100%;
-	background-color: #36393f;}
-.scrolleable{
-	/* overflow: auto; */
-	/* height: calc(100% - 3em - 1.5em); */
-	/* height: max-content; */
+	background-color: #36393f;
 }
 .Section{margin: 0.7em;padding-bottom:3em;}
 .h2{margin: 0;padding: 0;}
-
-
-
-/*************************************/
 .Footer{
 	height: 1.5em;
 	position: fixed;
@@ -101,7 +66,6 @@ html, body{
 
 	font-size: 0.8em;
     font-family: monospace;
-    /* height: max-content; */
     padding-top: 0.4em;
     padding-bottom: 0.4em;
     display: flex;
@@ -123,35 +87,17 @@ html, body{
 	display: inline-block;
 }
 .Footer .tech{
-	
 	margin: auto;
     margin-left: 0.3em;
     margin-right: 0.3em;
-    
-    /* height: 1.1em; */
     top: 0;
     bottom: 0;
-
 	width: 1em;
-	
 	margin-left: 0.3em;
 	margin-right: 0.3em;
-
 	background-position: center center;
     background-size: 100% 100%;
-
-
-
 }
-
-/*****************************************/
-::-webkit-scrollbar              { /* 1 */ }
-::-webkit-scrollbar-button       { /* 2 */ }
-::-webkit-scrollbar-track        { /* 3 */ }
-::-webkit-scrollbar-track-piece  { /* 4 */ }
-::-webkit-scrollbar-thumb        { /* 5 */ }
-::-webkit-scrollbar-corner       { /* 6 */ }
-::-webkit-resizer                { /* 7 */ }
 
 ::-webkit-scrollbar {
     width: 12px;

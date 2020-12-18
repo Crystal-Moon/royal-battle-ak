@@ -12,10 +12,9 @@ class Zoom extends Component{
   }
 
   componentDidMount(){
-    let zoom = parseInt(window.localStorage.getItem('zoom') || 100);
-    console.log('zoom reuperado de local', zoom)
-    this.setState({ zoom });
-    Event.emit('changeZoom',{ zoom });
+    //let zoom = parseInt(window.localStorage.getItem('zoom') || 100);
+    //this.setState({ zoom });
+    //Event.emit('changeZoom',{ zoom });
   }
 
   changeZoom(e){
@@ -25,7 +24,6 @@ class Zoom extends Component{
     zoom = zoom<100? 100 : zoom>200? 200 : zoom;
 
     this.setState({ zoom });
-    window.localStorage.setItem('zoom', zoom);
     Event.emit('changeZoom',{ zoom });
   }
 

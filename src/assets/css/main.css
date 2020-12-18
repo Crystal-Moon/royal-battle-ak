@@ -1,16 +1,7 @@
 
-/*
-.Item .ItemIcon{
-	width:1em;
-	height: 1em;
-}
-*/
 .SectionItems .Item:hover .Hover{display: none;}
 .Reward .Item .Hover{display: none;}
-.Item, .ItemIcon{
-	margin:auto;
-	/* margin-left: 1em; */
-}
+.Item, .ItemIcon{margin:auto;}
 div.table-conteiner{
 	height: 30em;
     overflow: auto;
@@ -22,12 +13,9 @@ div.table-conteiner{
     padding: 0;
     position: relative;
 }
-table{border-radius:0.3rem;/*padding: 0.8em;*/width: 90%;margin: auto;}
+table{border-radius:0.3rem;width: 90%;margin: auto;}
 table.main{
-/*	width: 90%;
-	margin: auto;*/
 	background-color: rgba(0,0,0,0.4);
-	/*margin-bottom: 1em;*/
 	width: 100%;
 }
 table.sub{width: 100%;}
@@ -35,7 +23,6 @@ table.sub td:last-child img{margin-left: 1.7em;}
 table.sub td:last-child p{margin-left: 0.5em;}
 tbody .ItemIcon{
 	font-size: 1.5em;
-	/* margin-left: 1em; */
 	display: inline;
 }
 table p,tr, td{
@@ -50,21 +37,12 @@ td{
 	vertical-align: top;
 }
 td.crystal{ text-align: center; }
-/*td.crystal{ min-width: 2em; display:block; }
-td.crystal, td.txt{ width:2em; }
-td.txt{ vertical-align: middle; }*/
-/*td:last-child{padding-left: 1.3em;}*/
 tfoot td,th{
 	padding: 0.2em;
 }
 tfoot{
 	font-size: 0.7em;
 }
-/*
-.w65{
-	width: 65%;
-}
-*/
 img.npc{
 	width: 90%;
     margin: auto;
@@ -118,7 +96,3 @@ div.for-by>div{
 .for-by:last-child{padding-right: 1.7em;}
 .SectionItems .detail-item .Item:hover .Hover{ display: block; }
 .SectionItems .Item:last-child:hover .Hover{ left: -8em; }
-/*
-git fetch <remote> <branchremoto>:<branchlocal> 
-git checkout <branchlocal>
-*/

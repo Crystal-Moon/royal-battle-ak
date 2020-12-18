@@ -1,9 +1,9 @@
-import { Component } from 'react';
+
+//import { Component } from 'react';
 import '../assets/css/logos.css';
 
-class Footer extends Component {
-  render() {
-    return (
+function Footer() {
+  return (
       <div className="Footer">
         <div>
           <span>Made with love by</span>
@@ -13,12 +13,11 @@ class Footer extends Component {
         <div>
           <span>Powered by</span>
           <span className="tech emoji" title="React JS" id="react"></span>
-          <span className="tech emoji" title="Neutralino JS 😅🤪 &#128298; &#128560; &#128561; &#128064;" id="neu"></span>
-          <span className="tech emoji" title="Internet Explorer &#127895;&#128148;&#x1F49B;" id="ie"></span>
+          <span className="tech emoji" title="Neutralino JS" id="neu"></span>
+          <span className="tech emoji" title="Internet Explorer &#128298;" id="ie"></span>
         </div>  
       </div>
-    );
-  }
+  );
 }
 
 export default Footer;

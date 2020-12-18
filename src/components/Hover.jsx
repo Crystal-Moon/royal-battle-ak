@@ -3,9 +3,8 @@
 import ItemIcon from './ItemIcon';
 
 function Hover(props) {
-
-    const { item={}, hoverup=false } = props;
-    return( 
+  const { item={}, hoverup=false } = props;
+  return( 
       <div className={`Hover ${hoverup?'hover-up':''}`} >
       <div className="item-head">
             <span>
@@ -20,7 +19,7 @@ function Hover(props) {
             <hr />
         </div>
     </div>
-    );
+  );
 }
 
 export default Hover;
