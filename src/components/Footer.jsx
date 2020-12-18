@@ -1,5 +1,4 @@
 
-//import { Component } from 'react';
 import '../assets/css/logos.css';
 
 function Footer() {
@@ -14,7 +13,7 @@ function Footer() {
           <span>Powered by</span>
           <span className="tech emoji" title="React JS" id="react"></span>
           <span className="tech emoji" title="Neutralino JS" id="neu"></span>
-          <span className="tech emoji" title="Internet Explorer &#128298;" id="ie"></span>
+          <span className="tech emoji" title="Internet Explorer &#128560;" id="ie"></span>
         </div>  
       </div>
   );

@@ -1,5 +1,4 @@
 
-//import npcImage from '../assets/imgs/npc.jpg';
 import { Component } from 'react';
 import db from '../util/db';
 
@@ -9,7 +8,6 @@ import ItemIcon from './ItemIcon';
 class SectionRecompensas extends Component {
   constructor(){
     super();
-    //this.selectItem = this.selectItem.bind(this)
     this.state = { 
       crystal: {
         name: 'Holy Spirit Crystal',
@@ -21,7 +19,6 @@ class SectionRecompensas extends Component {
       caja: {}, 
       cajaItems: [] 
     }
-   // Event.on('detailItem',this.selectItem)
   }
 
   componentDidMount(){
@@ -40,7 +37,7 @@ class SectionRecompensas extends Component {
       <h2 className="h2">Recompensas</h2>
       <p><img src="https://imgur.com/TkwNt6Z.png" 
         className="imgs" alt="cristal_luminoso" 
-        style={{width:'17em',float:'left'}} />Según tu desempeño dentro del campo de batalla recibirás más o menos “Cristales de Espíritu Luminoso”. Podrás intercambiar estos cristales con el NPC Coronel Weasel en navea en el área de PVP. Entre las recompensas disponibles se encuentra la “Caja de Espíritu Luminoso”, con la cual puedes obtener uno de los cuatro disponibles por ahora.
+        style={{width:'17em',float:'left'}} />Según tu desempeño dentro del campo de batalla recibirás más o menos “Cristales de Espíritu Luminoso”. Podrás intercambiar estos cristales con el NPC Coronel Weasel en navea en el área de PVP. Entre las recompensas disponibles se encuentra la “Caja de Espíritu Luminoso”, con la cual puedes obtener uno de los cuatro Espíritu Luminoso disponibles por ahora.
       </p>
       <img src="https://imgur.com/4ca9IqU.png" 
         alt="mapa_npc" className="imgs c" style={{width:'20em'}} />
@@ -63,9 +60,10 @@ class SectionRecompensas extends Component {
         </table>
       </div>
       <table className="main">
-        <thead><tr><th style={{fontSize:'1.6em'}}><ItemIcon item={this.state.caja} /></th><th colSpan="3"><p>caja de holy spirit</p></th></tr></thead>
+        <thead><tr><th style={{fontSize:'1.6em'}}><ItemIcon item={this.state.caja} /></th><th colSpan="3">
+          <p style={{textAlign:'left'}}>Cofre Magnifico del Espiritu Luminoso</p></th></tr></thead>
         <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} hoverup={true} /></td>)}</tr></tbody>
-        <tfoot><tr><td colSpan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
+        <tfoot><tr><td colSpan="4"><p>*Al momento de crear esta guia los Espiritu Luminoso de calidad dorado no estan disponibles en el juego.</p></td></tr></tfoot>
       </table>
     </section>
     );

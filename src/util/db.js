@@ -2,12 +2,12 @@
 const GO = (file) => new Promise(done=>{
 	fetch(`https://raw.githubusercontent.com/Crystal-Moon/royal-battle-ak/master/database/${file}.json`)
 	.then(r=> done(r.json()))
-})
+});
 
-const NEWS = Promise.resolve([]) //GO('news')
-const ITEMS = GO('items')
-const REWARDS = GO('rewards')
-const SPIRITS = GO('spirits')
+const NEWS = GO('news');
+const ITEMS = GO('items');
+const REWARDS = GO('rewards');
+const SPIRITS = GO('spirits');
 
 export default {
 	getById: id => ITEMS.then(d=>{
@@ -35,30 +35,9 @@ export default {
 	}), 
 
 	getHolySpirit: (qlty) => SPIRITS.then(z=> !qlty? z : z.filter(x=>x.qlty==qlty)),
+
 	getRewads: ()=> REWARDS.then(r=>r),
-	
-	//getByQlty: (data,qlty) => data.then(z=> z.filter(x=>x.qlty==qlty)),
 
-	//getByType: (data,type) => data.then(z=> z.filter(x=>x.type==type)),
-
-	//getThemes: (name)=> THEMES.then(t=> name? t.find(z=>z.name==name) : t),
-
-	getNews: ()=> NEWS.then(z=>z.sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime())),
+	getNews: ()=> NEWS.then(z=>z.sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime()))
 
 }
-
-
-
-
-/*
-const ITEMS = (() => Promise.resolve(new Promise(done=>{
-	fetch('http://localhost:3100')
-	.then(r => r.json())
-	.then(db =>{
-	console.log('lo del get',db) 
-		done(db)
-
-	})
-})))();
-*/
-//console.log('data global',ITEMS)

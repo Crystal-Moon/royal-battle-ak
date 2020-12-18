@@ -24,7 +24,7 @@ html, body{
 	height: 100%;
 	overflow: hidden;
 }
-.Nav{width: 20%;height: 100%;background-color: #202225;min-width: max-content;/* max-width: 16em; */height: auto;}
+.Nav{width: 20%;height: 100%;background-color: #202225;min-width:11em;height: auto;}
 .ul{margin: 0;padding: 0;list-style: none;height: 100%;display: flex;flex-direction: column;}
 .Li{flex: 1;display: flex;align-items: center;padding: 0.2em;padding-left: 0.8em;padding-right: 0.6em;position: relative;margin: 0.2em;margin-left: 0.4em;margin-right: 0.4em;border-radius: 0.5em;max-height:4em;}
 .Li:hover, .Li.selected:hover{

@@ -22,43 +22,25 @@ class SectionItems extends Component {
 
   componentDidMount(){
     db.getAllArray().then(items=>{
-      //let items = all.potas.blue.concat(all.potas.green).concat(all.equipo.blue).concat(all.equipo.green).concat(all.equipo.orange).concat(all.eido.blue).concat(all.eido.green)
-     // console.log('el items',all)
-     // items=items;
-      //console.log(items)
       this.setState({ items, selected: items[30] })
     })
-   /* db.getHolySpirit().then(items => {
-      console.log('items',items)
-      this.setState({ items })
-    })*/
   }
 
   selectItem({ id, ref }){
-    console.log('en select item', id, ref)
-    //db.getById(id).then(selected=> this.setState({ selected }))
     db.getById(id).then(selected=>{
-      //var x = [1, 2, 3, 4, 5, 6, 7, 3, 4, 4, 5, 5, 6];
       let i=selected.made_by.map(m=>m.id);
       let m={}
-      //var indices = new Array(i.length).fill(0);
       selected.made_by=Array.from(new Set(selected.made_by.map(JSON.stringify))).map(JSON.parse);
-      
-      //console.log('el select simple 1', selected.made_by)      
       i.forEach((n)=> m[String(n)] = (m[String(n)] || 0) + 1 );
       selected.by=m;
-      //console.log('i resumen',m)
       this.setState({ selected })
-
     })
   }
 
-/* aqi tendre un event.on para mostrar en el costado */
-  
-  render() { /* a los Item de aqui establecer el eventname en 'detail' para manejarlos diferentes eq en acordeonItems */
+  render() {
     return (
       <section className="Section SectionItems">
-        <h2 className="h2">seccion itens</h2>
+        <h2 className="h2">Items</h2>
         <p>En este apartado podrás ver todos los items que hay dentro de la arena y su descripción.</p>
         <table className="main">
           <tbody>
