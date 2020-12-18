@@ -5,7 +5,7 @@ import { Event } from '../util/Event';
 
 //import logo from './logo.svg';
 //import '../assets/css/gral.css';
-//import '../assets/css/royal-mini.css'; // no llamar para app comun
+import '../assets/css/royal-mini.css'; // no llamar para app comun
 
 // Components
 import Header from './Header';
@@ -59,7 +59,7 @@ class AppMini extends Component {
       <div className={`TodoMini ${this.state.nohover?'no-hover':''}`} 
         style={ {fontSize: `${this.state.zoom/100}rem` } } >
        <Helmet>
-          <link rel="stylesheet" type="text/css" href={`/assets/css/royal-mini.css`} />
+          <link rel="stylesheet" type="text/css" href={`/assets/css/mini.css`} />
         </Helmet> 
 
         <Header />

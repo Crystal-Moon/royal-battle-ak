@@ -38,8 +38,12 @@ class SectionRecompensas extends Component {
    return (
     <section className="Section Rewards">
       <h2 className="h2">Recompensas</h2>
-      <p><img src="" alt="cristal_luminoso" />Según tu desempeño dentro del campo de batalla recibirás más o menos “Cristales de Espíritu Luminoso”. Podrás intercambiar estos cristales con el NPC Coronel Weasel en navea en el área de PVP. Entre las recompensas disponibles se encuentra la “Caja de Espíritu Luminoso”, con la cual puedes obtener uno de los cuatro disponibles por ahora.</p>
-      <img src="" alt="mapa_npc" />
+      <p><img src="https://imgur.com/TkwNt6Z.png" 
+        className="imgs" alt="cristal_luminoso" 
+        style={{width:'17em',float:'left'}} />Según tu desempeño dentro del campo de batalla recibirás más o menos “Cristales de Espíritu Luminoso”. Podrás intercambiar estos cristales con el NPC Coronel Weasel en navea en el área de PVP. Entre las recompensas disponibles se encuentra la “Caja de Espíritu Luminoso”, con la cual puedes obtener uno de los cuatro disponibles por ahora.
+      </p>
+      <img src="https://imgur.com/4ca9IqU.png" 
+        alt="mapa_npc" className="imgs c" style={{width:'20em'}} />
 
       <div className='table-conteiner scrollable'>
         <table className="main">

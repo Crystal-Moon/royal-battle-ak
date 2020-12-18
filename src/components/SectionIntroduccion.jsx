@@ -6,7 +6,7 @@ function SectionIntroduccion(){
       <section className="Section">
         <News />
         <h2>Introducción</h2>
-        <p><img src='https://www.dropbox.com/s/hcttuiiklfm51jr/star_caller.jpg?dl=1' alt="chibi" className="imgs" style={{float:'right',width:'20em'}} /> 
+        <p><img src='https://imgur.com/zthgFQq.png' alt="chibi" className="imgs" style={{float:'right',width:'20em'}} /> 
         Con la llegada del parche 56, además de la nueva clase, Estrella Cósmica, también llegó un nuevo 
         pvp estilo Battle Royal. En pocas palabras: "el último que quede en pie".</p>
         <p>Todos los jugadores empiezan con el mínimo de recursos y equipamiento y deben ir consiguiendo 
@@ -20,7 +20,7 @@ function SectionIntroduccion(){
         <p>Para eso mismo fue creado este programa tipo 'helper'. En este sitioweb compilo los items 
           disponibles dentro del campo y las combinaciones disponibles, presentados en forma interactiva.</p>
         <p>Espero lo disfrutes y hagas un buen uso de ello.</p>
-        <img src='https://www.dropbox.com/s/g4jp7h6269xm2hg/divine_trial.jpeg?dl=1' alt="divine_trial" className="imgs" style={{width:'90%',margin:'auto'}} />
+        <img src='https://imgur.com/MqMzcLo.png' alt="divine_trial" className="imgs" style={{width:'90%',margin:'auto'}} />
       </section>
   );
 }

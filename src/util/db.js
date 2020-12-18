@@ -1,11 +1,11 @@
-//import spirit from '../test-db/spirits.json';
-//import items from '../test-db/items.json';
-//import rewards from '../test-db/rewards.json';
-//import themes from './royal-battle-themes.json';
+import spirit from '../test-db/spirits.json';
+import items from '../test-db/items.json';
+import rewards from '../test-db/rewards.json';
+import themes from './royal-battle-themes.json';
 
-const SPIRITS = Promise.resolve([]);
-const REWARDS = Promise.resolve([]);
-const DATA = Promise.resolve([]);
+const SPIRITS = Promise.resolve(spirit);
+const REWARDS = Promise.resolve(rewards);
+const DATA = Promise.resolve(items);
 const NEWS = Promise.resolve([
 
 {

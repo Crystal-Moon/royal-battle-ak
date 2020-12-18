@@ -78,11 +78,15 @@ img.imgs{
     margin: 1em;
     border: 2px solid white;
 }
+img.c{
+	margin-left:auto;
+	margin-right: auto;
+}
 
 div.for-by{
     padding: 0.5em;
     padding-bottom: 2em;
-    background-color: rgba(22, 22, 22, 1);
+    background-color: #202225;
     border-radius: 0.3em;
     width: 80%;
     margin: auto;

@@ -55,6 +55,10 @@ p, .prrfs{
 	font-family: 'Bree Serif', serif;
 }
 h1, h2, h3, h4, h5, h6{margin: 0; padding: 0;}
+h1{
+	line-height: 2em;
+    margin-left: 0.5em;
+}
 h2, h3, h4, .ttl{
 	font-family: 'Vollkorn', serif;
 	font-size: 1.8em;
@@ -73,7 +77,7 @@ h2{font-size: 2.2em;}
 	height: 3em;
 	display:flex;
 	flex-direction: row;
-	background-color: #443838;
+	background-color: #5a31a2;
 }
 .Logo{
 	height: 2em;
@@ -156,7 +160,7 @@ h2{font-size: 2.2em;}
 	height: 1.5em;
 	max-height: 2rem;
 	max-width: 2rem;
-	background-color: black;
+	background-color: #6aacc7;
 	text-align: center;
 	color: white;
 	cursor: pointer;
@@ -193,7 +197,7 @@ h2{font-size: 2.2em;}
 	max-height: 2rem;
 	max-width: 4rem;
 	cursor: pointer;
-	background-color: #a0a0a0;
+	background-color: #666;
 	text-align: center;
 }
 /*
@@ -213,7 +217,7 @@ h2{font-size: 2.2em;}
 }
 */
 .Switch.active .s-back{
-	background-color: skyblue;
+	background-color: #FFF;
 }
 .Switch.active .s{
 	right: 0;
