@@ -21,7 +21,7 @@ class News extends Component{
   }
 
   render(){
-    return(
+    return(this.state.news.length>0?
       <div className="News">
       	<h2 className="h2">Noticias</h2>
     	{
@@ -31,7 +31,8 @@ class News extends Component{
     	</div>)
     	}		
       </div>
-    )
+    : 
+      <div></div>)
   }
 }
 
