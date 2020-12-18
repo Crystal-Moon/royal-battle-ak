@@ -1,16 +1,14 @@
 const BTN = document.getElementById('SwitchInGame');
 
-function handlerInGame(active){
-	//console.log('el BTN',BTN) 
-	//let status= BTN.dataset.status;
-	if(active){
+function handlerInGame(pa){ 
+	let status= BTN.dataset.status;
+	if(!pa && status=='off'){
 		BTN.classList.add('active')
-	//	BTN.dataset.status='on'
+		BTN.dataset.status='on'
 		openMini()
 	}else{
-	//	console.log('window mini',Boolean(window.mini))
 		if(window.mini) window.mini.close();
-	//	BTN.dataset.status='off'
+		BTN.dataset.status='off'
 		BTN.classList.remove('active')
 	}
 }
@@ -25,18 +23,11 @@ function openMini() {
 }
 
 window.onbeforeunload = function () {
-	//window.alert('saliendo...')
 	if(window.opener) window.opener.onCloseMini();
-  	//(e || window.event).returnValue = null;
-  		//window.alert('salido')
-  	//return 'some_return';
 };
 
 window.onCloseMini = function () {
-	//console.log('se cerro miniVentana', document.getElementById('SwitchInGame'));
-	//document.getElementById('SwitchInGame')
-	//if(!window.opener) window.handlerInGame(document.getElementById('SwitchInGame'))
-	if(!window.opener) window.handlerInGame()
+	if(!window.opener) window.handlerInGame(1)
 }
 
 window.handlerInGame=handlerInGame;
