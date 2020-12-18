@@ -26,7 +26,7 @@ table{border-radius:0.3rem;/*padding: 0.8em;*/width: 90%;margin: auto;}
 table.main{
 /*	width: 90%;
 	margin: auto;*/
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.4);
 	/*margin-bottom: 1em;*/
 	width: 100%;
 }
@@ -86,7 +86,7 @@ img.c{
 div.for-by{
     padding: 0.5em;
     padding-bottom: 2em;
-    background-color: #202225;
+    background-color: #161616;
     border-radius: 0.3em;
     width: 80%;
     margin: auto;
@@ -117,6 +117,7 @@ div.for-by>div{
 }
 .for-by:last-child{padding-right: 1.7em;}
 .SectionItems .detail-item .Item:hover .Hover{ display: block; }
+.SectionItems .Item:last-child:hover .Hover{ left: -8em; }
 /*
 git fetch <remote> <branchremoto>:<branchlocal> 
 git checkout <branchlocal>

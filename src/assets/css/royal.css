@@ -14,7 +14,8 @@ html, body{
 	font-size:1em;
 	font-family: 'Carter One', cursive;
 	font-weight: normal;
-	line-height: 3em;
+	line-height: 2em;
+    margin-left: 0.5em;
 }
 /*****/
 .Todo .Config{

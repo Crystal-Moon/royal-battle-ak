@@ -1,23 +1,10 @@
-import { Component } from 'react';
+//import { Component } from 'react';
 
 import ItemIcon from './ItemIcon';
 
-class Hover extends Component {
-  constructor(){
-    super();
-   /* this.state = {
-        noHover: false
-    }*/
-  }
+function Hover(props) {
 
-  componentDidMount(){
-    /* llamar configuracion de usuario y preguntar por el no-hover */
- //   this.setState({ noHover: true }) // cargar aqui lo del usuario
-  }
-
-  render() {
-    //console.log('el prop q llega a hover sin const',this.props);
-    const { item={}, hoverup=false } = this.props;
+    const { item={}, hoverup=false } = props;
     return( 
       <div className={`Hover ${hoverup?'hover-up':''}`} >
       <div className="item-head">
@@ -34,7 +21,6 @@ class Hover extends Component {
         </div>
     </div>
     );
-  }
 }
 
 export default Hover;
