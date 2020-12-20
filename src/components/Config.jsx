@@ -1,7 +1,6 @@
 
 import { Component, createRef } from 'react';
 
-import ConfigIcon from '../assets/imgs/config.png';
 import Switch from './Switch';
 import Zoom from './Zoom';
 
@@ -21,7 +20,7 @@ class Config extends Component {
     return (
       <div className="Config"  ref={ this.refConfig } >
         <div onClick={ this.showConfig } style={{height:'2.5em',margin:'0'}} >
-          <img className="ConfigIcon" src={ ConfigIcon } alt="config" />
+          <img className="ConfigIcon" src="https://imgur.com/ttSYtN1.png" alt="config" />
         </div>
         <div className="config-in" >
           <Switch eventname="nohover" displayname="Ocultar detalles" 
