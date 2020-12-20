@@ -95,4 +95,4 @@ div.for-by>div{
 }
 .for-by:last-child{padding-right: 1.7em;}
 .SectionItems .detail-item .Item:hover .Hover{ display: block; }
-.SectionItems .Item:last-child:hover .Hover{ left: -8em; }
+.Rewards .Item:last-child:hover .Hover{ left: -8em; }
