@@ -9,9 +9,6 @@ import Item from './Item';
 import ItemIcon from './ItemIcon';
 import Hover from './Hover';
 
-
-
-
 class SectionItems extends Component {
   constructor(){
     super();

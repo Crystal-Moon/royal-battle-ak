@@ -11,11 +11,7 @@ class Zoom extends Component{
     }
   }
 
-  componentDidMount(){
-    //let zoom = parseInt(window.localStorage.getItem('zoom') || 100);
-    //this.setState({ zoom });
-    //Event.emit('changeZoom',{ zoom });
-  }
+  componentDidMount(){}
 
   changeZoom(e){
     e.stopPropagation();

@@ -11,11 +11,7 @@ class Switch extends Component {
     }
   }
 
-  componentDidMount(){
-    //let active = parseInt(window.localStorage.getItem(this.props.eventname) || 0)
-    //this.setState({ active: Boolean(active) })
-    //Event.emit(this.props.eventname || '',{ active })
-  }
+  componentDidMount(){}
 
   handlerSwitch(e){
     e.stopPropagation();

@@ -1,6 +1,4 @@
 
-//import logo from '../assets/imgs/logo.png';
-
 function Logo() {
   return (
       <div className="Logo">
