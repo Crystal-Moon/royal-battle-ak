@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/royal-battle-ak/static/css/main.fd9d8b08.chunk.css",
-    "main.js": "/royal-battle-ak/static/js/main.7782ac17.chunk.js",
-    "main.js.map": "/royal-battle-ak/static/js/main.7782ac17.chunk.js.map",
+    "main.js": "/royal-battle-ak/static/js/main.13f103d8.chunk.js",
+    "main.js.map": "/royal-battle-ak/static/js/main.13f103d8.chunk.js.map",
     "runtime-main.js": "/royal-battle-ak/static/js/runtime-main.47baac67.js",
     "runtime-main.js.map": "/royal-battle-ak/static/js/runtime-main.47baac67.js.map",
     "static/js/2.c3c66ff9.chunk.js": "/royal-battle-ak/static/js/2.c3c66ff9.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.47baac67.js",
     "static/js/2.c3c66ff9.chunk.js",
     "static/css/main.fd9d8b08.chunk.css",
-    "static/js/main.7782ac17.chunk.js"
+    "static/js/main.13f103d8.chunk.js"
   ]
 }
