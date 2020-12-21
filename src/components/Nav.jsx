@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 const routes = [
   { name: 'Inicio',  url: 'home' },
