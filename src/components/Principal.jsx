@@ -6,10 +6,21 @@ import SectionRecompensas from "./SectionRecompensas";
 import SectionSobreMi from "./SectionSobreMi";
 
 class Principal extends Component {
+  constructor(){
+    super();
+    //this.changeTab = this.changeTab.bind(this);
+    //this.state={
+      //tab: 'home'
+    //}
+    //Event.on('changeTab', this.changeTab)
+  }
+
+  componentDidMount(){
+    //window.myEvent=Event
+  }
+
   render() {
     const { body } = this.props;
-   // console.log('el body',body)
-    
     return (
       <article className="Principal">
         {body}

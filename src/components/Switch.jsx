@@ -1,4 +1,4 @@
-import { Component, createRef } from 'react';
+import { Component } from 'react';
 import { Event } from '../util/Event';
 
 class Switch extends Component {
@@ -11,11 +11,7 @@ class Switch extends Component {
     }
   }
 
-  componentDidMount(){
-
-    //this.setState({ active: Boolean(this.props.active) })
-
-  }
+  componentDidMount(){}
 
   handlerSwitch(e){
     e.stopPropagation();
@@ -25,27 +21,9 @@ class Switch extends Component {
     this.setState({ active: Boolean(active), eventname });
     Event.emit(eventname,{ active })
   }
-  /*
-  handlerSwitch(e){
-    e.stopPropagation();
-    let active = !this.state.active;
-    this.setState({ active });
-    if(this.props.userProp){
-      if(this.props.userProp.key){
- //   console.log('se detecto prop de user',this.props)
-        Event.emit('configUser',{ ...this.props.userProp, active })
-      }
-      else{
-   //     console.log('én el else de switch', this.props.userProp)
-      /* aqui solo hacer win.open con la ruta /in_game, y con helmet se quita todo con mini.css */
-/*        Event.emit('inGame', { active, switche:this });
-      }
-    }
-  }
-*/
 
   render() {
-    const { eventname='', tooltip='', displayname='' } = this.props;
+    const { eventname, displayname, tooltip='' } = this.props;
     return (
       <div className={`Switch ${this.state.active?'active':''} `} 
            onClick={ this.handlerSwitch } 
