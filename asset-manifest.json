@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/royal-battle-ak/static/css/main.f962154e.chunk.css",
+    "main.js": "/royal-battle-ak/static/js/main.ddeca0fc.chunk.js",
+    "main.js.map": "/royal-battle-ak/static/js/main.ddeca0fc.chunk.js.map",
+    "runtime-main.js": "/royal-battle-ak/static/js/runtime-main.47baac67.js",
+    "runtime-main.js.map": "/royal-battle-ak/static/js/runtime-main.47baac67.js.map",
+    "static/js/2.e558881b.chunk.js": "/royal-battle-ak/static/js/2.e558881b.chunk.js",
+    "static/js/2.e558881b.chunk.js.map": "/royal-battle-ak/static/js/2.e558881b.chunk.js.map",
+    "index.html": "/royal-battle-ak/index.html",
+    "static/css/main.f962154e.chunk.css.map": "/royal-battle-ak/static/css/main.f962154e.chunk.css.map",
+    "static/js/2.e558881b.chunk.js.LICENSE.txt": "/royal-battle-ak/static/js/2.e558881b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47baac67.js",
+    "static/js/2.e558881b.chunk.js",
+    "static/css/main.f962154e.chunk.css",
+    "static/js/main.ddeca0fc.chunk.js"
+  ]
+}

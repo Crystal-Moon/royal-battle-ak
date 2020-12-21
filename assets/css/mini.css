@@ -1,0 +1,7 @@
+.Nav, .Footer, .Todo>.Header{
+	display:none;
+}
+.Principal, .Main{
+	height: 100%;
+	width: 100%;
+}
