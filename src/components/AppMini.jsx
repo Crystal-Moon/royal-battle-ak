@@ -23,7 +23,14 @@ class AppMini extends Component {
   }
 
 
-  componentDidMount(){}
+  componentDidMount(){
+    let SwitchInGame = document.getElementById('SwitchInGame');
+    if(SwitchInGame){
+      SwitchInGame.dataset.status='on'
+      SwitchInGame.style.display='none';
+    }
+    Event.emit('changeTab', { tab: 'in_game' })
+  }
 
   changeZoom({ zoom }){
     this.setState({ zoom })
@@ -38,7 +45,7 @@ class AppMini extends Component {
       <div className={`TodoMini ${this.state.nohover?'no-hover':''}`} 
         style={ {fontSize: `${this.state.zoom/100}rem` } } >
        <Helmet>
-          <link rel="stylesheet" type="text/css" href='/assets/css/mini.css' />
+          <link rel="stylesheet" type="text/css" href='/royal-battle-ak/assets/css/mini.css' />
         </Helmet> 
 
         <div className="Header">

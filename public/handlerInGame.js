@@ -14,7 +14,7 @@ function handlerInGame(pa){
 }
 
 function openMini() {
-	window.mini= window.open('/in_game','mini_in_game',
+	window.mini= window.open('/royal-battle-ak','mini_in_game',
 		'height=600,width=220,' +
 		'left=1200,top=400,' +
 		'status=no,menubar=no,' +
@@ -32,6 +32,8 @@ window.onCloseMini = function () {
 
 window.handlerInGame=handlerInGame;
 
+window.onload= function () {
+  if(window.opener && window.myEvent) window.myEvent.emit('changeTab',{ tab: 'in_game' })
+}
 if(window.opener) BTN.style.display = 'none';
-//if(window.opener && window.myEvent) window.myEvent.emit('changeTab',{ tab: 'in_game' })
 //if(window.opener && window.setMyTop) window.setMyTop();

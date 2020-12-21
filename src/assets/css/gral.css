@@ -31,7 +31,6 @@ html, body, #root{
 	width: 100%;
 	height: 100%;
 	width:100%;
-	/*background-color: #333;*/
 	transition: all 0.3s ease;
 	box-sizing: border-box;
 	max-width: 100%;
@@ -54,11 +53,8 @@ h2, h3, h4, .ttl{
 }
 h2{font-size: 2.2em;}
 
-
-/***********************************/
 .Header{
 	font-size:1em;
-	/* position: fixed; */
 	top: 0;
 	right: 0;
 	left: 0;
@@ -77,7 +73,6 @@ h2{font-size: 2.2em;}
 }
 .Logo img{ height: 2em; }
 
-/**********************************/
 .Config{
     margin-right: 0.3em;
     margin-top: 0.3em;
@@ -91,14 +86,6 @@ h2{font-size: 2.2em;}
 .Config:hover, .Config:active, .Config.show{
 	background-color: #9068d5;
 }
-/* en all no esta esto
-.Config img{
-	position: relative;
-	height: 100%;
-    width: 100%;
-    display: block;
-}
-*/
 .ConfigIcon{
     height: 70%;
     width: auto;
@@ -123,7 +110,6 @@ h2{font-size: 2.2em;}
 .Config.show .config-in{
 	display:block;
 }
-/***********************************/
 .Switch, .Zoom{
 	display: flex;
 	flex-direction: row;
@@ -173,7 +159,6 @@ h2{font-size: 2.2em;}
 .s-back{
 	margin: auto;
 	margin-left: 0.3em;
-	/* margin-right: 1em; */
 	border-radius: 2em;
 	width: 3em;
 	height: 1.5em;
@@ -190,14 +175,10 @@ h2{font-size: 2.2em;}
 }
 .Switch.active .s{
 	right: 0;
-	/* float: right; */
 	margin-left: 50%;
-	/* left: auto; */
 	margin-right: 0;
 }
 
-
-/************************************************/
 .Item{
     width: max-content;
     height: max-content;
@@ -217,7 +198,6 @@ h2{font-size: 2.2em;}
 	border-radius: 10%;
 	width: 1.2em;
 	height: 1.2em;
-	/*margin: 0.1em;*/
 }
 .ItemIcon img{
 	width:100%;
@@ -242,7 +222,6 @@ h2{font-size: 2.2em;}
 .Hover.hover-up{
 	bottom: 0;
 }
-
 .item-head{
 	display: flex;
 	flex-direction:row;
@@ -278,7 +257,6 @@ h2{font-size: 2.2em;}
 	margin-top:0.3em;
 	margin-bottom:0.3em;
 }
-
 .white{
 	color:white;
 	border-color:white;
