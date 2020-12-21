@@ -2,52 +2,45 @@ import { Component } from 'react';
 //import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// Component
-//import Principal from './Principal';
+const routes = [
+  { name: 'Inicio',  url: '/home' },
+  { name: 'PVP', url: '/pvp' },
+  { name: 'Items', url: '/items' },
+  { name: 'Recompensas', url: '/rewards' },
+  { name: 'Modo In-Game', url: '/mode_in_game' },
+  { name: 'Sobre la app', url: '/abaut' }
+];
 
 class Nav extends Component {
-/*
   constructor(){
     super();
-    this.testOpen = this.testOpen.bind(this)
+    this.selectTab = this.selectTab.bind(this)
   }
 
-  testOpen(e){
-    //ReactDOM.createPortal(<Modal />, document.getElementById('root-mini')); 
-    //document.getElementById('root-mini').innerHTML=''
-    //window.ven = undefined
-    let rootMini=document.getElementById('root-mini');
-    rootMini.innerHTML=''
-    let div=document.createElement('div')
-    window.ven = ReactDOM.render(<AppMini />, div);
-    console.log('la ventana', window.ven)
-    rootMini.appendChild(div)
-   
+  selectTab(e){
+    Array.from(document.getElementsByClassName('selected'))
+      .forEach(x=>x.classList.remove('selected'));
+    
+    if(e.target.tagName=='A'){ 
+      e.target.parentNode.classList.add('selected')
+      //Event.emit('changeTab', { tab:e.target.dataset.to })
+    }
+    
   }
 
-*/
   render() {
     return (
       <nav className="Nav">
         <ul className="ul">
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/' className="Deep"><span>Introduccion</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/pvp' className="Deep"><span>PVP</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/items' className="Deep"><span>Items</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/rewards' className="Deep"><span>Recompensas</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl selected">
-            <Link to='/mode_in_game' className="Deep"><span>Mode In-Game</span></Link>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/abaut' className="Deep"><span>Sobre mi</span></Link>
-          </li>
+        {
+          routes.map((l,k)=>
+            <li className="Li sub-ttl" key={k}>
+              <Link to={l.url} 
+                className="Deep" 
+                onClick={this.selectTab}>{l.name}
+              </Link>
+            </li>)
+        }
         </ul>
       </nav>
     );
@@ -55,7 +48,11 @@ class Nav extends Component {
 }
 
 export default Nav;
-
+/*
+<li data-compoent="Li" className="Li sub-ttl">
+            <Link to='/' className="Deep"><span>Introduccion</span></Link>
+          </li>
+          */
 /*
       <nav className="Nav">
         <ul className="ul">

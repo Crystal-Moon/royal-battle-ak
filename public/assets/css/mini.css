@@ -1,0 +1,8 @@
+.Nav, .Footer, .Todo>.Header{
+	display:none;
+}
+.Principal, .Main{
+	/*background-color: #333;*/
+	height: 100%;
+	width: 100%;
+}

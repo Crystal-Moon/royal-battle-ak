@@ -9,9 +9,6 @@ import Item from './Item';
 import ItemIcon from './ItemIcon';
 import Hover from './Hover';
 
-
-
-
 class SectionItems extends Component {
   constructor(){
     super();
@@ -21,36 +18,37 @@ class SectionItems extends Component {
   }
 
   componentDidMount(){
-    db.getAll().then(all=>{
-     // console.log('el items',all)
-      this.setState({ items: all.spirit.orange })
+    db.getAllArray().then(items=>{
+      this.setState({ items, selected: items[30] })
     })
-   /* db.getHolySpirit().then(items => {
-      console.log('items',items)
-      this.setState({ items })
-    })*/
   }
 
   selectItem({ id, ref }){
-    console.log('en select item', id, ref)
-    db.getById(id).then(selected=> this.setState({ selected }))
+    db.getById(id).then(selected=>{
+      let i=selected.made_by.map(m=>m.id);
+      let m={}
+      selected.made_by=Array.from(new Set(selected.made_by.map(JSON.stringify))).map(JSON.parse);
+      i.forEach((n)=> m[String(n)] = (m[String(n)] || 0) + 1 );
+      selected.by=m;
+      this.setState({ selected })
+    })
   }
 
-/* aqi tendre un event.on para mostrar en el costado */
-  
-  render() { /* a los Item de aqui establecer el eventname en 'detail' para manejarlos diferentes eq en acordeonItems */
+  render() {
     return (
       <section className="Section SectionItems">
-        <h2 className="h2">seccion itens</h2>
+        <h2 className="h2">Items</h2>
+        <p>En este apartado podrás ver todos los items que hay dentro de la arena y su descripción.</p>
         <table className="main">
           <tbody>
             <tr>
-              <td className="w50">
+              <td>
+                <div className="table-conteiner scrollable scrollable-in">
                 <table className="sub">
-                  <thead><tr><th colSpan="2"><p>Recompensas disponibles</p></th></tr></thead>
+                  <thead><tr><th colSpan="2"><p>Items de la arena</p></th></tr></thead>
                   <tbody>
                   {
-                    this.state.items.map((i,k)=>
+                    this.state.items.filter(i=>i.type!='formula').map((i,k)=>
                       <tr key={k}>
                         <td><Item item={i} eventname="detailItem" /></td>
                         <td><p className={i.qlty}>{i.name}</p></td>
@@ -59,10 +57,37 @@ class SectionItems extends Component {
                   }
                   </tbody>
                 </table>
+                </div>
               </td>
+              {this.state.selected.name?
               <td className="w50 detail-item">
-                <Hover item={this.state.selected} />
+                <div className="for-by"> 
+                  <span>Creado por</span>
+                  <hr/>  
+                  <div>
+                    {
+                    this.state.selected.made_by.map((i,k)=>
+                      <>
+                      <ItemIcon item={i} key={k} />
+                      <span key={(k+1)*10}>x{this.state.selected.by[String(i.id)]}</span>
+                      </>)
+                    }
+                  </div>
+                </div>
+                <Hover item={this.state.selected} /> 
+                <div className="for-by">
+                  <span>Material para</span>
+                  <hr/> 
+                  <div>
+                    {
+                    this.state.selected.mat_for.map((i,k)=><Item key={k} item={i}/>)
+                    }
+                  </div>
+                </div>
               </td>
+              :
+              <td className="w50 detail-item"><span>select item</span></td>
+              }
             </tr>
           </tbody>
         </table>

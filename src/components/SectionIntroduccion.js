@@ -1,38 +1,28 @@
-import { Component } from 'react';
 
-class SectionIntroduccion extends Component {
-  render() {
-    return (
+import News from './News';
+
+function SectionIntroduccion(){
+  return (
       <section className="Section">
-        <h2 className="h2">seccon intro</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a
-          accumsan risus. Donec sodales ex ut est faucibus vestibulum. Morbi sit
-          amet turpis nulla. Vivamus quis purus id urna suscipit semper at vitae
-          orci. Vestibulum quis orci vitae neque viverra accumsan. Curabitur
-          nulla velit, congue et ligula a, cursus tincidunt nunc. Fusce
-          efficitur nulla vel nisl congue, non aliquet lorem maximus. Aliquam
-          erat volutpat. Aenean ac pharetra nibh. Praesent in augue consectetur,
-          rutrum ante nec, volutpat justo. Quisque facilisis odio quam, nec
-          maximus ligula eleifend a. Donec dui turpis, sodales id iaculis ut,
-          ornare id massa. Duis tellus libero, hendrerit ullamcorper posuere
-          quis, fringilla ac dolor. Fusce sit amet egestas diam. Nullam ac orci
-          tellus. Suspendisse potenti. <br />
-          Suspendisse potenti. Maecenas ultricies ipsum id tellus lobortis
-          aliquet sed vel odio. Pellentesque habitant morbi tristique senectus
-          et netus et malesuada fames ac turpis egestas. Proin maximus sapien eu
-          mi luctus, auctor varius est porttitor. Morbi aliquet nunc dolor, quis
-          fringilla diam ultrices in. Cras scelerisque auctor faucibus. Nam
-          bibendum sodales lectus, id sagittis est sollicitudin ac. Donec eget
-          lobortis diam. Donec rhoncus risus nibh, in semper magna dapibus sit
-          amet. Aliquam erat volutpat. In hac habitasse platea dictumst.
-          Pellentesque cursus sed justo vel aliquet. Suspendisse porta est non
-          eros vehicula, a ultrices augue pharetra.{" "}
-        </p>
-        <img src=''alt="some img1" />
+        <News />
+        <h2>Introducción</h2>
+        <p><img src='https://imgur.com/zthgFQq.png' alt="chibi" className="imgs" style={{float:'right',width:'20em'}} /> 
+        Con la llegada del parche 56, además de la nueva clase, Estrella Cósmica, también llegó un nuevo 
+        pvp estilo Battle Royal. En pocas palabras: "el último que quede en pie".</p>
+        <p>Todos los jugadores empiezan con el mínimo de recursos y equipamiento y deben ir consiguiendo 
+          mejores objetos mientras son desafiados constantemente por los otros jugadores y por una constante 
+          reducción de "área segura" (el campo de juego se hace más pequeño).</p>
+        <p>Participando en esta arena puedes llegar a obtener una nueva pieza de equipamiento: El Espíritu 
+          Luminoso. Un accesorio que está disponible para usar desde el nivel sup. 1.</p>
+        <p>La naturaleza aleatoria del punto de partida, la ubicación de los elementos y la reducción 
+          del área segura, convierte este género de pvp en un desafío de pensar y reaccionar rápidamente 
+          y mejorar las estrategias durante el juego para ser el último que quede vivo.</p>
+        <p>Para eso mismo fue creado este programa tipo 'helper'. En este sitioweb compilo los items 
+          disponibles dentro del campo y las combinaciones disponibles, presentados en forma interactiva.</p>
+        <p>Espero lo disfrutes y hagas un buen uso de ello.</p>
+        <img src='https://imgur.com/MqMzcLo.png' alt="divine_trial" className="imgs" style={{width:'90%',margin:'auto'}} />
       </section>
-    );
-  }
+  );
 }
 
 export default SectionIntroduccion;

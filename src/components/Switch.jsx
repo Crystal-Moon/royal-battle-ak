@@ -5,15 +5,27 @@ class Switch extends Component {
   constructor(props){
     super(props);
     this.handlerSwitch = this.handlerSwitch.bind(this);
-    this.state = { active: false }
+    this.state = { 
+      active: false, 
+      eventname: '' 
+    }
   }
 
   componentDidMount(){
 
-    this.setState({ active: Boolean(this.props.active) })
+    //this.setState({ active: Boolean(this.props.active) })
 
   }
 
+  handlerSwitch(e){
+    e.stopPropagation();
+    let active = !Boolean(this.state.active)*1;
+    let eventname = this.props.eventname || '';
+    
+    this.setState({ active: Boolean(active), eventname });
+    Event.emit(eventname,{ active })
+  }
+  /*
   handlerSwitch(e){
     e.stopPropagation();
     let active = !this.state.active;
@@ -25,17 +37,22 @@ class Switch extends Component {
       }
       else{
    //     console.log('én el else de switch', this.props.userProp)
-        Event.emit('inGame', { active, switche:this });
+      /* aqui solo hacer win.open con la ruta /in_game, y con helmet se quita todo con mini.css */
+/*        Event.emit('inGame', { active, switche:this });
       }
     }
   }
+*/
 
   render() {
-    const { userProp={} } = this.props;
+    const { eventname='', tooltip='', displayname='' } = this.props;
     return (
-      <div className={`Switch ${this.state.active?'active':''} `} onClick={ this.handlerSwitch } >
+      <div className={`Switch ${this.state.active?'active':''} `} 
+           onClick={ this.handlerSwitch } 
+           data-eventname={ eventname }
+           title={ tooltip } >
         <div className="s-txt">
-          <span>{ userProp.displayName }</span>
+          <span>{ displayname }</span>
         </div>
         <div className="s-back">
           <div className="s" />

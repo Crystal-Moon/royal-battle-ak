@@ -1,14 +1,9 @@
+
 html,body{
-	/*background-color: rgba(0,0,0,0);*/
 	background-color: #333;
 }
 .TodoMini{
-	display: flex;
-	flex-direction: row-reverse;
-	/*height:max-content;*/
 	height:100%;
-
-	/* float: right; */
 }
 .TodoMini .Logo h1{display: none;}
 .TodoMini .Header{font-size: 0.7em;}
@@ -16,39 +11,10 @@ html,body{
 .TodoMini .Header>.Switch{
  display: none;
 }
-.TodoMini .Config{margin-left: auto;}
-.TodoMini .Item:hover .Hover.no-hover{
+.TodoMini .Config{display:block;margin-left: auto;}
+.TodoMini.no-hover .Item:hover .Hover{
 	display:none;
 }
-/**********************************/
-.LeftBar{
-	border-top-left-radius: 1em;
-	border-bottom-left-radius: 1em;
-	background-color: dimgrey;
-	display: flex;
-	align-items: center;
-	width: 1.3em;
-	max-width: 1.3em;
-	min-width: 1em;
-	height: auto;
-}
-.LeftBar svg{
-	width: 70%;
-    margin: auto;
-    height: 1em;
-}
-.LeftBar:hover{
-	background-color: darkgrey;
-}
-.LeftBar:active{
-	background-color: #8a8989;
-}
-
-
-/************************************************/
-
-
-/**********************************************/
 .PrincipalMini{
 	width:100%;
 	background-color: #333;
@@ -61,8 +27,6 @@ html,body{
 }
 .AcordeonItem{
 	transition: all 0.25s ease;
-    /* height: 10em; */
-    /* height: 1.6em; */
     overflow: hidden;
     max-height: 1.7em;
     transition: max-height 0.25s ease-out;
@@ -72,13 +36,11 @@ html,body{
 .AcordeonItem h4{
     font-size: 1em;
     padding-left: 0.5em;
-    background-color: darkslategrey;
-   /* margin-bottom: 0.3em;*/
+    background-color: #7d8ea2;
     padding-top: 0.2em;
     font-weight: 200;
     border: none;
     border-bottom: 1px double white;
-
 }
 .AcordeonItem ul{
     display: flex;
@@ -88,30 +50,23 @@ html,body{
     height: max-content;
     min-height: max-content;
 }
-/*
-.AcordeonItem.hidden{
-	overflow:hidden;
-	height: 1.6em;
-}
-*/
 .AcordeonItem.show{
 	overflow: visible; /* necesario para los hover */
-    /* height: 1.6em; */
-    
     max-height: 20em;
     transition: max-height 0.25s ease-in;
 }
 .item-section{
 	font-size:1.1em;
-	position: relative;
+	/*position: relative;*/
 	display:flex;
 	flex-grow: 1;
-	/*flex-flow: column wrap;
-	height: 3.8em;*/
 	flex-flow: row wrap;
 	margin-bottom: 0.5em;
 	margin-top: 0.2em;
 	height: max-content;
+}
+.item-section li{
+	overflow: visible;
 }
 .icon-3 .Item{
 	margin:0;
@@ -135,19 +90,12 @@ html,body{
 	height: max-content;
 	box-sizing: content-box;
 	background-color: #333;
-   /*padding-bottom: 1.4em;*/
-
-   
-   
-  
-
+    border: 2px solid #FFD700;
+    border-radius: 0.5em;
 }
-/*.MapItems .central .Hover{
-	left: calc(-7 * 1em);
-}*//*
-.MapItems .hover-c{left: -7em;}
-.MapItems .hover-r{right: -1em;}
-*//*.svg-conteiner, .icon-conteiner{margin: 0.5em;margin-top: 0.8em;margin-bottom: 0.8em;}*/
+.MapItems .Hover{
+	bottom: 1.5em;
+}
 .ItemIcon{
 	transition: all 0.15s ease;
 }

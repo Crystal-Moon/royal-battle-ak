@@ -1,29 +1,28 @@
 
-/*
-.Item .ItemIcon{
-	width:1em;
-	height: 1em;
-}
-*/
 .SectionItems .Item:hover .Hover{display: none;}
 .Reward .Item .Hover{display: none;}
-.Item, .ItemIcon{
-	margin:auto;
-	/* margin-left: 1em; */
+.Item, .ItemIcon{margin:auto;}
+div.table-conteiner{
+	height: 30em;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 90%;
+    margin: auto;
+    margin-top:1.2em;
+    margin-bottom: 1.5em;
+    padding: 0;
+    position: relative;
 }
-table{border-radius:0.3rem;padding: 0.4em;width: 90%;margin: auto;}
+table{border-radius:0.3rem;width: 90%;margin: auto;}
 table.main{
-/*	width: 90%;
-	margin: auto;*/
-	background-color: rgba(0,0,0,0.6);
-	margin-bottom: 1em;
+	background-color: rgba(0,0,0,0.4);
+	width: 100%;
 }
 table.sub{width: 100%;}
 table.sub td:last-child img{margin-left: 1.7em;}
 table.sub td:last-child p{margin-left: 0.5em;}
 tbody .ItemIcon{
 	font-size: 1.5em;
-	/* margin-left: 1em; */
 	display: inline;
 }
 table p,tr, td{
@@ -31,29 +30,69 @@ table p,tr, td{
 	padding:0;
 	text-align: left;
 }
+th, th p{ text-align: center; }
 tr{height: 3.1em;}
 td{
 	padding: 0.3em;
 	vertical-align: top;
 }
+td.crystal{ text-align: center; }
 tfoot td,th{
 	padding: 0.2em;
 }
 tfoot{
 	font-size: 0.7em;
 }
-.w50{
-	width: 50%;
-}
-
 img.npc{
 	width: 90%;
     margin: auto;
     display: block;
 }
 
-.detail-item .Hover{display: block;position: relative;margin: auto;}
-/*
-git fetch <remote> <branchremoto>:<branchlocal> 
-git checkout <branchlocal>
-*/
+img.imgs{
+	width: auto;
+    height: auto;
+    display: block;
+    margin: 1em;
+    border: 2px solid white;
+}
+img.c{
+	margin-left:auto;
+	margin-right: auto;
+}
+
+div.for-by{
+    padding: 0.5em;
+    padding-bottom: 2em;
+    background-color: #161616;
+    border-radius: 0.3em;
+    width: 80%;
+    margin: auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+div.for-by>span{
+	width: 100%;
+    display: block;
+    text-align: center;
+}
+div.for-by>div{
+	margin-top: 0.5em;
+	display: flex;
+	display: -ms-flexbox;
+}
+.detail-item{
+	padding-top: 1.5em;
+
+}
+.detail-item>.Hover{display: block;position: relative;margin: auto;}
+.for-by:first-child .ItemIcon{margin-right: 0.2em;}
+.for-by:first-child span{
+	display: inline;
+    line-height: 2em;
+    margin: auto;
+    margin-left: 0;
+}
+.for-by:last-child{padding-right: 1.7em;}
+.SectionItems .detail-item .Item:hover .Hover{ display: block; }
+.Rewards .Item:last-child:hover .Hover{ left: -8em; }

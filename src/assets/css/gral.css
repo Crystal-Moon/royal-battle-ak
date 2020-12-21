@@ -23,15 +23,20 @@ html, body, #root{
 	padding:0;
 	height: 100%;
 	width: 100%;
-	/* background-color: grey; */
+	background-color: #36393f;
 }
 .Todo{
 	font-size: 1rem;
 	color: white;
 	width: 100%;
 	height: 100%;
-	/* overflow: hidden; */
-	/* background-color: grey; */
+	width:100%;
+	/*background-color: #333;*/
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	max-width: 100%;
+    overflow: hidden;
+    padding-bottom:2%;
 }
 a, a:hover, a:active, a:visited{color:inherit;text-decoration: none;}
 ul{list-style: none;margin: 0;padding: 0;}
@@ -47,6 +52,7 @@ h2, h3, h4, .ttl{
 	font-family: 'Vollkorn', serif;
 	font-size: 1.8em;
 }
+h2{font-size: 2.2em;}
 
 
 /***********************************/
@@ -60,28 +66,39 @@ h2, h3, h4, .ttl{
 	height: 3em;
 	display:flex;
 	flex-direction: row;
-	background-color: #443838;
+	background-color: #5a31a2;
 }
+
+.Logo{
+	height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5em;
+}
+.Logo img{ height: 2em; }
+
 /**********************************/
 .Config{
-	margin-left: 0.3em;
     margin-right: 0.3em;
     margin-top: 0.3em;
-       border-top-left-radius: 0.4em;
+      border-top-left-radius: 0.4em;
     border-top-right-radius: 0.4em;
     position: relative;
     width: 2.8em;
     cursor: pointer;
+    margin-left: auto;
 }
 .Config:hover, .Config:active, .Config.show{
-	background-color: dimgrey;
+	background-color: #9068d5;
 }
+/* en all no esta esto
 .Config img{
 	position: relative;
 	height: 100%;
     width: 100%;
     display: block;
 }
+*/
 .ConfigIcon{
     height: 70%;
     width: auto;
@@ -92,12 +109,16 @@ h2, h3, h4, .ttl{
 	display: none;
 	position: absolute;
     right: 0;
-    background-color: dimgrey;
+    background-color: #9068d5;
     padding: 0.4em;
     padding-left: 0.9em;
     width: max-content;
     height: max-content;
     z-index: 1500;
+}
+.config-in>div{
+	margin-top:0.5em;
+	margin-bottom: 0.5em;
 }
 .Config.show .config-in{
 	display:block;
@@ -109,26 +130,45 @@ h2, h3, h4, .ttl{
 	margin-right: 0.5em;
 	margin-top: 0.3em;
     margin-bottom: 0.3em;
-	margin-left: auto;
+	margin-left: 1em;
 	width: max-content;
 	font-family: 'Hind Siliguri', sans-serif;
+
+	width: 10em;
+    justify-content: space-between;
+    height: 1.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.Zoom span{ display:inline; text-align:center; }
+.s{
+	border-radius: 5em;
+	width: 1.5em;
+	height: 1.5em;
+	max-height: 2rem;
+	max-width: 2rem;
+	background-color: #6aacc7;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+.s.s-txt{
+	width: 3em;
+	background-color: white;
+	color: black;
+	width: 3em;
+    max-width: 3em;
+}
+
+.Switch{
+	color: white;
+	width: auto;
+	margin-left: auto;
 }
 .Switch *{
-	display:flex;
-	align-items:center;
+	white-space: pre;
 	transition: all 0.3s ease;
-}
-.s-txt{
-	height: 100%;
-	display: flex;
-}
-.s-txt span{
-	margin:auto;
-	/* top: 0; */
-	/* bottom: 0; */
-	display: block;
-	width: max-content;
-	/* position: relative; */
 }
 .s-back{
 	margin: auto;
@@ -140,26 +180,13 @@ h2, h3, h4, .ttl{
 	max-height: 2rem;
 	max-width: 4rem;
 	cursor: pointer;
-	background-color: #a0a0a0;
+	background-color: #666;
 	text-align: center;
-}
-.s{
-	border-radius: 50%;
-	width: 1.5em;
-	height: 1.5em;
-	max-height: 2rem;
-	max-width: 2rem;
-	background-color: black;
-	/* left:0; */
-	margin-right: auto;
-	right: auto;
-	margin-left:0;
-	text-align: center;
-	/*transition: all 0.4s ease;*/
 }
 
+
 .Switch.active .s-back{
-	background-color: skyblue;
+	background-color: #FFF;
 }
 .Switch.active .s{
 	right: 0;
@@ -168,40 +195,6 @@ h2, h3, h4, .ttl{
 	/* left: auto; */
 	margin-right: 0;
 }
-
-.Zoom{
-	width: 100%;
-    justify-content: space-between;
-}
-.Zoom span, .Zoom button{
-	
-}
-.Zoom .s-txt{
-	padding: 0.3em;
-    border: 1px solid;
-    width: 40%;
-    text-align: center;
-    line-height: 1em;
-    height: 1em;
-    font-size: 1em;
-    border: none;
-    border-radius: 1em;
-    line-height: 1.1em;
-}
-.Zoom .s{margin: 0;cursor: pointer;}
-.Zoom button{
-	margin:0;
-}
-
-.Zoom button span{
-	
-}
-button{position: relative;margin:0;padding: 0;color:white;}
-button span{display: block;margin:0;padding: 0;}
-/**************************************/
-.Theme{ font-size: inherit; }
-.Theme label{ display:block;margin-bottom: 0.3em; }
-.Theme select{border-radius: 2em;}
 
 
 /************************************************/
@@ -216,6 +209,7 @@ button span{display: block;margin:0;padding: 0;}
 }
 .Item:hover .Hover{
 	display:block;
+	left: -4em;
 }
 .ItemIcon{
 	display:block;
@@ -235,7 +229,7 @@ button span{display: block;margin:0;padding: 0;}
 	position: absolute;
 	background-color: #161616;
 	width: max-content;
-	max-width: 13.5em;
+	max-width: 14.5em;
 	font-size: 0.9em;
 	padding: 0.6em;
 	border-radius:0.5em;
@@ -244,7 +238,9 @@ button span{display: block;margin:0;padding: 0;}
 .Hover .ItemIcon{
 	width: inherit;
     height: inherit;
-
+}
+.Hover.hover-up{
+	bottom: 0;
 }
 
 .item-head{
@@ -289,6 +285,7 @@ button span{display: block;margin:0;padding: 0;}
 }
 .blue{
 	color: blue;
+	color: rgba(56, 89, 255, 1);
 	border-color:blue;
 }
 .green{

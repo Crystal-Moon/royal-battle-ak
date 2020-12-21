@@ -1,5 +1,4 @@
 
-import npcImage from '../assets/imgs/npc.jpg';
 import { Component } from 'react';
 import db from '../util/db';
 
@@ -9,68 +8,64 @@ import ItemIcon from './ItemIcon';
 class SectionRecompensas extends Component {
   constructor(){
     super();
-    //this.selectItem = this.selectItem.bind(this)
-    this.state = { crystal:{}, items:[], caja:{}, cajaItems:[] }
-   // Event.on('detailItem',this.selectItem)
+    this.state = { 
+      crystal: {
+        name: 'Holy Spirit Crystal',
+        desc: 'No canjeable. No se puede poner en banco comun. Puedes obtenerlo como recompensa del Desafio Divino.',
+        icon: 'https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00855.png',
+        qlty: 'orange'
+      }, 
+      items: [], 
+      caja: {}, 
+      cajaItems: [] 
+    }
   }
 
   componentDidMount(){
     db.getRewads().then(items=>{
-     // console.log('el items',all)
       let caja= items.find(i=>i.id==21)
       this.setState({ items, caja })
     })
-    db.getAll().then(all=>{
-     // console.log('el items',all)
-      this.setState({ cajaItems: all.spirit.orange })
-    })
-   /* db.getHolySpirit().then(items => {
-      console.log('items',items)
-      this.setState({ items })
-    })*/
+
+    db.getHolySpirit().then(spirits=> 
+      this.setState({ cajaItems:spirits }))
   }
 
   render() {
-    return (
-      <section className="Section Rewards">
-        <h2 className="h2">Recompensas</h2>
-        <table className="main">
-      <div>
-          <tbody>
-            <tr>
-              <td className="w50">
-                
-                <table className="sub">
-                  <thead><tr><th colSpan="2"><p>Recompensas disponibles</p></th></tr></thead>
-                  <tbody>
-                    {
-                      this.state.items.map((i,k)=>
-                        <tr key={k}>
-                          <td><Item item={i} eventname="" /></td>
-                          <td>
-                            <ItemIcon item={this.state.crystal} />
-                            <span>x{i.c1}</span>
-                            </td>
-                        </tr>
-                      )
-                    }
-                  </tbody>
-                </table>
+   return (
+    <section className="Section Rewards">
+      <h2 className="h2">Recompensas</h2>
+      <p><img src="https://imgur.com/TkwNt6Z.png" 
+        className="imgs" alt="cristal_luminoso" 
+        style={{width:'17em',float:'left'}} />Según tu desempeño dentro del campo de batalla recibirás más o menos “Cristales de Espíritu Luminoso”. Podrás intercambiar estos cristales con el NPC Coronel Weasel en navea en el área de PVP. Entre las recompensas disponibles se encuentra la “Caja de Espíritu Luminoso”, con la cual puedes obtener uno de los cuatro Espíritu Luminoso disponibles por ahora.
+      </p>
+      <img src="https://imgur.com/4ca9IqU.png" 
+        alt="mapa_npc" className="imgs c" style={{width:'20em'}} />
 
-              </td>
-              <td className="w50">
-                <img src={npcImage}alt="npc" className="npc" />
-              </td>
-            </tr>
-          </tbody>
-     </div>
-        </table>
+      <div className='table-conteiner scrollable'>
         <table className="main">
-          <thead><tr><th><ItemIcon item={this.state.caja} /></th><th colSpan="3"><p>caja de holy spirit</p></th></tr></thead>
-          <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} /></td>)}</tr></tbody>
-          <tfoot><tr><td colspan="4"><p>Para conseguir los Holy Spirit en calidad dorada es necesario canjear 6 Holy Spirit del mismo tipo con el NPC. Se tomarán los primeros 6 que se encuentren en el inventario.</p></td></tr></tfoot>
+          <thead><tr><th colSpan="4"><p>Recompensas disponibles</p></th></tr></thead>
+          <tbody>
+            {
+            this.state.items.map((i,k)=>
+              <tr key={k}>
+                <td className='crystal'><ItemIcon item={this.state.crystal} /></td>
+                <td className='txt'>x{i.c1}</td>
+                <td><Item item={i} eventname="" hoverup={Boolean(k>this.state.items.length/2)} /></td>
+                <td className={ i.qlty } style={{paddingLeft:'1.5em'}}>{ i.name }</td>
+              </tr>
+            )
+            }
+          </tbody>
         </table>
-      </section>
+      </div>
+      <table className="main">
+        <thead><tr><th style={{fontSize:'1.6em'}}><ItemIcon item={this.state.caja} /></th><th colSpan="3">
+          <p style={{textAlign:'left'}}>Cofre Magnifico del Espiritu Luminoso</p></th></tr></thead>
+        <tbody><tr>{this.state.cajaItems.map((i,k)=><td key={k}><Item item={i} hoverup={true} /></td>)}</tr></tbody>
+        <tfoot><tr><td colSpan="4"><p>*Al momento de crear esta guia los Espiritu Luminoso de calidad dorado no estan disponibles en el juego.</p></td></tr></tfoot>
+      </table>
+    </section>
     );
   }
 }
