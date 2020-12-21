@@ -131,6 +131,7 @@ line{
 	/*z-index: 100;*/
 }
 .icon-3 .Item, .item-section .Item{position: unset;transition: all 0.15s ease;}
+.item-section .Item{margin: 0.4em;}
 .icon-3 .Item .Hover, .item-section .Item .Hover{
 	left:0;right: 0;
 	margin-left: auto;

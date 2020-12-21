@@ -81,26 +81,3 @@ class MapItems extends Component {
 }
 
 export default MapItems;
-
- /*
-
-
-  <div className="icon-conteiner">
-            <div className="icon-3">
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-            </div>
-            <div className="icon-3 central posible">
-              <Item ref={ this.itemCentral } />
-            </div>
-            <div className="icon-3">
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-              <Item handlerSelect='moveToCentre' onClick={ this.moveAndGet } />
-            </div> 
-          </div>
-
-
-          */

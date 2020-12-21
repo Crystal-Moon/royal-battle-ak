@@ -1,5 +1,4 @@
 import { Component } from 'react';
-//import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const routes = [
@@ -23,7 +22,6 @@ class Nav extends Component {
     
     if(e.target.tagName=='A'){ 
       e.target.parentNode.classList.add('selected')
-      //Event.emit('changeTab', { tab:e.target.dataset.to })
     }
     
   }
@@ -48,44 +46,3 @@ class Nav extends Component {
 }
 
 export default Nav;
-/*
-<li data-compoent="Li" className="Li sub-ttl">
-            <Link to='/' className="Deep"><span>Introduccion</span></Link>
-          </li>
-          */
-/*
-      <nav className="Nav">
-        <ul className="ul">
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Introduccion</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>PVP</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Items</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Recompensas</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl selected">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Esta herramienta</span>
-            </a>
-          </li>
-          <li data-compoent="Li" className="Li sub-ttl">
-            <a href='#' title='' data-content="Deep" className="Deep">
-              <span>Sobre mi</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-*/

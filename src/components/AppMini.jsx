@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet';
 import { Event } from '../util/Event';
 import '../assets/css/royal-mini.css';
 
-// Components
-//import Header from './Header';
 import Logo from './Logo';
 import Config from './Config';
 import AcordeonMenu from './AcordeonMenu';
@@ -25,14 +23,7 @@ class AppMini extends Component {
   }
 
 
-  componentDidMount(){
-  //  let SwitchInGame = document.getElementById('SwitchInGame');
-  //  if(SwitchInGame){
-  //    SwitchInGame.dataset.status='on'
-  //    SwitchInGame.style.display='none';
-  //  }
-  //  Event.emit('changeTab', { tab: 'in_game' })
-  }
+  componentDidMount(){}
 
   changeZoom({ zoom }){
     this.setState({ zoom })
@@ -56,9 +47,7 @@ class AppMini extends Component {
         </div>
         <AcordeonMenu />
         <MapItems />
-
       </div>
-    
     );
   }
 }

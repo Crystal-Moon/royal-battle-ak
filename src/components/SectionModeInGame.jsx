@@ -5,7 +5,7 @@ function SectionModeInGame() {
         <h2 className="h2">Modo In-Game</h2>
         <p>Esta app está diseñada para acompañarte durante el juego.</p>
         <p>En la esquina superior derecha se encuentra un interruptor para entrar al modo In-Game. Al encenderlo se abrirá una pequeña ventana dividida en secciones según los tipos de items disponibles de la arena.</p>
-        <p>Esta mini ventana es algo especial... Utiliza comandos del sistema operativo para permanecer siempre a la vista, incluso sobre otras ventanas.</p>
+        <p>Esta mini ventana es algo especial... Utiliza comandos del sistema operativo para permanecer siempre a la vista, incluso sobre otras ventanas. (No funciona con la version Web)</p>
         <p>Al seleccionar cada ítem, este se 'desglosa' en lo necesario para su creación y los ítems de mejor calidad que se pueden hacer con él.</p>
         <img src='https://imgur.com/2u3mhG9.png' alt="map_items" className="imgs c" />
 
