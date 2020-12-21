@@ -1,4 +1,6 @@
+
 import { Component } from 'react';
+import { Event } from '../util/Event';
 
 const routes = [
   { name: 'Inicio',  url: 'home' },
