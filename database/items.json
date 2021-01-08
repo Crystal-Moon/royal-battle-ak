@@ -71,7 +71,7 @@
   },
   {
     "id": 8,
-    "name": "Heruka Dazzling Necklace Formula",
+    "name": "Formula: Collar Deslumbrante de Heruka",
     "type": "formula",
     "desc": "Desaparece tras la fusion.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00201.png",
@@ -101,7 +101,7 @@
   },
   {
     "id": 11,
-    "name": "Ilora Holy Sword Formula",
+    "name": "Formula: Mandoble de Ilora",
     "type": "formula",
     "desc": "Desaparece tras la fusion.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00201.png",
@@ -531,7 +531,7 @@
   },
   {
     "id": 53,
-    "name": "Heruka Dazzling Necklace",
+    "name": "Collar Deslumbrante de Heruka",
     "type": "equipo",
     "desc": "Daño recibido -18%, Enfriamiento de skill -15% y 20% posibilidad de generar un escudo que absorve 15,000 del daño",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/I00797.png",
@@ -561,7 +561,7 @@
   },
   {
     "id": 56,
-    "name": "Ilora Holy Ring",
+    "name": "Mandoble de Ilora",
     "type": "equipo",
     "desc": "Daño +15%, Enfriamiento de skill -10% y 20% de posibilidad de incrementar tu siguiente ataque un 90% por 15 segundos. El efecto desaparece despues de atacar.",
     "icon": "https://cdn.aurakingdom-db.com/file/bb-akdb/images/icons/WD1201.png",
