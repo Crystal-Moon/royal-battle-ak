@@ -3,7 +3,7 @@
 
 _Pequeño helper para la jugabilidad del nuevo PVP Desafio Divino de AuraKingdom ES_ :video_game:
 
-![status](https://img.shields.io/badge/status-OK-green) ![readme](https://img.shields.io/badge/readme-OK-green) ![version](https://img.shields.io/badge/version-v0.1.0-blue) ![techs](https://img.shields.io/badge/techs-ReactJS-blue)
+![status](https://img.shields.io/badge/status-deprecated-orange) ![readme](https://img.shields.io/badge/readme-OK-green) ![version](https://img.shields.io/badge/version-v0.1.0-blue) ![techs](https://img.shields.io/badge/techs-ReactJS-blue)
 
 ---
 
